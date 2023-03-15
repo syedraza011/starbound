@@ -4,7 +4,7 @@ function App() {
     <>
       <div>Nav</div>
       <div>Main</div>
-      <div>Footer</div>
+      <div>Footer I am a foot</div>
     </>
   );
 }
