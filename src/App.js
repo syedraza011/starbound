@@ -1,8 +1,11 @@
 
-
 function App() {
   return (
-   <p>i am app.js</p>
+    <>
+      <div>Nav</div>
+      <div>Main</div>
+      <div>Footer</div>
+    </>
   );
 }
 
