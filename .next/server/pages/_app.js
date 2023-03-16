@@ -49,11 +49,11 @@ function NavigationBar() {
                 }),
                 /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
                     href: "/flights",
-                    children: "Depating Flights"
+                    children: "DepatingFlights"
                 }),
                 /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
                     href: "/flights",
-                    children: "Flight"
+                    children: "ArivingFlight"
                 }),
                 /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
                     href: "/training",

@@ -9,8 +9,8 @@ export default function NavigationBar() {
 
         <Link href="/about">About</Link>
         <Link href="/contact">Contact</Link>
-        <Link href="/flights">Depating Flights</Link>
-        <Link href="/flights">Flight</Link>
+        <Link href="/flights">DepatingFlights</Link>
+        <Link href="/flights">ArivingFlight</Link>
         <Link href="/training">Training</Link>
         <Link href="/users">Users</Link>
         <Link href="/checkout">checkout</Link>
