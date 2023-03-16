@@ -1,9 +1,17 @@
 {
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/about": "pages/about.js",
-  "/contact": "pages/contact.js",
-  "/checkout": "pages/checkout.js"
+  "/about": "pages/about.html",
+  "/api/flightRoutes": "pages/api/flightRoutes.js",
+  "/api/hello": "pages/api/hello.js",
+  "/api/userRoutes": "pages/api/userRoutes.js",
+  "/api/users": "pages/api/users.js",
+  "/checkout": "pages/checkout.html",
+  "/_app": "pages/_app.js",
+  "/contact": "pages/contact.html",
+  "/flights": "pages/flights.html",
+  "/": "pages/index.html",
+  "/training": "pages/training.html",
+  "/users": "pages/users.html",
+  "/_error": "pages/_error.js",
+  "/404": "pages/404.html"
 }
