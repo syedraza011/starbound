@@ -2,6 +2,14 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/about": "pages/about.js"
+  "/about": "pages/about.html",
+  "/api/flightRoutes": "pages/api/flightRoutes.js",
+  "/api/hello": "pages/api/hello.js",
+  "/api/userRoutes": "pages/api/userRoutes.js",
+  "/api/users": "pages/api/users.js",
+  "/checkout": "pages/checkout.html",
+  "/contactus": "pages/contactus.html",
+  "/": "pages/index.html",
+  "/training": "pages/training.html",
+  "/404": "pages/404.html"
 }
