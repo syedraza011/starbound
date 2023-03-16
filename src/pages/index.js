@@ -16,9 +16,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1>Hello world</h1>
-        <Link href={"/about"}>Go to About</Link>
+        <h1>Hello world welcome to Star Bound</h1>
       </main>
+  
     </>
   );
 }
