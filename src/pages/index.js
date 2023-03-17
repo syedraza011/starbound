@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
+
 import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div>
+        <div className={styles.users}>
           <h1> All Users</h1>
           <div class="card">
             <h4>UserName:{"John Doe"}</h4>
@@ -31,12 +32,31 @@ export default function Home() {
             <p>User Phone: {"123456786"}</p>
           </div>
         </div>
-        <div className="destinations">
-          
-          <Link href='/destinations'><h1>Destinations</h1></Link>
-          
+        <div className={styles.destination}>
+          <h1> Destinations</h1>
+          <div class="destination-card">
+            <img src={".."} className="product-img" />
+            <h4>
+              <Link href="/jupitor">{"Jupitor"}</Link>
+            </h4>
+            <p>info about destination</p>
+          </div>
+          <div class="destination-card">
+            <img src={".."} className="product-img" />
+            <h4>
+              <Link href="/mars">{"Mars"}</Link>
+            </h4>
+            <p>info about destination</p>
+          </div>
+          <div class="destination-card">
+            <img src={".."} className="product-img" />
+            <h4>
+              <Link href="/neptune">{"Neptune"}</Link>
+            </h4>
+            <p>info about destination</p>
+          </div>
         </div>
-        <div className="depating-soon">
+        <div className={styles.departingSoon}>
           <h4> Flights departing soon</h4>
           <div class="flight-card-left">
             <h5> Mars</h5>

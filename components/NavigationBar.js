@@ -1,95 +1,92 @@
-import React from "react";
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
 function NavigationBar() {
   return (
-
-
     <nav className="sticky bg-[#f0e7db] shadow-lg">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between">
           <div className="flex space-x-2">
             <div>
               {/* Website Logo */}
-              <a href="/" className="companyLogo">
+              <div href="/" className="companyLogo">
                 <img src="rocketlogo.png" alt="Logo" className="rocket" />
-              </a>
+              </div>
             </div>
             {/* Primary Navbar items */}
             <div className="hidden md:flex items-center space-x-1">
-              <a
+              <div
                 href="/"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 Home
-              </a>
-              <a
+              </div>
+              <div
                 href="/about"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 About
-              </a>
-              <a
+              </div>
+              <div
                 href="/flights"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 Flights
-              </a>
+              </div>
 
-              <a
+              <div
                 href="/destinations"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 Destinations
-              </a>
+              </div>
 
-              <a
+              <div
                 href="/training"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 Training
-              </a>
+              </div>
 
-              <a
+              <div
                 href="/store"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 Store
-              </a>
-              <a
+              </div>
+              <div
                 href="/contact"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 Contact
-              </a>
-              <a
+              </div>
+              <div
                 href="/checkout"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 Checkout
-              </a>
-              <a
+              </div>
+              <div
                 href="/user"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 Users
-              </a>
+              </div>
             </div>
           </div>
           {/* Secondary Navbar items */}
           <div className="hidden md:flex items-center space-x-3 ">
-            <a
+            <div
               href="/login"
               className="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300"
             >
               Log In
-            </a>
-            <a
+            </div>
+            <div
               href="/register"
               className="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300"
             >
               Register
-            </a>
+            </div>
           </div>
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
@@ -114,28 +111,28 @@ function NavigationBar() {
       <div className="hidden mobile-menu">
         <ul className="">
           <li>
-            <a
+            <div
               href="/services"
               className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
             >
               Serviçes
-            </a>
+            </div>
           </li>
           <li>
-            <a
+            <div
               href="/about"
               className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
             >
               About
-            </a>
+            </div>
           </li>
           <li>
-            <a
+            <div
               href="/contacts"
               className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
             >
               Contact
-            </a>
+            </div>
           </li>
         </ul>
       </div>

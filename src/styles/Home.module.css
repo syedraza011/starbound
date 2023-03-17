@@ -2,7 +2,12 @@
   padding: 0 2rem;
   background-color: #f7f3ee;
 }
-
+.users{
+  background-color: darkred;
+}
+.destination{
+  background-color: aquamarine;
+}
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -60,7 +65,9 @@
   line-height: 1.5;
   font-size: 1.5rem;
 }
-
+.departingSoon{
+  background-color: chocolate;
+}
 .code {
   background: #fafafa;
   border-radius: 5px;
