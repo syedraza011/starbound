@@ -11,12 +11,8 @@ function NavigationBar() {
           <div className="flex space-x-2">
             <div>
               {/* Website Logo */}
-              <a href="/" className="flex items-center py-4 px-2">
-                <img
-                  src="/public/rocketlogo.png"
-                  alt="Logo"
-                  className="h-8 w-8 mr-2"
-                />
+              <a href="/" className="companyLogo">
+                <img src="rocketlogo.png" alt="Logo" className="rocket" />
               </a>
             </div>
             {/* Primary Navbar items */}
@@ -34,16 +30,31 @@ function NavigationBar() {
                 About
               </a>
               <a
-                href="/flight"
+                href="/flights"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
-                Flight
+                Flights
               </a>
+
+              <a
+                href="/destinations"
+                className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+              >
+                Destinations
+              </a>
+
               <a
                 href="/training"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 Training
+              </a>
+
+              <a
+                href="/store"
+                className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+              >
+                Store
               </a>
               <a
                 href="/contact"
@@ -128,6 +139,14 @@ function NavigationBar() {
           </li>
         </ul>
       </div>
+      {/* <Script id="show-responsive-menu" strategy="lazyOnload">
+        {`const btn = document.querySelector("button.mobile-menu-button");
+            const menu = document.querySelector(".mobile-menu");
+
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });`}
+      </Script> */}
     </nav>
   );
 }

@@ -1,5 +1,3 @@
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,6 +13,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.rocket {
+  height: 60px;
+  width: 60px;
 }
 
 * {
