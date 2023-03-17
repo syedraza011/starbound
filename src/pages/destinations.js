@@ -15,39 +15,68 @@ const Destinations = () => {
   <>
     <Link href="/">Home page</Link>
     <h1>Destinations</h1>
-    <div className="desPlnts">
-      <h2>Mercury</h2>
-      <Image src={mer} />
+    <div className={styles.desPlnts} >
+
+      <div className={styles.desPlntsText}>
+        <h2>Mercury</h2>
+        <p>The smallest planet in our solar system and nearest to the Sun, Mercury is only slightly larger than Earth's Moon.</p>
+        <p>From the surface of Mercury, the Sun would appear more than three times as large as it does when viewed from Earth, and the sunlight would be as much as seven times brighter. Despite its proximity to the Sun, Mercury is not the hottest planet in our solar system. That title belongs to nearby Venus, thanks to its dense atmosphere.</p>
+        <p>Because of Mercury's elliptical "egg-shaped" orbit, and sluggish rotation, the Sun appears to rise briefly, set, and rise again from some parts of the planet's surface. The same thing happens in reverse at sunset.</p>
+      </div>
+      <div>
+        <Image src={mer} height='500' width='500' />
+      </div>
     </div>
 
-    <div className="desPlnts">
-      <h2>Venus</h2>
-      <Image src={ven} />
+    <div className={styles.desPlnts} >
+      
+      <div>
+        <h2>Venus</h2>
+      </div>
+      <div>
+        <Image src={ven} height='500' width='500' />
+      </div>
+      
     </div>
     
-    <div className="desPlnts">
+    <div className={styles.desPlnts}>
       <h2>Mars</h2>
-      <Image src={mar} />
+      <div>
+        <Image src={mar} height='500' width='500' />
+      </div>
+      
     </div>
     
-    <div className="desPlnts">
+    <div className={styles.desPlnts}>
       <h2>Jupiter</h2>
-      <Image src={jup} />
+      <div>
+        <Image src={jup} height='500' width='500' />
+      </div>
+      
     </div>
     
-    <div className="desPlnts">
+    <div className={styles.desPlnts}>
       <h2>Saturn</h2>
-      <Image src={sat} />
+      <div >
+        <Image src={sat} height='350' />
+      </div>
+      
     </div>
     
-    <div className="desPlnts">
+    <div className={styles.desPlnts}>
       <h2>Neptune</h2>
-      <Image src={nep} />
+      <div>
+        <Image src={nep} height='500' width='500' />
+      </div>
+      
     </div>
 
-    <div className="desPlnts">
+    <div className={styles.desPlnts}>
       <h2>Uranus</h2>
-      <Image src={ura} />
+      <div>
+        <Image src={ura} height='500' width='500' />
+      </div>
+      
     </div>
   </>
   )
