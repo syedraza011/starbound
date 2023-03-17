@@ -139,14 +139,14 @@ function NavigationBar() {
           </li>
         </ul>
       </div>
-      <Script id="show-responsive-menu" strategy="lazyOnload">
+      {/* <Script id="show-responsive-menu" strategy="lazyOnload">
         {`const btn = document.querySelector("button.mobile-menu-button");
             const menu = document.querySelector(".mobile-menu");
 
             btn.addEventListener("click", () => {
                 menu.classList.toggle("hidden");
             });`}
-      </Script>
+      </Script> */}
     </nav>
   );
 }

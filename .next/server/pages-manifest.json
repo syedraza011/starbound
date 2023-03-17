@@ -2,10 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/contact": "pages/contact.js",
-  "/flights": "pages/flights.js",
-  "/checkout": "pages/checkout.js",
   "/": "pages/index.js",
-  "/user": "pages/user.js",
+  "/about": "pages/about.js",
+  "/flights": "pages/flights.js",
   "/training": "pages/training.js"
 }
