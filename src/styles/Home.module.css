@@ -13,7 +13,9 @@
   align-items: center;
   background-color: #f6eeeeee;
 }
-
+.departing-soon *{
+  background-color: aqua;
+}
 .footer {
   display: flex;
   flex: 1;

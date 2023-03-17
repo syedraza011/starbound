@@ -1,25 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
-/* eslint-disable @next/next/no-html-link-for-pages */
 import React from "react";
-import Script from "next/script";
-
+import Link from "next/link";
+import styles from "@/styles/Home.module.css";
 function NavigationBar() {
   return (
-    //     <>
-    //       <div className="nav-class">
-    //         <Link href="/">Home</Link>
 
-    //         <Link href="/about">About</Link>
-    //         <Link href="/contact">Contact</Link>
-    //         <Link href="/flights">DepartingFlights</Link>
-    //         <Link href="/flights">ArrivingFlight</Link>
-    //         <Link href="/training">Training</Link>
-    //         <Link href="/users">Users</Link>
-    //         <Link href="/checkout">checkout</Link>
-    //       </div>
-    //     </>
-    //   );
-    // }
 
     <nav className="sticky bg-[#f0e7db] shadow-lg">
       <div className="max-w-6xl mx-auto px-4">
