@@ -1,5 +1,3 @@
-import react from "react";
-import Link from "Next/link";
 const Bookings = () => {
   return (
     <>
