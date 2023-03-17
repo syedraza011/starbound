@@ -15,11 +15,6 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
-    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -30,20 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/about": [
+    "/destinations": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/about.js"
-    ],
-    "/flights": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/flights.js"
-    ],
-    "/training": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/training.js"
+      "static/chunks/pages/destinations.js"
     ]
   },
   "ampFirstPages": []

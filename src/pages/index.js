@@ -32,28 +32,9 @@ export default function Home() {
           </div>
         </div>
         <div className="destinations">
-          <h1> Destinations</h1>
-          <div class="destination-card">
-            <img src={".."} className="product-img" />
-            <h4>
-              <Link href="/jupitor">{"Jupitor"}</Link>
-            </h4>
-            <p>info about destination</p>
-          </div>
-          <div class="destination-card">
-            <img src={".."} className="product-img" />
-            <h4>
-              <Link href="/mars">{"Mars"}</Link>
-            </h4>
-            <p>info about destination</p>
-          </div>
-          <div class="destination-card">
-            <img src={".."} className="product-img" />
-            <h4>
-              <Link href="/neptune">{"Neptune"}</Link>
-            </h4>
-            <p>info about destination</p>
-          </div>
+          
+          <Link href='/destinations'><h1>Destinations</h1></Link>
+          
         </div>
         <div className="depating-soon">
           <h4> Flights departing soon</h4>
