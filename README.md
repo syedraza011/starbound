@@ -1,3 +1,7 @@
+As a group we worked togather to put this wirefrae using ExcaliDraw: an overview of our project
+
+https://excalidraw.com/#json=MheOsMx2CfYJdYKYbArXQ,yGSFsWsYi_GSwhm0Vs1thg
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

@@ -1,22 +1,9 @@
-
-
+import React from "react";
+import Link from "next/link";
+import styles from "@/styles/Home.module.css";
 function NavigationBar() {
   return (
-    //     <>
-    //       <div className="nav-class">
-    //         <Link href="/">Home</Link>
 
-    //         <Link href="/about">About</Link>
-    //         <Link href="/contact">Contact</Link>
-    //         <Link href="/flights">DepartingFlights</Link>
-    //         <Link href="/flights">ArrivingFlight</Link>
-    //         <Link href="/training">Training</Link>
-    //         <Link href="/users">Users</Link>
-    //         <Link href="/checkout">checkout</Link>
-    //       </div>
-    //     </>
-    //   );
-    // }
 
     <nav className="sticky bg-[#f0e7db] shadow-lg">
       <div className="max-w-6xl mx-auto px-4">
@@ -141,13 +128,6 @@ function NavigationBar() {
           </li>
         </ul>
       </div>
-      <Script id="show-responsive-menu" strategy="lazyOnload">
-        {`const btn = document.querySelector("button.mobile-menu-button");
-            const menu = document.querySelector(".mobile-menu");
-            btn.addEventListener("click", () => {
-                menu.classList.toggle("hidden");
-            });`}
-      </Script>
     </nav>
   );
 }

@@ -16,9 +16,64 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1>Hello world welcome to Star Bound</h1>
+        <div>
+          <h1> All Users</h1>
+          <div class="card">
+            <h4>UserName:{"John Doe"}</h4>
+            <p>User Phone: {"123456786"}</p>
+          </div>
+          <div className="card">
+            <h4>UserName:{"Jane Doe"}</h4>
+            <p>User Phone: {"123456786"}</p>
+          </div>
+          <div class="card">
+            <h4>UserName:{"Joe camaro"}</h4>
+            <p>User Phone: {"123456786"}</p>
+          </div>
+        </div>
+        <div className="destinations">
+          <h1> Destinations</h1>
+          <div class="destination-card">
+            <img src={".."} className="product-img" />
+            <h4>
+              <Link href="/jupitor">{"Jupitor"}</Link>
+            </h4>
+            <p>info about destination</p>
+          </div>
+          <div class="destination-card">
+            <img src={".."} className="product-img" />
+            <h4>
+              <Link href="/mars">{"Mars"}</Link>
+            </h4>
+            <p>info about destination</p>
+          </div>
+          <div class="destination-card">
+            <img src={".."} className="product-img" />
+            <h4>
+              <Link href="/neptune">{"Neptune"}</Link>
+            </h4>
+            <p>info about destination</p>
+          </div>
+        </div>
+        <div className="depating-soon">
+          <h4> Flights departing soon</h4>
+          <div class="flight-card-left">
+            <h5> Mars</h5>
+            <p>Flight time: 14:20pm</p>
+            <p>Flight Date: 04-07-2023</p>
+            <p>Flight Origon: space-X, california</p>
+          </div>
+          <div class="flight-card-right">
+            <h5> Neptune</h5>
+            <p>Flight time: 14:20pm</p>
+            <p>Flight Date: 04-07-2023</p>
+            <p>Flight Origon: space-X, california</p>
+          </div>
+          <button>
+            <Link href="/bookings"> Book your Trip</Link>
+          </button>
+        </div>
       </main>
-  
     </>
   );
 }
