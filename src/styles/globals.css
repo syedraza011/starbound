@@ -15,6 +15,11 @@ a {
   text-decoration: none;
 }
 
+.rocket {
+  height: 60px;
+  width: 60px;
+}
+
 * {
   box-sizing: border-box;
 }
