@@ -1,3 +1,6 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
 .container {
   padding: 0 2rem;
   background-color: #f7f3ee;
@@ -146,3 +149,47 @@
   font-size: large;
   max-width: 700px;
 }
+.form{
+  background-color: rgb(198, 121, 21);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 250px;
+  height: 350px;
+}
+.sizingBox{
+  width: 350px;
+  height: 330px;
+  border-radius: 15px;
+}
+.btnStyle{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(198, 188, 188);
+  border-radius: 15px;
+  border: 5px solid black;
+  margin: 15px;
+  padding: 15px;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnStyle:hover{
+  background-color: rgb(162, 33, 33);
+  color: white;
+ }
+ .boxInput{
+  height: 200px;
+ }
+
+/* boarding pass  */
+
+
+

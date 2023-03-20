@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "@/styles/Home.module.css";
 const Training = () => {
   return (
     <>
@@ -23,14 +24,17 @@ const Training = () => {
           enjoyable, and truly unforgettable experience. So why wait? Contact us
           today to start planning your journey to the stars with Starbound!
         </p>
-        <button>
-          <Link href="/training">{"Prev"}</Link>
+        <button  className={styles.btnStyle} >
+         <Link href="/training">{"Prev"}</Link>
         </button>
         {/* {setTimeout(function () { */}
-        <button>
-          <Link href="/training">{"Next"}</Link>
+        <button  className={styles.btnStyle} >
+         <Link href="/training">{"Next"}</Link>
         </button>
         {/* }, 5000)} */}
+        <button  className={styles.btnStyle} >
+         <Link href="/payment">{"Payment"}</Link>
+        </button>
       </div>
     </>
   );
