@@ -4,9 +4,18 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
 import Link from "next/link";
+import { useEffect } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+// destructure session and supabase out of the props being passed into the function
+export default function Home({ session, supabase }) {
+
+  const [loggedIn, setLoggedIn] = useState(false);
+  useEffect(() => {
+    // !! will turn session into a boolean and check to see if it has any data inside it
+    setLoggedIn(!!session)
+  // look for variables inside the function that could change
+  }, [session]);
   return (
     <>
       <Head>
@@ -17,6 +26,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        {/* If loggedIn is true, return text that says user is logged in, else return a log in button */}
+        {loggedIn ? <span>Welcome, ${user}</span> : <button label="Login"></button>}
         <div className={styles.users}>
           <h1> All Users</h1>
           <div class="card">

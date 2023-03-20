@@ -5,9 +5,10 @@ import Footer from "/components/Footer";
 import "../styles/globals.css";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
-// import supabase from "./supabase";
+import useSupabase from '../utils/useSupabase';
 
 function MyApp({ Component, pageProps }) {
+  const { session, supabase } = useSupabase()
   return (
     <>
       <Head>
@@ -18,7 +19,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <NavigationBar />
-      <Component {...pageProps} />
+      <Component session={session} supabase={supabase} {...pageProps} />
       <Footer />
       {/* <footer className={styles.footer}>
         <a
@@ -34,6 +35,6 @@ function MyApp({ Component, pageProps }) {
       </footer> */}
     </>
   );
-}
+};
 
 export default MyApp;
