@@ -2,13 +2,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from '@/styles/Destinations.module.css';
-import mer from '../styles/assets/mercury/Mercury_in_true_color.jpg'
-import ven from '../styles/assets/venus/Venus_2_Approach_Image.jpg'
-import mar from '../styles/assets/mars/Tharsis_and_Valles_Marineris_-_Mars_Orbiter_Mission_(30055660701).png'
-import jup from '../styles/assets/jupiter/Jupiter_New_Horizons.jpg'
-import sat from '../styles/assets/saturn/Saturn_during_Equinox.jpg'
-import nep from '../styles/assets/neptune/Neptune_-_Voyager_2_(29347980845)_flatten_crop.jpg'
-import ura from '../styles/assets/uranus/uranusPic.jpg'
+import mer from '../styles/assets/planets/mercury.jpg'
+import ven from '../styles/assets/planets/venus.jpg'
+import mar from '../styles/assets/planets/mars.png'
+import jup from '../styles/assets/planets/jupiter.jpg'
+import sat from '../styles/assets/planets/saturn.jpg'
+import nep from '../styles/assets/planets/neptune.jpg'
+import ura from '../styles/assets/planets/uranus.jpg'
 
 const Destinations = () => {
   return (
