@@ -2,10 +2,20 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
+
 import Link from "next/link";
+import { useEffect } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+// destructure session and supabase out of the props being passed into the function
+export default function Home({ session, supabase }) {
+
+  const [loggedIn, setLoggedIn] = useState(false);
+  useEffect(() => {
+    // !! will turn session into a boolean and check to see if it has any data inside it
+    setLoggedIn(!!session)
+  // look for variables inside the function that could change
+  }, [session]);
   return (
     <>
       <Head>
@@ -16,7 +26,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div>
+        {/* If loggedIn is true, return text that says user is logged in, else return a log in button */}
+        {loggedIn ? <span>Welcome, ${user}</span> : <button label="Login"></button>}
+        <div className={styles.users}>
           <h1> All Users</h1>
           <div class="card">
             <h4>UserName:{"John Doe"}</h4>
@@ -31,7 +43,7 @@ export default function Home() {
             <p>User Phone: {"123456786"}</p>
           </div>
         </div>
-        <div className="destinations">
+        <div className={styles.destination}>
           <h1> Destinations</h1>
           <div class="destination-card">
             <img src={".."} className="product-img" />
@@ -55,7 +67,7 @@ export default function Home() {
             <p>info about destination</p>
           </div>
         </div>
-        <div className="depating-soon">
+        <div className={styles.departingSoon}>
           <h4> Flights departing soon</h4>
           <div class="flight-card-left">
             <h5> Mars</h5>
