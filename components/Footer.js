@@ -1,91 +1,105 @@
 import React from "react";
 import Link from "next/link";
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 
-const Footer = () => {
+function Footer() {
   return (
-    <footer className="footer">
-      <div className="container">
-        <div className="row">
-          <div className="top">
-            <footer></footer>
-            <h3>
-              <Link href="/about" About Us>
-                About Us
-              </Link>
-            </h3>
-          </div>
-          <div className="both">
-            <div className="left">
-              <h3>Social Media</h3>
-              <ul className="list-unstyled">
-                <li>
-                  <a href="https://vanlifecustoms.com">Youtube</a>
-                </li>
-                <li>
-                  <a href="https://www.contravans.com/camper-van-repair-services">
-                    facebook
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.contravans.com/camper-van-repair-services">
-                    Twitter
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.travellers-autobarnrv.com/car-deals-and-campervan-specials">
-                    instagram
-                  </a>
-                </li>
-              </ul>
+    <>
+      <div
+        id="footer"
+        className="bg-gray-400 h-1/2 w-full flex md:flex-row flex-col justify-around items-start p-20"
+      >
+        <div className="p-5 ">
+          <ul>
+            <p className="text-gray-800 font-bold text-3xl pb-6">
+              STAR<span className="text-blue-600">BOUND💫</span>
+            </p>
+            <div className="flex gap-6 pb-5">
+              <FaInstagram className="text-2xl cursor-pointer hover:text-purple-600" />
+              <FaTwitter className="text-2xl cursor-pointer hover:text-blue-600" />
+              <FaLinkedin className="text-2xl cursor-pointer hover:text-blue-600" />
+              <FaYoutube className="text-2xl cursor-pointer hover:text-red-600" />
             </div>
-            <div className="right">
-              <h3>Contact Us</h3>
-              <ul className="list-unstyled">
-                <li>
-                  <a href="https://www.google.com/maps/dir//Legacy+West,+5908+Headquarters+Dr,+Plano,+TX+75024/@33.0810585,-96.8613826,13z/data=!3m1!5s0x864c3cb9ef318e9d:0x41ee042d076131ae!4m8!4m7!1m0!1m5!1m1!1s0x864c3cb3b7db18f1:0xd61719f6b7b65199!2m2!1d-96.8263461!2d33.0810576">
-                    🏠 5908 Headquarters Dr, Plano, TX 75024
-                  </a>
-                </li>
-                <li>
-                  <a href="https://voice.google.com/u/0/about">
-                    📱800-480-1111
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          </ul>
         </div>
-        <div className="row">
-          <div className="bottom">
-            <div className="social-icons">
-              <a href="https://www.linkedin.com">
-                <i className="fa fa-linkedin"></i>
-              </a>
-              <a href="https://www.facebook.com">
-                <i className="fa fa-facebook"></i>
-              </a>
-              <a href="https://twitter.com">
-                <i className="fa fa-twitter"></i>
-              </a>
-              <a href="https://www.instagram.com">
-                <i className="fa fa-instagram"></i>
-              </a>
-              <a href="https://www.youtube.com/">
-                <i className="fa fa-youtube"></i>
-              </a>
-              <a href="https://www.pinterest.com/">
-                <i className="fa fa-pinterest"></i>
-              </a>
-              <div className="col-md-12">
-                <p>&copy;Starbound 2023</p>
-                <p>All right reserved</p>
-              </div>
-            </div>
-          </div>
+        <div className="p-5">
+          <ul>
+            <p className="text-gray-800 font-bold text-2xl pb-4">Providers</p>
+            <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+              <Link href="https://www.spacex.com/">SpaceX</Link>
+            </li>
+            <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+              <Link href="https://www.blueorigin.com/">Blue Origin</Link>
+            </li>
+            <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+              <Link href="https://www.virgingalactic.com/">
+                Virgin Galactic
+              </Link>
+            </li>
+            <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+              <Link href="https://www.nasa.gov/">NASA</Link>
+            </li>
+          </ul>
+        </div>
+        <div className="p-5">
+          <ul>
+            <p className="text-gray-800 font-bold text-2xl pb-4">Company</p>
+            <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+              <Link href="/src/pages/about.js">About</Link>
+            </li>
+            <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+              <Link href="/src/pages/store.js">Store</Link>
+            </li>
+            <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+              <Link href="/src/pages/career.js">Careers</Link>
+            </li>
+            <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+              <Link href="/src/pages/newsletter.js">Newsletter</Link>
+            </li>
+          </ul>
+        </div>
+        <div className="p-5">
+          <ul>
+            <p className="text-gray-800 font-bold text-2xl pb-4">Support</p>
+            <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+              <Link href="/src/pages/contact.js">Contact</Link>
+            </li>
+            <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+              <Link href="/src/pages/chat.js">Starbound Chat</Link>
+            </li>
+            <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+              <Link href="/src/pages/podcast.js">Podcast</Link>
+            </li>
+            <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+              <Link href="https://stellarium-web.org/">Study Space</Link>
+            </li>
+            <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+              <Link href="https://www.youtube.com/watch?v=kXUnJ61KxRE&t=17s">
+                Ambience
+              </Link>
+            </li>
+            <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+              <Link href="https://www.space.com/">News</Link>
+            </li>
+          </ul>
         </div>
       </div>
-    </footer>
+      <div
+        id="copyright"
+        className="flex flex-col justify-center items-center text-center bg-gray-400"
+      >
+        <h1 className=" text-gray-800 font-semibold cursor-pointer">
+          © 2023 All rights reserved {""}
+          <span className="hover:text-blue-600 font-semibold cursor-pointer">
+            STARBOUND💫{" "}
+          </span>
+        </h1>
+      </div>
+    </>
   );
-};
+}
 
 export default Footer;
