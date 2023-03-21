@@ -1,0 +1,14 @@
+.abtUsBox {
+    margin: 25px;
+    padding: 25px;
+    /* display: inline-block; */
+    justify-content: space-between;
+
+}
+
+.abtUsInBox {
+    border: solid silver 5px;
+    color: black;
+    text-align: center;
+    display: inline-block;
+}
