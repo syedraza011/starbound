@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
 function NavigationBar() {
@@ -8,85 +9,85 @@ function NavigationBar() {
           <div className="flex space-x-2">
             <div>
               {/* Website Logo */}
-              <div href="/" className="companyLogo">
+              <a href="/" className="companyLogo">
                 <img src="rocketlogo.png" alt="Logo" className="rocket" />
-              </div>
+              </a>
             </div>
             {/* Primary Navbar items */}
             <div className="hidden md:flex items-center space-x-1">
-              <div
+              <a
                 href="/"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 Home
-              </div>
-              <div
+              </a>
+              <a
                 href="/about"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 About
-              </div>
-              <div
+              </a>
+              <a
                 href="/flights"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 Flights
-              </div>
+              </a>
 
-              <div
+              <a
                 href="/destinations"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 Destinations
-              </div>
+              </a>
 
-              <div
+              <a
                 href="/training"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 Training
-              </div>
+              </a>
 
-              <div
+              <a
                 href="/store"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 Store
-              </div>
-              <div
+              </a>
+              <a
                 href="/contact"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 Contact
-              </div>
-              <div
+              </a>
+              <a
                 href="/checkout"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 Checkout
-              </div>
-              <div
+              </a>
+              <a
                 href="/user"
                 className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
               >
                 Users
-              </div>
+              </a>
             </div>
           </div>
           {/* Secondary Navbar items */}
           <div className="hidden md:flex items-center space-x-3 ">
-            <div
+            <a
               href="/login"
               className="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300"
             >
               Log In
-            </div>
-            <div
+            </a>
+            <a
               href="/register"
               className="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300"
             >
               Register
-            </div>
+            </a>
           </div>
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
@@ -111,39 +112,31 @@ function NavigationBar() {
       <div className="hidden mobile-menu">
         <ul className="">
           <li>
-            <div
+            <a
               href="/services"
               className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
             >
               Serviçes
-            </div>
+            </a>
           </li>
           <li>
-            <div
+            <a
               href="/about"
               className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
             >
               About
-            </div>
+            </a>
           </li>
           <li>
-            <div
+            <a
               href="/contacts"
               className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
             >
               Contact
-            </div>
+            </a>
           </li>
         </ul>
       </div>
-      {/* <Script id="show-responsive-menu" strategy="lazyOnload">
-        {`const btn = document.querySelector("button.mobile-menu-button");
-            const menu = document.querySelector(".mobile-menu");
-
-            btn.addEventListener("click", () => {
-                menu.classList.toggle("hidden");
-            });`}
-      </Script> */}
     </nav>
   );
 }
