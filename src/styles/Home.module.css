@@ -1,7 +1,41 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-.container {
+.indexBox {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.welcBox {
+  margin: 15px;
+  padding: 15px;
+  border: solid silver 5px;
+  font-size: large;
+  /* display: inline-block; */
+  width: fit-content;
+  block-size: fit-content;
+  text-align: center;
+
+  /* justify-content: center; */
+  /* position: relative; */
+}
+
+.graphicBox {
+  margin: 15px;
+  padding: 15px;
+  border: solid silver 5px;
+  display: inline-block;
+  /* position: relative; */
+}
+
+.outFlightBox {
+  margin: 15px;
+  padding: 15px;
+  border: solid silver 5px;
+  display: inline-block;
+}
+
+
+
+/* .container {
   padding: 0 2rem;
   background-color: #f7f3ee;
 }
@@ -128,7 +162,7 @@
     width: 100%;
     flex-direction: column;
   }
-}
+} */
 
 .desPlnts {
   display: flex;

@@ -1,8 +1,7 @@
 .abtUsBox {
     margin: 25px;
     padding: 25px;
-    /* display: inline-block; */
-    justify-content: space-between;
+    display: table;
 
 }
 
@@ -10,5 +9,8 @@
     border: solid silver 5px;
     color: black;
     text-align: center;
-    display: inline-block;
+    width: 40%;
+    padding: 25px;
+    margin: 25px;
+    float: left;
 }
