@@ -3,9 +3,9 @@ import Link from "Next/link";
 import styles from "@/styles/Home.module.css";
 const Users = () => {
   return (
-    <>
+    <div>
       <h1>Users page</h1>
-
+    <div>
     <form>
       <div className="grid gap-6 sm:grid-cols-2">
         <div className="relative z-0">
@@ -26,9 +26,6 @@ const Users = () => {
   </div>
 </div>
 
-
-
-</>
   );
 };
 export default Users;

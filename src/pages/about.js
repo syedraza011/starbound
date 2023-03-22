@@ -1,9 +1,9 @@
 import react from "react";
 import Link from "next/link";
-const About = () => {
+const about = () => {
   return (
     <>
-      <h1>About page</h1>
+      <h1>about page</h1>
       <div>
         <p>
           Welcome to Starbound, the premier space tourism company for those
@@ -28,4 +28,4 @@ const About = () => {
     </>
   );
 };
-export default About;
+export default about;

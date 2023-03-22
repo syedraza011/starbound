@@ -6,7 +6,7 @@
   background-color: #f7f3ee;
 }
 .users{
-  background-color: darkred;
+  background-color: rgb(162, 158, 158);
 }
 .destination{
   background-color: aquamarine;
@@ -20,7 +20,7 @@
   justify-content: center;
   align-items: center;
   background-color: rgb(244, 238, 238);
-} */
+} 
 .departing-soon * {
   background-color: aqua;
 }

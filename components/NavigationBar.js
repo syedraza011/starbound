@@ -15,79 +15,84 @@ function NavigationBar() {
             </div>
             {/* Primary Navbar items */}
             <div className="hidden md:flex items-center space-x-1">
-              <div
+              <Link
                 href="/"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 Home
-              </div>
-              <div
+              </Link>
+              <Link
                 href="/about"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 About
-              </div>
-              <div
+              </Link>
+              <a
                 href="/flights"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 Flights
-              </div>
-
-              <div
+              </a>
+              {/* <Link href="/src/pages/flights.js">Podcast</Link> */}
+              <Link
                 href="/destinations"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 Destinations
-              </div>
+              </Link>
 
-              <div
+              <Link
                 href="/training"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 Training
-              </div>
-
-              <div
+              </Link>
+              {/* <Link
+                href="/flight"
+                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
+              >
+                n_Flight
+              </Link> */}
+              <Link
                 href="/store"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 Store
-              </div>
-              <div
+              </Link>
+              <Link
                 href="/contact"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 Contact
-              </div>
-              <div
+              </Link>
+              <Link
                 href="/checkout"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 Checkout
-              </div>
-              <div
-                href="/user"
+              </Link>
+              <Link
+                href="/users"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 Users
-              </div>
+              </Link>
             </div>
           </div>
           {/* Secondary Navbar items */}
           <div className="hidden md:flex items-center space-x-3 ">
-            <div
+            <Link
               href="/login"
               className="py-2 px-2 font-medium text-white bg-blue-600 rounded hover:bg-blue-800 transition duration-300"
             >
               Log In
-            </div>
-            <div
+            </Link>
+            <Link
               href="/register"
               className="py-2 px-2 font-medium text-white bg-blue-600 rounded hover:bg-blue-800 transition duration-300"
             >
               Register
-            </div>
+            </Link>
           </div>
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
@@ -124,7 +129,7 @@ function NavigationBar() {
               href="/about"
               className="w-6 h-6 text-blue-600 hover:text-blue-800 "
             >
-              About
+              about
             </div>
           </li>
           <li>
