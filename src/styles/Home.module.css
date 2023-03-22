@@ -40,7 +40,7 @@
   background-color: #f7f3ee;
 }
 .users{
-  background-color: darkred;
+  background-color: rgb(162, 158, 158);
 }
 .destination{
   background-color: aquamarine;
@@ -53,27 +53,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f6eeeeee;
-}
-.departing-soon *{
+  background-color: rgb(244, 238, 238);
+} 
+.departing-soon * {
   background-color: aqua;
 }
 .footer {
   display: flex;
   flex: 1;
   padding: 1rem 0;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid #d63c3c;
   justify-content: center;
   align-items: center;
-  background-color: #444343;
+  background-color: red;
 }
 
-.footer a {
+/* .footer a {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-}
+} */
 
 .title a {
   color: #0070f3;
@@ -106,7 +106,7 @@
   background-color: chocolate;
 }
 .code {
-  background: #fafafa;
+  background: red;
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
@@ -128,7 +128,7 @@
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
+  border: 1px solid red;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
@@ -163,4 +163,67 @@
     flex-direction: column;
   }
 } */
+
+.desPlnts {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+}
+
+.desPlnts > * {
+  border: solid silver 5px;
+  color: black;
+  /* justify-content: space-between; */
+
+}
+
+.desPlntsText {
+  font-size: large;
+  max-width: 700px;
+}
+.form{
+  background-color: rgb(198, 121, 21);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 250px;
+  height: 350px;
+}
+.sizingBox{
+  width: 350px;
+  height: 330px;
+  border-radius: 15px;
+}
+.btnStyle{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(198, 188, 188);
+  border-radius: 15px;
+  border: 5px solid black;
+  margin: 15px;
+  padding: 15px;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnStyle:hover{
+  background-color: rgb(162, 33, 33);
+  color: white;
+ }
+ .boxInput{
+  height: 200px;
+ }
+
+/* boarding pass  */
+
+
 

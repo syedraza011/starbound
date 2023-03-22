@@ -15,9 +15,14 @@ a {
   text-decoration: none;
 }
 
-.rocket {
+/* .rocket {
   height: 60px;
   width: 60px;
+} */
+
+#copyright {
+  text-align: center;
+  position: bottom;
 }
 
 * {
