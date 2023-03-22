@@ -4,7 +4,6 @@ import styles from '@/styles/AboutUs.module.css'
 const AboutUs = () => {
   return (
     <>
-    <Link href="/">Home page</Link>
     <h1>About Us</h1>
     <div className={styles.abtUsBox}>
       <div className={styles.abtUsInBox} >

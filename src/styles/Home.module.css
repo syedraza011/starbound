@@ -1,4 +1,29 @@
-.container {
+.homeBox {
+  margin: 15px;
+  padding: 15px;
+  border: solid silver 5px;
+  font-size: large;
+  display: inline-block;
+  position: relative;
+}
+
+.graphicBox {
+  margin: 15px;
+  padding: 15px;
+  border: solid silver 5px;
+  display: inline-block;
+}
+
+.outFlightBox {
+  margin: 15px;
+  padding: 15px;
+  border: solid silver 5px;
+  display: inline-block;
+}
+
+
+
+/* .container {
   padding: 0 2rem;
   background-color: #f7f3ee;
 }
@@ -125,5 +150,5 @@
     width: 100%;
     flex-direction: column;
   }
-}
+} */
 
