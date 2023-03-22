@@ -9,18 +9,18 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-    <div>
-      <div className={styles.homeBox}>
-      <h1>WELCOME TO STARBOUND</h1>
-      <h2>placeHolderText</h2>
-      <h2>placeHolderText</h2>
-    </div>
-    <div className={styles.graphicBox}>
-      <h1>Graphics box</h1>
-    </div>
-    <div className={styles.outFlightBox}>
-      <h1>Out Flight Box</h1>
-    </div>
+    <div className={styles.indexBox}>
+      <div className={styles.welcBox}>
+        <h1>WELCOME TO STARBOUND</h1>
+        <h2>placeHolderText</h2>
+        <h2>placeHolderText</h2>
+      </div>
+      <div className={styles.graphicBox}>
+        <h1>Graphics box</h1>
+      </div>
+      <div className={styles.outFlightBox}>
+        <h1>Out Flight Box</h1>
+      </div>
     </div>
     
 
