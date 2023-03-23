@@ -1,23 +1,28 @@
-.abtUsBox {
+.flightsBox {
     margin: 20px;
     padding: 20px;
-    display: table;
-}
-
-.abtUsInBox {
     border: solid whitesmoke 5px;
     color: 	#2F4F4F;
-    text-align: center;
-    width: 40%;
-    padding: 25px;
-    margin: 25px;
-    float: left;
     transition-property: background color;
     transition-duration: 2s;
     transition-timing-function: linear;
+    font-size: x-large;
 }
 
-.abtUsInBox:hover {
+.textBox {
+    margin: 5px;
+    padding: 5px;
+}
+
+.btnBox {
+    margin: 5px;
+    padding: 5px;
+    border: solid silver 5px;
+    color: black;
+    display: inline;
+}
+
+.flightsBox:hover {
     background-color: darkgray;
     color: yellow;
   }

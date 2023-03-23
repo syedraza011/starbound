@@ -2,6 +2,14 @@
     margin: 25px;
     padding: 25px;
     font-size: large;
-    border: solid silver 5px;
-    color: black;
+    border: solid whitesmoke 5px;
+    color: 	#2F4F4F;
+    transition-property: background color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
 }
+
+.abtBox:hover {
+    background-color: darkgray;
+    color: yellow;
+  }

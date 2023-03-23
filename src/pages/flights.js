@@ -1,8 +1,9 @@
 import react from "react";
 import Link from "next/link";
 import supabase from "../../supabase";
-import FlightCard from "./flightCard";
+// import FlightCard from "./flightCard";
 import styles from "@/styles/Home.module.css";
+import robStyles from "@/styles/Flights.module.css";
 import { useEffect, useState } from "react";
 const Flights = () => {
   // function handleSubmit=(e)=>{
@@ -31,8 +32,9 @@ const Flights = () => {
   }, []);
 
   return (
-    <div>
-      <p>
+    <>
+    <div className={robStyles.flightsBox} >
+      <p className={robStyles.textBox} >
         Welcome to Starbound Flights, the premier space tourism company for
         those seeking a truly out-of-this-world experience. Our mission is to
         make space travel accessible and safe for everyone, so that you can
@@ -51,18 +53,22 @@ const Flights = () => {
         truly unforgettable experience. So why wait? Contact us today to start
         planning your journey to the stars with Starbound!
       </p>
-      <div>
+      <div className={robStyles.btnBox} >
         <button className={styles.btnstyle}>Add a new flight</button>
       </div>
       {fetchError && <p>{fetchError}</p>}
       {flights && (
         <div className="flights">
-          {flights.map((flight) => (
+          {/* {flights.map((flight) => (
             <FlightCard key={flight.id} flight={flight} />
-          ))}
+          ))} */}
         </div>
       )}
     </div>
+    <div class="main"></div>
+    </>
+    
+    
   );
 };
 

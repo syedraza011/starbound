@@ -42,7 +42,8 @@ const About = () => {
           Wanna Meet the Founders? <Link href='/aboutus' ><br></br>CLICK HERE</Link>
         </p>
       </div>
+      <div class="main"></div>
     </>
   );
 };
-export default about;
+export default About;
