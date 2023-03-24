@@ -1,5 +1,7 @@
 import Link from "next/link";
-import styles from '@/styles/About.module.css'
+import styles from '@/styles/robsStyles/About.module.css'
+import { BsFillRocketTakeoffFill } from 'react-icons/bs'
+
 
 const About = () => {
   return (
@@ -38,11 +40,18 @@ const About = () => {
           today to start planning your journey to the stars with Starbound!
         </p>
         <br></br>
-        <p>
-          Wanna Meet the Founders? <Link href='/aboutus' ><br></br>CLICK HERE</Link>
-        </p>
+        <div className={styles.abtBttnBox}>
+          <Link href='/aboutus' >
+            <p>
+              Meet the Founders Click Here? <BsFillRocketTakeoffFill /> 
+            </p>
+          </Link>
+        </div>
       </div>
+
+      
+      <div class="main"></div>
     </>
   );
 };
-export default about;
+export default About;

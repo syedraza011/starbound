@@ -1,7 +1,7 @@
  import react from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "@/styles/Destinations.module.css";
+import styles from "@/styles/robsStyles/Destinations.module.css";
 import mer from "../styles/assets/planets/mercury.jpg";
 import ven from "../styles/assets/planets/venus.jpg";
 import mar from "../styles/assets/planets/mars.png";
@@ -213,6 +213,7 @@ const Destinations = () => {
           <Image src={nep} height="500" width="500" />
         </div>
       </div>
+      <div class="main"></div>
     </>
   );
 };
