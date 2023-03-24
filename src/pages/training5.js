@@ -3,39 +3,38 @@ import robStyles from "@/styles/Training.module.css"
 import Link from "next/link";
 
 
-const Training2 = () => {
+const Training5 = () => {
   return (
     <>
     <div className={robStyles.trainBox}>
-        <h1 className={robStyles.trainHeadBox}>PRE-FIGHT TRAINING</h1>
+    <h1 className={robStyles.trainHeadBox}>PRE-FIGHT TRAINING</h1>
 
       <div className={robStyles.trainingBox} >
-        <h1>TRAINING PAGE 2</h1>
+        <h1>TRAINING PAGE 5</h1>
         <div>
-          training game to test customer hearing
+          training game to test customer compliance
         </div>
         <div>
           <button  className={styles.btnStyle} >
-            <Link href="/training">{"Prev"}</Link>
+            <Link href="/training4">{"Prev"}</Link>
           </button>
 
           {/* {setTimeout(function () { */}
 
-          <button  className={styles.btnStyle} >
-            <Link href="/training3">{"Next"}</Link>
-          </button>
+          {/* <button  className={styles.btnStyle} >
+            <Link href="/training">{"Next"}</Link>
+          </button> */}
 
           {/* }, 5000)} */}
 
-          {/* <button  className={styles.btnStyle} >
+          <button  className={styles.btnStyle} >
             <Link href="/payment">{"Payment"}</Link>
-          </button> */}
+          </button>
         </div>
       </div>
-      </div>
-     
-      <div class="main"></div>
+    </div>
+    <div class="main"></div>
     </>
   );
 };
-export default Training2;
+export default Training5;

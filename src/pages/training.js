@@ -11,7 +11,7 @@ const Training = () => {
       <div className={robStyles.trainingBox}  >
         <h1>TRAINING PAGE 1</h1>
         <div>
-          training content
+          training game to test customer vision
         </div>
         <div>
           {/* <button  className={styles.btnStyle} >

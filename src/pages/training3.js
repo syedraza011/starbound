@@ -10,9 +10,9 @@ const Training3 = () => {
     <h1 className={robStyles.trainHeadBox}>PRE-FIGHT TRAINING</h1>
 
       <div className={robStyles.trainingBox} >
-        <h1>PAGE 3</h1>
+        <h1>TRAINING PAGE 3</h1>
         <div>
-          training content
+          training game to test customer coordination
         </div>
         <div>
           <button  className={styles.btnStyle} >
@@ -21,15 +21,15 @@ const Training3 = () => {
 
           {/* {setTimeout(function () { */}
 
-          {/* <button  className={styles.btnStyle} >
-            <Link href="/training">{"Next"}</Link>
-          </button> */}
+          <button  className={styles.btnStyle} >
+            <Link href="/training4">{"Next"}</Link>
+          </button>
 
           {/* }, 5000)} */}
 
-          <button  className={styles.btnStyle} >
+          {/* <button  className={styles.btnStyle} >
             <Link href="/payment">{"Payment"}</Link>
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
