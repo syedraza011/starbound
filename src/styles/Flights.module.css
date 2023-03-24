@@ -18,11 +18,19 @@
     margin: 5px;
     padding: 5px;
     border: solid silver 5px;
-    color: black;
+    color: silver;
     display: inline;
+    transition-property: background color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
 }
 
 .flightsBox:hover {
-    background-color: darkgray;
-    color: yellow;
+    /* background-color: darkgray; */
+    color: silver;
   }
+
+.btnBox:hover {
+    background-color: blue;
+    color: silver;
+}

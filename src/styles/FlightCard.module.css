@@ -9,6 +9,6 @@
 }
 
 .flightCardBox:hover {
-    background-color: darkgray;
-    color: yellow;
+    /* background-color: darkgray; */
+    color: silver;
   }

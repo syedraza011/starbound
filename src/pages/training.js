@@ -1,10 +1,38 @@
-import Link from "next/link";
 import styles from "@/styles/Home.module.css";
+import robStyles from "@/styles/Training.module.css"
+import Link from "next/link";
+
+
 const Training = () => {
   return (
     <>
-      <h1>Training page</h1>
-      <div>
+    <div className={robStyles.trainBox}>
+      <h1 className={robStyles.trainHeadBox}>PRE-FIGHT TRAINING</h1>
+      <div className={robStyles.trainingBox}  >
+        <h1>TRAINING PAGE 1</h1>
+        <div>
+          training content
+        </div>
+        <div>
+          {/* <button  className={styles.btnStyle} >
+            <Link href="/training">{"Prev"}</Link>
+          </button> */}
+
+          {/* {setTimeout(function () { */}
+
+          <button  className={styles.btnStyle} >
+            <Link href="/training2">{"Next"}</Link>
+          </button>
+
+          {/* }, 5000)} */}
+
+          {/* <button  className={styles.btnStyle} >
+            <Link href="/payment">{"Payment"}</Link>
+          </button> */}
+        </div>
+      </div>
+      
+      {/* <div>
         <p>
           Welcome to Starbound, the premier space tourism company for those
           seeking a truly out-of-this-world experience. Our mission is to make
@@ -23,19 +51,27 @@ const Training = () => {
           to your actual space flight, to ensure that you have a safe,
           enjoyable, and truly unforgettable experience. So why wait? Contact us
           today to start planning your journey to the stars with Starbound!
-        </p>
-        <button  className={styles.btnStyle} >
+        </p> */}
+
+        {/* <button  className={styles.btnStyle} >
          <Link href="/training">{"Prev"}</Link>
-        </button>
+        </button> */}
+
         {/* {setTimeout(function () { */}
-        <button  className={styles.btnStyle} >
+
+        {/* <button  className={styles.btnStyle} >
          <Link href="/training">{"Next"}</Link>
-        </button>
+        </button> */}
+
         {/* }, 5000)} */}
-        <button  className={styles.btnStyle} >
+
+        {/* <button  className={styles.btnStyle} >
          <Link href="/payment">{"Payment"}</Link>
-        </button>
+        </button> */}
+
+      {/* </div> */}
       </div>
+      <div class="main"></div>
     </>
   );
 };

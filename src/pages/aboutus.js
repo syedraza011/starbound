@@ -4,9 +4,10 @@ import styles from "@/styles/AboutUs.module.css";
 const aboutUs = () => {
   return (
     <>
-    <h1>About Us</h1>
+   
 
     <div className={styles.abtUsBox}>
+      <h1 className={styles.abtUsHeadBox} >MEET THE FOUNDERS</h1>
 
       <div className={styles.abtUsInBox} >
         <h2>Angeles R.</h2>

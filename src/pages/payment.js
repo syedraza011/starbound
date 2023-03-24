@@ -1,39 +1,40 @@
-import react from "react";
 import styles from "@/styles/Home.module.css";
+import robStlyes from '@/styles/Payment.module.css'
 import Link from "next/link";
+
+
 const Payment = () => {
   return (
     <>
-      <div>payment</div>
+    {/* <div className={robStlyes.pmntBox} > */}
+      
 
-      <form>
-        <div class="card-details">
-          <p>Pay using Credit or Debit card</p>
-
-          <div class="card-number">
-            <label> Card Number </label>
+      <form className={robStlyes.pmntBox} >
+        <h1 className={robStlyes.pmntHeadBox} >PAYMENT</h1>
+        {/* <div> */}
+          {/* <p>Pay using Credit or Debit card</p> */}
+          <div className={robStlyes.crdDtlBox} >
+            <label> CARD NUMBER </label>
             <input
               type="text"
               class="card-number-field"
               placeholder="###-###-###"
             />
           </div>
-          <br />
-          <div class="date-number">
-            <label> Expiry Date </label>
+          <div className={robStlyes.crdDtlBox}>
+            <label> EXPIRATION DATE </label>
             <input
               type="text"
               class="date-number-field"
               placeholder="DD-MM-YY"
             />
           </div>
-
-          <div class="cvv-number">
-            <label> CVV number </label>
+          <div className={robStlyes.crdDtlBox}>
+            <label> CVV NUMBER </label>
             <input type="text" class="cvv-number-field" placeholder="xxx" />
           </div>
-          <div class="nameholder-number">
-            <label> Card Holder name </label>
+          <div className={robStlyes.crdDtlBox}>
+            <label> CARD HOLDER NAME </label>
             <input
               type="text"
               class="card-name-field"
@@ -41,10 +42,12 @@ const Payment = () => {
             />
           </div>
           <button type="submit" className={styles.btnStyle}>
-            <Link href="/bpass"> {"Boarding pass"}</Link>
+            <Link href="/bpass"> {"BOARDING PASS"}</Link>
           </button>
-        </div>
+        {/* </div> */}
       </form>
+    {/* </div> */}
+    <div class="main"></div>
     </>
   );
 };

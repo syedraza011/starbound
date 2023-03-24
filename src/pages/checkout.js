@@ -2,6 +2,7 @@ import react from "react";
 // import Link from "Next/link";
 import styles from "@/styles/Home.module.css";
 import robStyles from '@/styles/Checkout.module.css'
+import { BsFillRocketTakeoffFill } from 'react-icons/bs'
 
 const Checkout = () => {
   return (
@@ -87,7 +88,7 @@ const Checkout = () => {
             </li>
             <div className={robStyles.btnBox} >
               <button className={styles.btnStyle} type="submit" >
-              Book my Flight
+              Book my Flight <  BsFillRocketTakeoffFill />
             </button>
             {/* <button className={styles.btnStyle} type="submit" >
               Cancel

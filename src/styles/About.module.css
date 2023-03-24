@@ -10,6 +10,23 @@
 }
 
 .abtBox:hover {
-    background-color: darkgray;
-    color: yellow;
+    /* background-color: black; */
+    color: silver;
+    /* background-color: blue; */
   }
+
+.abtBttnBox {
+    margin: 10px;
+    padding: 10px;
+    border: solid whitesmoke 5px;
+    color: 	#2F4F4F;
+    display: inline-block;
+    transition-property: background ;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+
+.abtBttnBox:hover {
+    background-color: blue;
+    color: silver;
+}
