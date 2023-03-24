@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "@/styles/AboutUs.module.css";
+import styles from "@/styles/robsStyles/AboutUs.module.css";
 
 const aboutUs = () => {
   return (

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from '@/styles/About.module.css'
+import styles from '@/styles/robsStyles/About.module.css'
 import { BsFillRocketTakeoffFill } from 'react-icons/bs'
 
 

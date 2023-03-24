@@ -3,7 +3,7 @@ import Link from "next/link";
 import supabase from "../../supabase";
 // import FlightCard from "./flightCard";
 import styles from "@/styles/Home.module.css";
-import robStyles from "@/styles/Flights.module.css";
+import robStyles from "@/styles/robsStyles/Flights.module.css";
 import { useEffect, useState } from "react";
 const Flights = () => {
   // function handleSubmit=(e)=>{

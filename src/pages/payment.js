@@ -1,5 +1,5 @@
 import styles from "@/styles/Home.module.css";
-import robStlyes from '@/styles/Payment.module.css'
+import robStlyes from '@/styles/robsStyles/Payment.module.css'
 import Link from "next/link";
 
 

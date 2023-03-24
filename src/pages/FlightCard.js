@@ -1,7 +1,8 @@
 import styles from "@/styles/Home.module.css";
-import robStyles from '@/styles/FlightCard.module.css'
+import robStyles from '@/styles/robsStyles/FlightCard.module.css'
 import { AiFillEdit } from 'react-icons/ai'
 import Link from "next/link";
+
 const FlightCard = ( flight ) => {
   // flight = this.props;
   const handdleDelete = ((id) => {

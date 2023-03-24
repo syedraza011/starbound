@@ -1,7 +1,7 @@
 import react from "react";
 // import Link from "Next/link";
 import styles from "@/styles/Home.module.css";
-import robStyles from '@/styles/Checkout.module.css'
+import robStyles from '@/styles/robsStyles/Checkout.module.css'
 import { BsFillRocketTakeoffFill } from 'react-icons/bs'
 
 const Checkout = () => {

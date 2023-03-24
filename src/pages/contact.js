@@ -1,6 +1,6 @@
 // import Link from "Next/link";
 import styles from "@/styles/Home.module.css";
-import robvStyles from "@/styles/Contact.module.css";
+import robvStyles from "@/styles/robsStyles/Contact.module.css";
 import { BsFillRocketTakeoffFill } from 'react-icons/bs'
 
 
