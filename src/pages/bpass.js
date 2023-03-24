@@ -5,9 +5,9 @@ export default function boardingpass() {
     <>
       <div>
         boardingpass
-        <div classname={styles.ticket}>
-          <div classname={styles.header}>
-            classname={styles.companyName}
+        <div className={styles.ticket}>
+          <div className={styles.header}>
+            className={styles.companyName}
             {"American Airlines"}
             <div className={styles.gate}> </div>
             <div>Gate</div>

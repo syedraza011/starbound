@@ -9,9 +9,9 @@ function NavigationBar() {
           <div className="flex space-x-20">
             <div>
               {/* Website Logo */}
-              <div href="/" className="companyLogo">
+              <Link href="/" className="companyLogo">
                 <img src="starbound.png" alt="Logo" className="starlogo" />
-              </div>
+              </Link>
             </div>
             {/* Primary Navbar items */}
             <div className="hidden md:flex items-center space-x-1">
@@ -76,6 +76,18 @@ function NavigationBar() {
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 Users
+              </Link>
+              <Link
+                href="/date"
+                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
+              >
+                Date
+              </Link>
+              <Link
+                href="/time"
+                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
+              >
+                time
               </Link>
             </div>
           </div>

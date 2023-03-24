@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "@/styles/robsStyles/AboutUs.module.css";
 
-const aboutUs = () => {
+const AboutUs = () => {
   return (
     <>
    
@@ -89,4 +89,4 @@ const aboutUs = () => {
     </>
   );
 };
-export default aboutUs;
+export default AboutUs;
