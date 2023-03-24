@@ -1,31 +1,58 @@
-import Image from "next/image";
+import react from "react";
 import Link from "next/link";
+import supabase from "../../supabase";
+import ItemCard from "./itemCard";
+import styles from "@/styles/Home.module.css";
+import { useEffect, useState } from "react";
 const Store = () => {
-  return (
-    <>
-      <h1>Store page</h1>
+  console.log(supabase);
+  const [fetchError, setFetchError] = useState(null);
+  const [items, setItems] = useState(null);
+  console.log("Store");
+  // const handleDelete = (id) => {
+  //   setflights((prevFlights) => {
+  //     return prevFlights.filter((flight) => flight.id !== id);
+  //   });
+  // };
 
-      <div className="container">
-        <div className=" border-dotted allitems">
-          <div className=" hover:border-dotted border-blue-500  single-card">
-            {/* <Image
-              fill
-              sizes="(max-width: 768px) 100vw
-                    
-              src="https://cdn.mos.cms.futurecdn.net/QHvQLhnFjrD6RgWgyZSHRn.jpg"
-              alt="item image"
-            /> */}
-            <h2>Item Image</h2>
-            <h3>{"Mercury's Stone"}</h3>
-            <p>item Details</p>
-            <p>Item price</p>
-            <button className="ring-offset-2 ring-2 ring-{width=2px} ">
-              Add item
-            </button>
-          </div>
-        </div>
+  useEffect(() => {
+    const fecthItems = async () => {
+      const { data, error } = await supabase.from("items").select();
+      if (error) {
+        setFetchError("Could not fecth flights data");
+        setItems(null);
+        console.log("Error: ", error);
+      }
+      if (data) {
+        console.log(data);
+        setItems(data);
+        setFetchError(null);
+      }
+    };
+    fecthItems();
+  }, []);
+
+  return (
+    <div>
+      <div>
+        <Link href="/addflight" className={styles.btnStyle}>
+          Sort items
+        </Link>
+        <Link className={styles.btnStyle} href="/AddFlight">
+          Add a new Item
+        </Link>
       </div>
-    </>
+      {fetchError && <p>{fetchError}</p>}
+      {items && (
+        <div className="items">
+          {items.map((item) => (
+            <ItemCard key={item.id} item={item} />
+            // onDelete={handleDelete}
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
+
 export default Store;

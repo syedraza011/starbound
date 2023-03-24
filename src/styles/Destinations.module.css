@@ -17,3 +17,6 @@
     font-size: large;
     max-width: 600px;
   }
+  .card{
+    overflow-wrap: break-word;
+  }

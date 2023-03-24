@@ -1,6 +1,7 @@
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
+@import url("http://cdn.syncfusion.com/ej2/material.css");
 .container {
   padding: 0 2rem;
   background-color: #f7f3ee;
@@ -98,6 +99,8 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  overflow-wrap: break-word;
+
 }
 
 .card:hover,
@@ -105,6 +108,7 @@
 .card:active {
   color: #0070f3;
   border-color: #0070f3;
+  cursor: pointer;
 }
 
 .card h2 {
@@ -188,7 +192,12 @@
  .boxInput{
   height: 200px;
  }
-
+ .carditem:hover{
+  color: red
+ }
+ .companyLogo:hover{
+cursor: pointer;
+ }
 /* boarding pass  */
 
 

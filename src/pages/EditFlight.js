@@ -1,16 +1,15 @@
+import react from "react";
+import Link from "Next/link";
 import { useState } from "react";
 import styles from "@/styles/Home.module.css";
-import DatePicker from "react-datepicker";
-import TimePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import supabase from "../../supabase";
+import flight from "../pages/flightCard";
+import { data } from "autoprefixer";
 
-const AddFlight = () => {
-  const [date, setDate] = useState(null);
-  const [startTime, setStartTime] = useState("");
+const EditFlight = (id) => {
   const [depart, setDeparture] = useState("");
   const [departime, setDepartime] = useState("");
-  const [depardate, setDepardate] = useState(null);
+  const [depardate, setDepardate] = useState("");
   const [arrivetime, setArrivetime] = useState("");
   const [arrivedate, setArrivedate] = useState("");
   const [formError, setFormError] = useState(null);
@@ -20,31 +19,41 @@ const AddFlight = () => {
       setFormError("Please fill out the required fields");
       return;
     }
-    console.log("Company Name:", depart);
-    console.log("depart Time:", departime);
-    console.log("depart depardate:", depardate);
-    console.log("depart arrivetime:", arrivetime);
-    console.log("depart  arrivedate:", arrivedate);
+    console.log(
+      "Hello new obj",
+      depart,
+      departime,
+      depardate,
+      arrivetime,
+      arrivedate
+    );
 
     const { data, error } = await supabase
       .from("flight")
-      .insert([{ depart, departime, depardate, arrivetime, arrivedate }]);
+      .select("depart,departime,depardate,arrivetime,arrivedate");
+    // .eq('id',flight.id)
+    // .single()
     if (error) {
       console.log(error);
       setFormError("Please fill out the required fields");
     }
     if (data) {
-      console.log(data);
+      setDeparture(data.departure);
+      setDepartime(data.departime);
+      setDepardate(data.depardate);
+      setArrivetime(data.arrivetime);
+      setArrivedate(data.arrivedate);
       setFormError(null);
-      navigate("/flights");
     }
   };
 
   return (
     <>
       <div>
-        <h1>Add Flight page</h1>
-        <form className="Form bg-zinc-200" onSubmit={handleSubmit}>
+        <h1>Update Flight Information page</h1>
+
+        <form>
+          {/* <form className="Form bg-zinc-200" onSubmit={handleSubmit}> */}
           <div className="flex justify-center">
             <div className="relative mb-3 xl:w-96" data-te-input-wrapper-init>
               <input
@@ -66,26 +75,14 @@ const AddFlight = () => {
                 Departure Origon
               </label>
               {/* -------------------------------------- */}
-
-              <TimePicker
-                placeholderText="Select Time Slots"
-                selected={departime}
-                onChange={(time) => setDepartime(time)}
-                showTimeSelect
-                isClearable
-                showTimeSelectOnly
-                timeIntervals={15}
-                timeCaption="Time"
-                dateFormat="hh:mm:ss aa"
-              />
-              {/* <input
+              <input
                 type="text"
                 id="departuretime"
                 value={departime}
                 onChange={(e) => setDepartime(e.target.value)}
                 className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 placeholder="Departure time"
-              /> */}
+              />
               <div className="border-red-800">
                 <hr />
               </div>
@@ -96,26 +93,14 @@ const AddFlight = () => {
                 Departure Time
               </label>
               {/* ------------------------------------------------------ */}
-
-              <DatePicker
-                placeholderText="Select Start Date"
-                selected={depardate}
-                onChange={(depardate) => setDepardate(depardate)}
-                dateFormat="yyyy-MM-dd"
-                isClearable
-                showYearDropdown
-                scrollableYearDropdown
-              />
-
-              {/* <input
+              <input
                 type="text"
                 id="departuretime"
                 value={depardate}
                 onChange={(e) => setDepardate(e.target.value)}
                 className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 placeholder="Departure Date"
-              /> */}
-              {/* <Date /> */}
+              />
               <div className="border-red-800">
                 <hr />
               </div>
@@ -126,26 +111,14 @@ const AddFlight = () => {
                 Departure Date
               </label>
 
-              <TimePicker
-                placeholderText="Select Arival Time"
-                selected={arrivetime}
-                onChange={(arrivetime) => setArrivetime(arrivetime)}
-                showTimeSelect
-                isClearable
-                showTimeSelectOnly
-                timeIntervals={15}
-                timeCaption="Time"
-                dateFormat="hh:mm:ss aa"
-              />
-
-              {/* <input
+              <input
                 type="text"
                 id="arrivetime"
                 value={arrivetime}
-               
+                onChange={(e) => setArrivetime(e.target.value)}
                 className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 placeholder="Arrival time"
-              /> */}
+              />
               <div className="border-red-800">
                 <hr />
               </div>
@@ -157,23 +130,15 @@ const AddFlight = () => {
               </label>
 
               {/* ------------------------ */}
-              <DatePicker
-                placeholderText="Select Arrival Date"
-                selected={arrivedate}
-                onChange={(date) => setArrivedate(date)}
-                dateFormat="yyyy-MM-dd"
-                isClearable
-                showYearDropdown
-                scrollableYearDropdown
-              />
-              {/* <input
+
+              <input
                 type="text"
                 id="arrivetime"
                 value={arrivedate}
-                onChange={(e) => setArrivedate(date)}
+                onChange={(e) => setArrivedate(e.target.value)}
                 className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 placeholder="Arrival Date"
-              /> */}
+              />
               <div className="border-red-800">
                 <hr />
               </div>
@@ -184,7 +149,9 @@ const AddFlight = () => {
                 Arrival Date
               </label>
 
-              <button className={styles.btnStyle}>Submit data</button>
+              <button className={styles.btnStyle}>
+                <Link href="/flights">Update data</Link>
+              </button>
             </div>
           </div>
         </form>
@@ -192,4 +159,4 @@ const AddFlight = () => {
     </>
   );
 };
-export default AddFlight;
+export default EditFlight;

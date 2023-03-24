@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "@/styles/aboutUs.module.css";
 
-const aboutUs = () => {
+const AboutUs = () => {
   return (
     <>
       <Link href="/">Home page</Link>
@@ -106,4 +106,4 @@ const aboutUs = () => {
     </>
   );
 };
-export default aboutUs;
+export default AboutUs;

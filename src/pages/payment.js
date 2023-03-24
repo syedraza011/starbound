@@ -7,36 +7,36 @@ const Payment = () => {
       <div>payment</div>
 
       <form>
-        <div class="card-details">
+        <div className="card-details">
           <p>Pay using Credit or Debit card</p>
 
-          <div class="card-number">
+          <div className="card-number">
             <label> Card Number </label>
             <input
               type="text"
-              class="card-number-field"
+              className="card-number-field"
               placeholder="###-###-###"
             />
           </div>
           <br />
-          <div class="date-number">
+          <div className="date-number">
             <label> Expiry Date </label>
             <input
               type="text"
-              class="date-number-field"
+              className="date-number-field"
               placeholder="DD-MM-YY"
             />
           </div>
 
-          <div class="cvv-number">
+          <div className="cvv-number">
             <label> CVV number </label>
-            <input type="text" class="cvv-number-field" placeholder="xxx" />
+            <input type="text" className="cvv-number-field" placeholder="xxx" />
           </div>
-          <div class="nameholder-number">
+          <div className="nameholder-number">
             <label> Card Holder name </label>
             <input
               type="text"
-              class="card-name-field"
+              className="card-name-field"
               placeholder="Enter your Name"
             />
           </div>

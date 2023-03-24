@@ -33,7 +33,7 @@ export default function Home({ session, supabase }) {
         )}
         <div className={styles.users}>
           <h1> All Users</h1>
-          <div class="card">
+          <div className="card">
             <h4>UserName:{"John Doe"}</h4>
             <p>User Phone: {"123456786"}</p>
           </div>
@@ -41,28 +41,28 @@ export default function Home({ session, supabase }) {
             <h4>UserName:{"Jane Doe"}</h4>
             <p>User Phone: {"123456786"}</p>
           </div>
-          <div class="card">
+          <div className="card">
             <h4>UserName:{"Joe camaro"}</h4>
             <p>User Phone: {"123456786"}</p>
           </div>
         </div>
         <div className={styles.destination}>
           <h1> Destinations</h1>
-          <div class="destination-card">
+          <div className="destination-card">
             <img src={".."} className="product-img" />
             <h4>
               <Link href="/jupitor">{"Jupitor"}</Link>
             </h4>
             <p>info about destination</p>
           </div>
-          <div class="destination-card">
+          <div className="destination-card">
             <img src={".."} className="product-img" />
             <h4>
               <Link href="/mars">{"Mars"}</Link>
             </h4>
             <p>info about destination</p>
           </div>
-          <div class="destination-card">
+          <div className="destination-card">
             <img src={".."} className="product-img" />
             <h4>
               <Link href="/neptune">{"Neptune"}</Link>
@@ -72,13 +72,13 @@ export default function Home({ session, supabase }) {
         </div>
         <div className={styles.departingSoon}>
           <h4> Flights departing soon</h4>
-          <div class="flight-card-left">
+          <div className="flight-card-left">
             <h5> Mars</h5>
             <p>Flight time: 14:20pm</p>
             <p>Flight Date: 04-07-2023</p>
             <p>Flight Origon: space-X, california</p>
           </div>
-          <div class="flight-card-right">
+          <div className="flight-card-right">
             <h5> Neptune</h5>
             <p>Flight time: 14:20pm</p>
             <p>Flight Date: 04-07-2023</p>
