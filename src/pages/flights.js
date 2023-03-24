@@ -5,7 +5,6 @@ import FlightCard from "./flightCard";
 import styles from "@/styles/Home.module.css";
 import { useEffect, useState } from "react";
 const Flights = () => {
- 
   <h1>Flights</h1>;
 
   console.log(supabase);
@@ -57,7 +56,7 @@ const Flights = () => {
         planning your journey to the stars with Starbound!
       </p>
       <div>
-      <Link className={styles.btnStyle} href="/AddFlight" >
+        <Link className={styles.btnStyle} href="/AddFlight">
           Sort flights
         </Link>
         <Link className={styles.btnStyle} href="/AddFlight">
@@ -74,6 +73,7 @@ const Flights = () => {
               onDelete={handleDelete}
             />
           ))}
+         
         </div>
       )}
     </div>

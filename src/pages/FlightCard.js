@@ -35,11 +35,13 @@ const FlightCard = ({ flight, onDelete }) => {
               <Link href={{ pathname: "/EditFlight", state: flight.id }}>
                 Edit
               </Link>
-           
             </button>
             <button className={styles.btnStyle} onClick={handleDelete}>
               Delete
             </button>
+            <Link className={styles.btnStyle} href="/AddFlight">
+              Add to bag
+            </Link>
           </div>
         </div>
       </div>

@@ -8,11 +8,13 @@ const Time = () => {
   const [displayTime, setDisplayTime] = useState(event);
 
   console.log("Event", event.toDateString());
-  console.log("Your time Starts now", startTime.toTimeString());
+  console.log("Your time Starts now", startTime);
 
   const handleSubmit = async (e) => {
+    startTime = startTime.toTimeString();
+    console.log("T", t);
     e.preventDefault();
-    setStartTime(startTime);
+    setStartTime(t);
 
     console.log("Company Name:", startTime);
   };
