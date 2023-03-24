@@ -1,13 +1,18 @@
 import react from "react";
-import Link from "Next/link";
+// import Link from "Next/link";
 import styles from "@/styles/Home.module.css";
+import robStyles from '@/styles/robsStyles/Checkout.module.css'
+import { BsFillRocketTakeoffFill } from 'react-icons/bs'
+
 const Checkout = () => {
   return (
     <>
+    <div className={robStyles.chckOutBox}>
+      <h1 className={robStyles.headBox} >CHECKOUT HERE</h1>
       <form className="formStyling ">
         <div className={styles.sizingBox}>
           <ul>
-            <li>
+            <li className={robStyles.textBox} >
               <label className="label" htmlFor="firstName">
                 firstName:
               </label>
@@ -19,7 +24,7 @@ const Checkout = () => {
                 required
               ></input>
             </li>
-            <li>
+            <li className={robStyles.textBox} >
               <label className="label" htmlFor="firstName">
                 lastName:
               </label>
@@ -31,7 +36,7 @@ const Checkout = () => {
                 required
               ></input>
             </li>
-            <li>
+            <li className={robStyles.textBox} >
               <label className="label" htmlFor="Address">
                 Address:
               </label>
@@ -43,7 +48,7 @@ const Checkout = () => {
                 required
               ></input>
             </li>
-            <li>
+            <li className={robStyles.textBox} >
               <label className="label" htmlFor="Address">
                 Address 2:
               </label>
@@ -55,20 +60,7 @@ const Checkout = () => {
                 required
               ></input>
             </li>
-            <li>
-              <label className="label" htmlFor="Email">
-                Email:
-              </label>
-              <input
-                className="field-style field-split student-edit-input-small"
-                type="text"
-                name="email"
-                label="Email"
-                placeholder="xyz@example.com"
-                required
-              ></input>
-            </li>
-            <li>
+            <li className={robStyles.textBox} >
               <label className="label" htmlFor="imageUrl">
                 postal_zip_code:
               </label>
@@ -81,12 +73,33 @@ const Checkout = () => {
                 required
               ></input>
             </li>
-            <button className={styles.btnStyle} type="submit">
-              Book my Flight
+            <li className={robStyles.textBox} >
+              <label className="label" htmlFor="Email">
+                Email:
+              </label>
+              <input
+                className="field-style field-split student-edit-input-small"
+                type="text"
+                name="email"
+                label="Email"
+                placeholder="xyz@example.com"
+                required
+              ></input>
+            </li>
+            <div className={robStyles.btnBox} >
+              <button className={styles.btnStyle} type="submit" >
+              Book my Flight <  BsFillRocketTakeoffFill />
             </button>
+            {/* <button className={styles.btnStyle} type="submit" >
+              Cancel
+            </button> */}
+            </div>
           </ul>
         </div>
       </form>
+    </div>
+
+    <div class="main"></div>
     </>
   );
 };
