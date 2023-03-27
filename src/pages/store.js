@@ -1,9 +1,10 @@
-import react from "react";
 import Link from "next/link";
 import supabase from "../../supabase";
 import ItemCard from "./itemCard";
 import styles from "@/styles/Home.module.css";
+import robStyles from "@/styles/robsStyles/Store.module.css"
 import { useEffect, useState } from "react";
+
 const Store = () => {
   console.log(supabase);
   const [fetchError, setFetchError] = useState(null);
@@ -33,8 +34,10 @@ const Store = () => {
   }, []);
 
   return (
+    <>
     <div>
-      <div>
+      <div className={robStyles.bttnBox}>
+        <h1 className={robStyles.headBox} >STARBOUND STORE</h1>
         <Link href="/addflight" className={styles.btnStyle}>
           Sort items
         </Link>
@@ -42,9 +45,13 @@ const Store = () => {
           Add a new Item
         </Link>
       </div>
+      
       {fetchError && <p>{fetchError}</p>}
-      {items && (
-        <div className="items">
+
+      <div className={robStyles.itemBox}>
+        {items && (
+        // <div className="items">
+        <div>
           {items.map((item) => (
             <ItemCard key={item.id} item={item} />
             // onDelete={handleDelete}
@@ -52,6 +59,12 @@ const Store = () => {
         </div>
       )}
     </div>
+      </div>
+      
+    <div className="main"></div>
+    
+    </>
+    
   );
 };
 

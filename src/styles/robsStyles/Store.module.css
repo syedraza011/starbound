@@ -1,0 +1,33 @@
+.bttnBox {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    border: solid whitesmoke 5px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headBox {
+    margin:  10px;
+    padding: 10px;
+    border: solid whitesmoke 5px;
+    color: whitesmoke;
+    font-size: xx-large;
+
+}
+
+.itemBox {
+    display: table;
+    margin: 10px;
+    padding: 10px;
+}
+
+.itemCardBttn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.itemBox {
+    padding: 25px;
+    float: left;
+}

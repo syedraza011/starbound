@@ -10,7 +10,7 @@
     margin: 10px;
     padding: 10px;
     border: solid whitesmoke 5px;
-    color: 	silver;
+    color: 	whitesmoke;
     text-align: center;
     font-size: x-large;
 }
@@ -29,6 +29,6 @@
 }
 
 .abtUsInBox:hover {
-    /* background-color: darkgray; */
-    color: silver;
+    background-color: #00308F;
+    color: whitesmoke;
   }

@@ -1,5 +1,5 @@
 import react from "react";
-import Link from "Next/link";
+import Link from "next/link";
 import styles from "@/styles/Home.module.css";
 const Users = () => {
   return (

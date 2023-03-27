@@ -11,21 +11,13 @@ const Training5 = () => {
         <div className={robStyles.trainingBox}>
           <h1>TRAINING PAGE 5</h1>
           <div>training game to test customer compliance</div>
-          <div>
+          <div className={robStyles.lowBar} >
             <button className={styles.btnStyle}>
-              <Link href="/training4">{"Prev"}</Link>
+              <Link href="/training4">{"PREV"}</Link>
             </button>
-
-            {/* {setTimeout(function () { */}
-
-            {/* <button  className={styles.btnStyle} >
-            <Link href="/training">{"Next"}</Link>
-          </button> */}
-
-            {/* }, 5000)} */}
-
+            <h2 className={styles.btnStyle} >PROGRESS = 80%</h2>
             <button className={styles.btnStyle}>
-              <Link href="/payment">{"Payment"}</Link>
+              <Link href="/payment">{"PAYMENT"}</Link>
             </button>
           </div>
         </div>

@@ -14,11 +14,11 @@
     margin: 10px;
     padding: 10px;
     border: solid whitesmoke 5px;
-    color: 	silver;
+    color: 	whitesmoke;
     display: inline-block;
-    /* transition-property: background color;
+    transition-property: background color;
     transition-duration: 2s;
-    transition-timing-function: linear; */
+    transition-timing-function: linear;
     text-align: center;
     font-size: x-large;
 }
@@ -37,5 +37,6 @@
 /* .pmntHeadBox:hover, */
 .pmntBox:hover,
 .crdDtlBox:hover {
-    color: silver
+    color: whitesmoke
+    /* background: #00308F; */
 }

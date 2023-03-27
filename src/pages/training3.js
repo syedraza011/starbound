@@ -11,22 +11,14 @@ const Training3 = () => {
         <div className={robStyles.trainingBox}>
           <h1>TRAINING PAGE 3</h1>
           <div>training game to test customer coordination</div>
-          <div>
+          <div className={robStyles.lowBar} >
             <button className={styles.btnStyle}>
-              <Link href="/training2">{"Prev"}</Link>
+              <Link href="/training2">{"PREV"}</Link>
             </button>
-
-            {/* {setTimeout(function () { */}
-
+            <h2 className={styles.btnStyle} >PROGRESS = 40%</h2>
             <button className={styles.btnStyle}>
-              <Link href="/training4">{"Next"}</Link>
+              <Link href="/training4">{"NEXT"}</Link>
             </button>
-
-            {/* }, 5000)} */}
-
-            {/* <button  className={styles.btnStyle} >
-            <Link href="/payment">{"Payment"}</Link>
-          </button> */}
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-import react from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "@/styles/robsStyles/Destinations.module.css";
@@ -13,11 +12,10 @@ import ura from "../styles/assets/planets/uranus.jpg";
 const Destinations = () => {
   return (
     <>
-      <Link href="/">Home page</Link>
-      <h1>Destinations</h1>
+      <h1 className={styles.desHead} >DESINATIONS</h1>
       <div className={styles.desPlnts}>
         <div className={styles.desPlntsText}>
-          <h2>MERCURY</h2>
+          <h2 className={styles.desHead} >MERCURY</h2>
           <p>
             The smallest planet in our solar system and nearest to the Sun,
             Mercury is only slightly larger than Earth's Moon.
@@ -35,7 +33,7 @@ const Destinations = () => {
             some parts of the planet's surface. The same thing happens in
             reverse at sunset.
           </p>
-          <h2>
+          <h2 className={styles.desBttn} >
             <Link href={"/bookings"}>BOOK A FlIGHT RIGHT NOW!</Link>
           </h2>
         </div>
@@ -46,7 +44,7 @@ const Destinations = () => {
 
       <div className={styles.desPlnts}>
         <div className={styles.desPlntsText}>
-          <h2>VENUS</h2>
+          <h2 className={styles.desHead} >VENUS</h2>
           <p>
             Venus is the second planet from the Sun and is Earth's closest
             planetary neighbor. It's one of the four inner, terrestrial (or
@@ -65,7 +63,7 @@ const Destinations = () => {
             mountains and thousands of large volcanoes. Scientists think it's
             possible some volcanoes are still active.
           </p>
-          <h2>
+          <h2 className={styles.desBttn} >
             <Link href={"/bookings"}>BOOK A FlIGHT RIGHT NOW!</Link>
           </h2>
         </div>
@@ -76,7 +74,7 @@ const Destinations = () => {
 
       <div className={styles.desPlnts}>
         <div className={styles.desPlntsText}>
-          <h2>Mars</h2>
+          <h2 className={styles.desHead} >Mars</h2>
           <p>
             ​Mars is the fourth planet from the Sun - a dusty, cold, desert
             world with a very thin atmosphere. Mars is also a dynamic planet
@@ -98,7 +96,7 @@ const Destinations = () => {
             much wetter and warmer, with a thicker atmosphere, billions of years
             ago.
           </p>
-          <h2>
+          <h2 className={styles.desBttn} >
             <Link href={"/bookings"}>BOOK A FlIGHT RIGHT NOW!</Link>
           </h2>
         </div>
@@ -109,7 +107,7 @@ const Destinations = () => {
 
       <div className={styles.desPlnts}>
         <div className={styles.desPlntsText}>
-          <h2>JUPITER</h2>
+          <h2 className={styles.desHead} >JUPITER</h2>
           <p>
             Jupiter has a long history of surprising scientists – all the way
             back to 1610 when Galileo Galilei found the first moons beyond
@@ -126,7 +124,7 @@ const Destinations = () => {
             and helium. Jupiter’s iconic Great Red Spot is a giant storm bigger
             than Earth that has raged for hundreds of years.
           </p>
-          <h2>
+          <h2 className={styles.desBttn} >
             <Link href={"/bookings"}>BOOK A FlIGHT RIGHT NOW!</Link>
           </h2>
         </div>
@@ -137,7 +135,7 @@ const Destinations = () => {
 
       <div className={styles.desPlnts}>
         <div className={styles.desPlntsText}>
-          <h2>SATURN</h2>
+          <h2 className={styles.desHead} >SATURN</h2>
           <p>
             Saturn is the sixth planet from the Sun and the second-largest
             planet in our solar system.
@@ -152,7 +150,7 @@ const Destinations = () => {
             Like fellow gas giant Jupiter, Saturn is a massive ball made mostly
             of hydrogen and helium.
           </p>
-          <h2>
+          <h2 className={styles.desBttn} >
             <Link href={"/bookings"}>BOOK A FlIGHT RIGHT NOW!</Link>
           </h2>
         </div>
@@ -163,7 +161,7 @@ const Destinations = () => {
 
       <div className={styles.desPlnts}>
         <div className={styles.desPlntsText}>
-          <h2>URANUS</h2>
+          <h2 className={styles.desHead} >URANUS</h2>
           <p>
             Uranus is the seventh planet from the Sun, and has the third-largest
             diameter in our solar system. It was the first planet found with the
@@ -179,7 +177,7 @@ const Destinations = () => {
             community accepted Bode's suggestion to name it Uranus, the Greek
             god of the sky, as suggested by Bode.​
           </p>
-          <h2>
+          <h2 className={styles.desBttn} >
             <Link href={"/bookings"}>BOOK A FlIGHT RIGHT NOW!</Link>
           </h2>
         </div>
@@ -190,7 +188,7 @@ const Destinations = () => {
 
       <div className={styles.desPlnts}>
         <div className={styles.desPlntsText}>
-          <h2>NEPTUNE</h2>
+          <h2 className={styles.desHead} >NEPTUNE</h2>
           <p>
             Dark, cold, and whipped by supersonic winds, ice giant Neptune is
             the eighth and most distant planet in our solar system
@@ -205,7 +203,7 @@ const Destinations = () => {
             Like fellow gas giant Jupiter, Saturn is a massive ball made mostly
             of hydrogen and helium.
           </p>
-          <h2>
+          <h2 className={styles.desBttn} >
             <Link href={"/bookings"}>BOOK A FlIGHT RIGHT NOW!</Link>
           </h2>
         </div>
