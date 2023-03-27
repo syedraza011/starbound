@@ -1,38 +1,35 @@
 import styles from "@/styles/Home.module.css";
-import robStyles from "@/styles/robsStyles/Training.module.css"
+import robStyles from "@/styles/robsStyles/Training.module.css";
 import Link from "next/link";
-
 
 const Training = () => {
   return (
     <>
-    <div className={robStyles.trainBox}>
-      <h1 className={robStyles.trainHeadBox}>PRE-FIGHT TRAINING</h1>
-      <div className={robStyles.trainingBox}  >
-        <h1>TRAINING PAGE 1</h1>
-        <div>
-          training game to test customer vision
-        </div>
-        <div>
-          {/* <button  className={styles.btnStyle} >
+      <div className={robStyles.trainBox}>
+        <h1 className={robStyles.trainHeadBox}>PRE-FIGHT TRAINING</h1>
+        <div className={robStyles.trainingBox}>
+          <h1>TRAINING PAGE 1</h1>
+          <div>training game to test customer vision</div>
+          <div>
+            {/* <button  className={styles.btnStyle} >
             <Link href="/training">{"Prev"}</Link>
           </button> */}
 
-          {/* {setTimeout(function () { */}
+            {/* {setTimeout(function () { */}
 
-          <button  className={styles.btnStyle} >
-            <Link href="/training2">{"Next"}</Link>
-          </button>
+            <button className={styles.btnStyle}>
+              <Link href="/training2">{"Next"}</Link>
+            </button>
 
-          {/* }, 5000)} */}
+            {/* }, 5000)} */}
 
-          {/* <button  className={styles.btnStyle} >
+            {/* <button  className={styles.btnStyle} >
             <Link href="/payment">{"Payment"}</Link>
           </button> */}
+          </div>
         </div>
-      </div>
-      
-      {/* <div>
+
+        {/* <div>
         <p>
           Welcome to Starbound, the premier space tourism company for those
           seeking a truly out-of-this-world experience. Our mission is to make
@@ -69,9 +66,9 @@ const Training = () => {
          <Link href="/payment">{"Payment"}</Link>
         </button> */}
 
-      {/* </div> */}
+        {/* </div> */}
       </div>
-      <div class="main"></div>
+      <div className="main"></div>
     </>
   );
 };
