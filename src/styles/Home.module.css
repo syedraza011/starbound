@@ -12,8 +12,8 @@
   width: fit-content;
   block-size: fit-content;
   text-align: center;
-  border: solid whitesmoke 5px;
-  color: 	#2F4F4F;
+  /* border: solid whitesmoke 0.02px; */
+  color: 	whitesmoke;
   transition-property: background color;
   transition-duration: 2s;
   transition-timing-function: linear;
@@ -22,8 +22,9 @@
 .graphicBox {
   margin: 15px;
   padding: 15px;
-  border: solid silver 5px;
+  border: solid silver 0.3px;
   display: inline-block;
+  color: white;
   /* position: relative; */
 }
 
@@ -32,10 +33,10 @@
   padding: 15px;
   display: flex inline;
   float: left;
-  border: solid whitesmoke 5px;
-  color: 	#2F4F4F;
+ 
+  color: whitesmoke;
   transition-property: background color;
-  transition-duration: 2s;
+  transition-duration: 1s;
   transition-timing-function: linear;
 }
 
@@ -63,7 +64,7 @@
 
 .welcBox:hover {
   /* background-color: darkgray; */
-  color: silver;
+  color: rgb(112, 93, 93);
 }
 
 /* --- Robs Styling --- */
@@ -218,7 +219,7 @@
   color: 	#2F4F4F;
   /* background-color: rgb(198, 188, 188); */
   border-radius: 15px;
-  border: solid whitesmoke 5px;
+  border: solid whitesmoke 1px;
   margin: 15px;
   padding: 15px;
   cursor: pointer;
@@ -229,7 +230,7 @@
   align-items: center;
   justify-content: center;
   transition-property: background color;
-  transition-duration: 2s;
+  transition-duration: 0.5s;
   transition-timing-function: linear;
 }
 
