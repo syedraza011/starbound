@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "@/styles/Home.module.css";
+import robStyle from "@/styles/robsStyles/Flights.module.css"
 import DatePicker from "react-datepicker";
 import TimePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -42,11 +43,12 @@ const AddFlight = () => {
 
   return (
     <>
-      <div>
-        <h1>Add Flight page</h1>
+      <div className={robStyle.addFlightBox} >
+        <h1 className={robStyle.addFlightHead} >ADD YOUR FLIGHTS HERE </h1>
         <form className="Form bg-zinc-200" onSubmit={handleSubmit}>
-          <div className="flex justify-center">
-            <div className="relative mb-3 xl:w-96" data-te-input-wrapper-init>
+          <div className={robStyle.addFlightSbmt}>
+            {/* <div className="relative mb-3 xl:w-96" data-te-input-wrapper-init> */}
+            <div data-te-input-wrapper-init>
               <input
                 type="text"
                 id="departure"
@@ -55,7 +57,8 @@ const AddFlight = () => {
                 className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 placeholder="Departure Origon"
               />
-              <div className="border-red-800">
+              {/* <div className="border-red-800"> */}
+              <div  >
                 <hr />
               </div>
 
@@ -86,7 +89,8 @@ const AddFlight = () => {
                 className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 placeholder="Departure time"
               /> */}
-              <div className="border-red-800">
+              {/* <div className="border-red-800"> */}
+              <div  >
                 <hr />
               </div>
               <label
@@ -116,7 +120,8 @@ const AddFlight = () => {
                 placeholder="Departure Date"
               /> */}
               {/* <Date /> */}
-              <div className="border-red-800">
+              {/* <div className="border-red-800"> */}
+              <div  >
                 <hr />
               </div>
               <label
@@ -146,7 +151,8 @@ const AddFlight = () => {
                 className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 placeholder="Arrival time"
               /> */}
-              <div className="border-red-800">
+              {/* <div className="border-red-800"> */}
+              <div  >
                 <hr />
               </div>
               <label
@@ -174,7 +180,8 @@ const AddFlight = () => {
                 className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 placeholder="Arrival Date"
               /> */}
-              <div className="border-red-800">
+              {/* <div className="border-red-800"> */}
+              <div  >
                 <hr />
               </div>
               <label
@@ -189,6 +196,7 @@ const AddFlight = () => {
           </div>
         </form>
       </div>
+      <div className="main"></div>
     </>
   );
 };

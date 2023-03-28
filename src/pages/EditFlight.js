@@ -1,9 +1,10 @@
 import react from "react";
-import Link from "Next/link";
+import Link from "next/link";
 import { useState } from "react";
+import robsStyles from "@/styles/robsStyles/Flights.module.css"
 import styles from "@/styles/Home.module.css";
 import supabase from "../../supabase";
-import flight from "../pages/flightCard";
+// import FlightCard from "../pages/flightCard";
 import { data } from "autoprefixer";
 
 const EditFlight = (id) => {
@@ -49,15 +50,15 @@ const EditFlight = (id) => {
 
   return (
     <>
-      <div>
-        <h1>Update Flight Information page</h1>
-
-        <form>
+      <div className={robsStyles.editFlightBox} >
+        <h1 className={robsStyles.editFlightHead} >UPDATE FLIGHT INFO</h1>
+        <form className={robsStyles.editFlightInpt} >
           {/* <form className="Form bg-zinc-200" onSubmit={handleSubmit}> */}
           <div className="flex justify-center">
             <div className="relative mb-3 xl:w-96" data-te-input-wrapper-init>
               <input
                 type="text"
+
                 id="departure"
                 value={depart}
                 onChange={(e) => setDeparture(e.target.value)}
@@ -94,6 +95,8 @@ const EditFlight = (id) => {
               </label>
               {/* ------------------------------------------------------ */}
               <input
+                // className={robsStyles.editInput}
+
                 type="text"
                 id="departuretime"
                 value={depardate}
@@ -156,6 +159,7 @@ const EditFlight = (id) => {
           </div>
         </form>
       </div>
+      <div className="main"></div>
     </>
   );
 };

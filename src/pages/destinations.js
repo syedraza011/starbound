@@ -13,8 +13,9 @@ const Destinations = () => {
   return (
     <>
       <h1 className={styles.desHead} >DESINATIONS</h1>
-      <div className={styles.desPlnts}>
-        <div className={styles.desPlntsText}>
+      <div className={styles.desScroll} >
+         <div className={styles.desPlnts}>
+          <div className={styles.desPlntsText}>
           <h2 className={styles.desHead} >MERCURY</h2>
           <p>
             The smallest planet in our solar system and nearest to the Sun,
@@ -211,6 +212,8 @@ const Destinations = () => {
           <Image src={nep} height="500" width="500" />
         </div>
       </div>
+      </div>
+     
       <div className="main"></div>
     </>
   );

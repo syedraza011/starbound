@@ -2,7 +2,8 @@ import styles from "@/styles/Home.module.css";
 import robStyles from "@/styles/robsStyles/Store.module.css";
 import supabase from "../../supabase";
 import Link from "next/link";
-import { AiFillEdit } from "react-icons/ai"
+// import { AiFillEdit } from "react-icons/ai"
+import { BiEdit } from "react-icons/bi"
 import { RiDeleteBin2Fill } from "react-icons/ri"
 import {useState} from "react-dom"
 const ItemCard = ({ item}) => {
@@ -45,7 +46,7 @@ const ItemCard = ({ item}) => {
             </button>
             <button className={styles.btnStyle}>
               <Link href={"/EditItem"}>
-                < AiFillEdit />
+                < BiEdit />
               </Link>
             </button>            
           </div>

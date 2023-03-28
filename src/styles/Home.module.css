@@ -235,8 +235,8 @@
 }
 
 .btnStyle:hover{
-  background-color: #00308F;
-  color: goldenrod;
+  background-color: whitesmoke;
+  color: #00308F;
  }
  .boxInput{
   height: 200px;

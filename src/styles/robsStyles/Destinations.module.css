@@ -1,17 +1,23 @@
+.desScroll {
+  scroll-snap-type: mandatory;
+  /* scroll-snap-points-y: repeat(3rem); */
+  scroll-snap-type: y mandatory;
+}
+
 .desPlnts {
   display: flex;
   /* flex-wrap: wrap; */
   justify-content: space-between;
   align-items: center;
   margin: 5px;
-  scroll-snap-type: y mandatory;
+  scroll-snap-align: start;
 }
 
 .desHead {
   margin: 15px;
   padding: 15px;
   border: solid whitesmoke 5px;
-  color: whitesmoke;
+  color: goldenrod;
   font-size: XX-large;
   display: inline-block;
 }
@@ -46,7 +52,7 @@
 
 .desPlntsText:hover {
   background-color: #00308F;
-  color: whitesmoke;
+  color: goldenrod;
 }
 
 .desBttn:hover {
