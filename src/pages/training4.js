@@ -33,7 +33,7 @@ const Training4 = () => {
         </div>
       </div>
     </div>
-    <div class="main"></div>
+    <div className="main"></div>
     </>
   );
 };

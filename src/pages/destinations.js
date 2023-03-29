@@ -213,7 +213,7 @@ const Destinations = () => {
           <Image src={nep} height="500" width="500" />
         </div>
       </div>
-      <div class="main"></div>
+      <div className="main"></div>
     </>
   );
 };

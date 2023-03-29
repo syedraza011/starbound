@@ -1,6 +1,7 @@
 import Head from "next/head";
 import react from "react";
 import NavigationBar from "/components/NavigationBar";
+import ChatWidget from "../../components/ChatWidget";
 import Footer from "/components/Footer";
 import "../styles/globals.css";
 import styles from "../styles/Home.module.css";
@@ -18,6 +19,7 @@ function MyApp({ Component, pageProps }) {
 
       <NavigationBar />
       <Component {...pageProps} />
+      <ChatWidget />
       <Footer />
     </>
   );

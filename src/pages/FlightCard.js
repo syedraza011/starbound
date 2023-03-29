@@ -57,7 +57,7 @@ const FlightCard = ({ flight, onDelete }) => {
         </div>
       </div>
     </div>
-    <div class="main"></div>
+    <div className="main"></div>
       
     </>
   );

@@ -29,7 +29,7 @@ const Payment = () => {
         </div>
         <div className={robStlyes.crdDtlBox}>
           <label> CVV NUMBER </label>
-          <input type="text" class="cvv-number-field" placeholder="xxx" />
+          <input type="text" className="cvv-number-field" placeholder="xxx" />
         </div>
         <div className={robStlyes.crdDtlBox}>
           <label> CARD HOLDER NAME </label>
@@ -45,7 +45,7 @@ const Payment = () => {
         {/* </div> */}
       </form>
       {/* </div> */}
-      <div class="main"></div>
+      <div className="main"></div>
     </>
   );
 };

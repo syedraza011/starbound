@@ -33,7 +33,7 @@ export default function Home({ session, supabase }) {
       <div className={styles.someElseBox}>
         <h1>Something Else Box</h1>
       </div>
-      <div class="main"></div>
+      <div className="main"></div>
     </>
   );
 }

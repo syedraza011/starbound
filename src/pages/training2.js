@@ -34,7 +34,7 @@ const Training2 = () => {
       </div>
       </div>
      
-      <div class="main"></div>
+      <div className="main"></div>
     </>
   );
 };

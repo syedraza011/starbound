@@ -85,7 +85,7 @@ const AboutUs = () => {
           </h3>
         </div>
       </div>
-      <div class="main"></div>
+      <div className="main"></div>
     </>
   );
 };
