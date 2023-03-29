@@ -30,10 +30,10 @@ return (
         <>
             <div className="fixed z-90 bottom-10 right-8 flex items-center justify-center p-12">
                 <div className="w-full">
-                    <div className="relative inline-flex align-middle w-full">
+                    <div className="relative inline-flex align-middle w-full">                        
                         <button
                             className={
-                                "text-white flex h-[70px] w-[70px] items-center justify-center rounded-full bg-[#6A64F1] ease-linear transition-all duration-150 "
+                                "text-white flex h-[70px] w-[70px] items-center justify-center rounded-full bg-[#3fb0ac] ease-linear transition-all duration-150 drop-shadow-lg"
                             }
                             type="button"
                             ref={btnDropdownRef}
@@ -60,50 +60,74 @@ return (
                                 (dropdownPopoverShow ? "block " : "hidden ")
                         }
                         >
-                            <div
-                                className="overflow-visible mx-auto w-full max-w-[550px] rounded-lg border border-[#e0e0e0] bg-white"
-                                >
-                                <div
-                                    className="flex items-center justify-between rounded-t-lg bg-[#6A64F1] py-4 px-9"
-                                >
-                                    <h3 className="text-xl font-bold text-white">Let's chat? - Online</h3>
-                                    <button onClick={() => {
-                                                dropdownPopoverShow ? closeDropdownPopover() : openDropdownPopover();
-                                            }}
-                                    className="text-white">
-                                        <svg width="17" height="17" viewBox="0 0 17 17" className="fill-current">
-                                            <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M0.474874 0.474874C1.10804 -0.158291 2.1346 -0.158291 2.76777 0.474874L16.5251 14.2322C17.1583 14.8654 17.1583 15.892 16.5251 16.5251C15.892 17.1583 14.8654 17.1583 14.2322 16.5251L0.474874 2.76777C-0.158291 2.1346 -0.158291 1.10804 0.474874 0.474874Z"
-                                            />
-                                            <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M0.474874 16.5251C-0.158291 15.892 -0.158291 14.8654 0.474874 14.2322L14.2322 0.474874C14.8654 -0.158292 15.892 -0.158291 16.5251 0.474874C17.1583 1.10804 17.1583 2.1346 16.5251 2.76777L2.76777 16.5251C2.1346 17.1583 1.10804 17.1583 0.474874 16.5251Z"
-                                            />
-                                        </svg>
-                                    </button>
-                                </div>
-                                    <div className="flex flex-col justify-end bg-white h-[20rem] min-w-[33%] rounded-md shadow-md ">
-                                        <div className="h-full last:border-b-0 overflow-y-scroll">
-                                            <div className="mb-5">
-                                            <label
-                                                htmlFor="message"
-                                                className="mb-3 block text-base font-medium text-[#07074D]"
-                                            >
-                                            </label>
-                                            <input
-                                                type="text"
-                                                name="message"
-                                                id="livemsg"
-                                                placeholder="New Message..."
-                                                className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                            />
-                                            </div>
-                                        </div>
+                            <div className="hidden lg:col-span-2 lg:block rounded-lg border border-[#e0e0e0] bg-[#dddfd4] drop-shadow-lg">
+                                <div className="w-full">
+                                    <div className="relative flex items-center p-3 border-b rounded-t-lg border-gray-300 bg-[#3fb0ac]">
+                                    <img className="object-cover w-10 h-10 rounded-full"
+                                        src="" alt="username" />
+                                    <span className="block ml-2 font-bold text-gray-600">Placeholder Name</span>
+                                    <span className="absolute w-3 h-3 bg-green-600 rounded-full left-10 top-3">
+                                    </span>
+                                    </div>
+                                    <div className="relative w-full p-6 overflow-y-auto h-[40rem] ">
+                                        <ul className="space-y-2">
+                                            <li className="flex justify-start">
+                                                <div className="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-200 rounded shadow">
+                                                    <span className="block">Hi</span>
+                                                </div>
+                                            </li>
+                                            <li className="flex justify-end">
+                                                <div className="relative max-w-xl px-4 py-2 text-gray-700 bg-[#FFB87F] rounded shadow">
+                                                    <span className="block">Hiiii</span>
+                                                </div>
+                                            </li>
+                                            <li className="flex justify-end">
+                                                <div className="relative max-w-xl px-4 py-2 text-gray-700 bg-[#FFB87F] rounded shadow">
+                                                    <span className="block">how are you?</span>
+                                                </div>
+                                            </li>
+                                            <li className="flex justify-start">
+                                                <div className="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-200 rounded shadow">
+                                                    <span className="block">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="flex items-center justify-between w-full p-3 border-t rounded-b-lg border-gray-300 bg-[#3fb0ac]">
+                                        <button>
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-600" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                        </button>
+                                        <button>
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gray-600" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                                    d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+                                            </svg>
+                                        </button>
+                                        <input type="text" placeholder="Message"
+                                            className="block w-full py-2 pl-4 mx-3 bg-gray-200 rounded-full outline-none focus:text-gray-700"
+                                            name="message" required />
+                                        <button>
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gray-600" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                                    d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                                            </svg>
+                                        </button>
+                                        <button type="submit">
+                                            <svg className="w-5 h-5 text-gray-600 origin-center transform rotate-90" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20" fill="currentColor">
+                                                <path
+                                                    d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+                                            </svg>
+                                        </button>
                                     </div>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
