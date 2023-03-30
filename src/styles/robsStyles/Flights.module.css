@@ -13,7 +13,7 @@
 
 .textBox {
     border: solid whitesmoke 5px;
-    color: goldenrod;
+    color: #ffdf00;
     margin: 10px;
     padding: 10px;
     transition-property: background color;
@@ -40,7 +40,7 @@
 .textBox:hover,
 .btnBox:hover {
     background-color: #00308F;
-    /* color: goldenrod; */
+    /* color: #ffdf00; */
 }
 
                                         /* --- FLIGHT CARD --- */
@@ -56,7 +56,7 @@
 
 .flightCardBox:hover {
     /* background-color: darkgray; */
-    color: goldenrod;
+    color: #ffdf00;
   }
 
 .flightCardBttn {
@@ -69,7 +69,7 @@
     margin:  15px;
     padding: 15px;
     /* border: solid whitesmoke 5px; */
-    color: goldenrod;
+    color: #ffdf00;
     display: flex ;
     justify-content: center;
     align-items: center;
@@ -80,7 +80,7 @@
     margin:  15px;
     padding: 15px;
     border: solid whitesmoke 5px;
-    color: goldenrod;
+    color: #ffdf00;
     font-size: x-large;
 }
 
@@ -96,7 +96,7 @@
 
 .addFlightSbmt:hover {
     background-color: #00308F;
-    color: goldenrod;
+    color: #ffdf00;
   }
 
                                         /* --- EDIT FLIGHT --- */
@@ -115,7 +115,7 @@
     margin:  15px;
     padding: 15px;
     border: solid whitesmoke 5px;
-    color: goldenrod;
+    color: #ffdf00;
     
     font-size: x-large;
     /* display: inline-block; */
@@ -134,5 +134,5 @@
 
 .editFlightInpt:hover {
     background-color: #00308F;
-    color: goldenrod;
+    color: #ffdf00;
 }

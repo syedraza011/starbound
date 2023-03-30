@@ -14,7 +14,7 @@
     margin: 10px;
     padding: 10px;
     border: solid whitesmoke 5px;
-    color: 	whitesmoke;
+    color: 	#ffdf00;
     display: inline-block;
     transition-property: background color;
     transition-duration: 2s;
@@ -24,19 +24,21 @@
 }
 
 .crdDtlBox {
-    margin: 10px;
-    padding: 10px;
+    margin: 5px;
+    padding: 5px;
     border: solid whitesmoke 5px;
     color: 	#2F4F4F;
     display: inline-block;
     transition-property: background color;
     transition-duration: 2s;
     transition-timing-function: linear;
+    font-size: x-large;
 }
 
-/* .pmntHeadBox:hover, */
-.pmntBox:hover,
+
+
 .crdDtlBox:hover {
-    color: whitesmoke
-    /* background: #00308F; */
+    color: #ffdf00;
+    background-color: #00308F;
 }
+

@@ -15,27 +15,31 @@ const Payment = () => {
           <label> CARD NUMBER </label>
           <input
             type="text"
-            className="card-number-field"
-            placeholder="###-###-###"
+            className={robStlyes.crdDtlBox}
+            placeholder="###-###-###" 
+            color='#00308F'
           />
         </div>
         <div className={robStlyes.crdDtlBox}>
           <label> EXPIRATION DATE </label>
           <input
             type="text"
-            className="date-number-field"
+            className={robStlyes.crdDtlBox}
             placeholder="DD-MM-YY"
           />
         </div>
         <div className={robStlyes.crdDtlBox}>
           <label> CVV NUMBER </label>
-          <input type="text" className="cvv-number-field" placeholder="xxx" />
+          <input 
+          type="text" 
+          className={robStlyes.crdDtlBox} 
+          placeholder="xxx" />
         </div>
         <div className={robStlyes.crdDtlBox}>
           <label> CARD HOLDER NAME </label>
           <input
             type="text"
-            className="card-name-field"
+            className={robStlyes.crdDtlBox}
             placeholder="Enter your Name"
           />
         </div>

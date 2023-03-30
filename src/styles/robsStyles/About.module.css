@@ -18,14 +18,48 @@
     transition-property: background color;
     transition-duration: 2s;
     transition-timing-function: linear;
+    display: inline-block;
 }
 
 .abtBox:hover {
     background-color: #00308F;
-    color: whitesmoke;
+    color: #ffdf00;
 }
 
-.abtBttnBox:hover {
-    background-color: #00308F;
-    color: goldenrod;
+                                        /*  ---  ABOUT US  ---  */
+
+.abtUsBox {
+    margin: 20px;
+    padding: 20px;
+    display: table;
+    justify-content: center;
+    align-items: center;
 }
+
+.abtUsHeadBox {
+    margin: 10px;
+    padding: 10px;
+    border: solid whitesmoke 5px;
+    color: 	#ffdf00;
+    text-align: center;
+    font-size: x-large;
+}
+
+.abtUsInBox {
+    border: solid whitesmoke 5px;
+    color: 	#2F4F4F;
+    text-align: center;
+    width: 40%;
+    padding: 25px;
+    margin: 55px;
+    float: left;
+    transition-property: background color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    font-size: large;
+}
+
+.abtUsInBox:hover {
+    background-color: #00308F;
+    color: #ffdf00;
+  }

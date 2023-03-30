@@ -6,7 +6,33 @@ import { BsFillRocketTakeoffFill } from "react-icons/bs";
 const Contact = () => {
   return (
     <>
-      <div className={robvStyles.cnctBox}>
+    <div className={robvStyles.cnctBox} >
+      <h1 className={robvStyles.conHeadBox} >
+        Contact via, help@starbound.com, or by filling out the form
+      </h1>
+      <form>
+        <div className={robvStyles.conDtlBox}>
+          <label>YOUR NAME: </label>
+          <input className={robvStyles.conInBox} type="text" name="name" placeholder="Name Here..." />
+        </div>
+        <div className={robvStyles.conDtlBox}>
+          <label>YOUR EMAIL: </label>
+          <input className={robvStyles.conInBox} type="text" name="email" placeholder="Email Here..." />
+        </div>
+        <div className={robvStyles.conDtlBox}>
+          <label>YOUR MESSAGE: </label>
+          <textarea className={robvStyles.conComBox} type="text" name="messege" rows="5" placeholder="Message Here..." />
+        </div>
+      </form>
+      <button className={styles.btnStyle} type="submit" >
+        Send Message
+        <BsFillRocketTakeoffFill />
+      </button>
+    </div>
+    <div className="main"></div>
+
+
+      {/* <div className={robvStyles.cnctBox}>
         <div>
           You can contact StarBound at help@starbound.com or by filling out the
           form
@@ -32,7 +58,7 @@ const Contact = () => {
                 </div>
                 <div className="relative z-0">
                   <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">
-                    Your Name
+                    Your Email
                   </label>
                   <input
                     type="email"
@@ -63,9 +89,8 @@ const Contact = () => {
                 </div>
               </div>
               <button
-                className={styles.btnStyle}
                 type="submit"
-                // className="mt-5 rounded-md bg-black px-10 py-2 text-white"
+                className="mt-5 rounded-md bg-black px-10 py-2 text-white"
               >
                 Send Message
                 <BsFillRocketTakeoffFill />
@@ -73,8 +98,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
-      </div>
-      <div className="main"></div>
+      </div> */}
     </>
   );
 };

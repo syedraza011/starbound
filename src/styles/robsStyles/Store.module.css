@@ -11,13 +11,14 @@
     margin:  10px;
     padding: 10px;
     border: solid whitesmoke 5px;
-    color: goldenrod;
+    color: #ffdf00;
     font-size: xx-large;
 
 }
 
 .itemBox {
-    display: table;
+    display: flex table;
+
     /* justify-content: space-around; */
     /* align-items: center; */
     margin: 10px;
