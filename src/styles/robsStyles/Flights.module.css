@@ -1,10 +1,10 @@
 .flightsBox {
     margin: 20px;
     padding: 20px;
-    border: solid whitesmoke 5px;
+    border: solid whitesmoke 0.5px;
     color: 	#2F4F4F;
     transition-property: background color;
-    transition-duration: 2s;
+    transition-duration: 1s;
     transition-timing-function: linear;
     font-size: x-large;
 }

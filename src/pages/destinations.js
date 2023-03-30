@@ -1,4 +1,4 @@
- import react from "react";
+import react from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "@/styles/robsStyles/Destinations.module.css";
@@ -40,7 +40,7 @@ const Destinations = () => {
           </h2>
         </div>
         <div>
-          <Image src={mer} height="500" width="500" />
+          <Image src={mer} height="500" width="500" alt="" />
         </div>
       </div>
 

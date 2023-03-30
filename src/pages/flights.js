@@ -1,7 +1,7 @@
 import react from "react";
 import Link from "next/link";
 import supabase from "../../supabase";
-// import FlightCard from "./flightCard";
+import FlightCard from "./FlightCard";
 import styles from "@/styles/Home.module.css";
 import robStyles from "@/styles/robsStyles/Flights.module.css";
 import { useEffect, useState } from "react";
@@ -19,7 +19,7 @@ const Flights = () => {
   };
 
   useEffect(() => {
-    const fecthFlights = async () => {
+    const fetchFlights = async () => {
       const { data, error } = await supabase.from("flight").select();
       if (error) {
         setFetchError("Could not fecth flights data");
@@ -32,7 +32,7 @@ const Flights = () => {
         setFetchError(null);
       }
     };
-    fecthFlights();
+    fetchFlights();
   }, []);
 
   return (
@@ -61,9 +61,6 @@ const Flights = () => {
           Sort flights
         </Link>
 
-        <div className={robStyles.btnBox}>
-          <button className={styles.btnstyle}>Add a new flight</button>
-        </div>
         {fetchError && <p>{fetchError}</p>}
         {flights && (
           <div className="flights">

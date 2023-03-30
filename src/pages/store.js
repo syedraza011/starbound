@@ -38,7 +38,7 @@ const Store = () => {
         <Link href="/addflight" className={styles.btnStyle}>
           Sort items
         </Link>
-        <Link className={styles.btnStyle} href="/AddFlight">
+        <Link className={styles.btnStyle} href="/AddItem">
           Add a new Item
         </Link>
       </div>
