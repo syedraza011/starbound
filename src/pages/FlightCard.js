@@ -26,9 +26,9 @@ const FlightCard = ({ flight, onDelete }) => {
   return (
     <>
       <div>
-        <Link className={styles.btnStyle} href="/AddFlight">
+        {/* <Link className={styles.btnStyle} href="/AddFlight">
           Add a new flight
-        </Link>
+        </Link> */}
       </div>
       <div className={robStyles.flightCardBox}>
         <div>

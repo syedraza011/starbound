@@ -1,5 +1,7 @@
+import React from 'react'
 import styles from "@/styles/Home.module.css";
 import robStyles from "@/styles/robsStyles/Training.module.css";
+import Train2 from '../../components/trainingGames/train2'
 import Link from "next/link";
 
 const Training2 = () => {
@@ -10,12 +12,12 @@ const Training2 = () => {
 
         <div className={robStyles.trainingBox}>
           <h1>TRAINING PAGE 2</h1>
-          <div>training game to test customer hearing</div>
+          < Train2 />
           <div className={robStyles.lowBar} >
             <button className={styles.btnStyle}>
-              <Link href="/training">{"PREV"}</Link>
+              <Link href="/training1">{"PREV"}</Link>
             </button>
-            <h2 className={styles.btnStyle} >PROGRESS = 20%</h2>
+            <h2 className={styles.btnStyle} >PROGRESS = 33%</h2>
             <button className={styles.btnStyle}>
               <Link href="/training3">{"NEXT"}</Link>
             </button>

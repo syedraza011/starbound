@@ -1,10 +1,12 @@
 import styles from "@/styles/Home.module.css";
+import robStyle from "@/styles/robsStyles/bPass.module.css";
+
 
 export default function boardingpass() {
   return (
     <>
-      <div>
-        boardingpass
+      <div className={robStyle.bPassBox}>
+        <h1>boardingpass</h1>
         <div className={styles.ticket}>
           <div className={styles.header}>
             className={styles.companyName}
@@ -33,6 +35,7 @@ export default function boardingpass() {
           src="http://www.classtools.net/QR/pics/qr.png"
         </div>
       </div>
+      <div className="main"></div>
     </>
   );
 }

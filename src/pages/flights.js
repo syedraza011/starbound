@@ -74,6 +74,9 @@ const Flights = () => {
           </div>
         )}
       </div>
+      <Link className={styles.btnStyle} href="/AddFlight">
+          Add a new flight
+        </Link>
 
       <div className="main"></div>
     </div>
