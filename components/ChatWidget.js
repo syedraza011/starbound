@@ -25,7 +25,21 @@ const ChatWidget = () => {
     };
     const closeDropdownPopover = () => {
         setDropdownPopoverShow(false);
-    };        
+    };
+    useEffect(() => {
+        const checkClickTarget = e => {
+            if (dropdownPopoverShow && btnDropdownRef.current && !btnDropdownRef.current.contains(e.target))
+                setDropdownPopoverShow(false)
+            };
+            if (typeof document !== "undefined") {
+            document.addEventListener("mousedown", checkClickTarget);
+            }
+            return () => {
+                if (typeof document !== "undefined") {
+                document.removeEventListener("mousedown", checkClickTarget);
+                }
+            };
+        }, [dropdownPopoverShow]);        
 return (
         <>
             <div className="fixed z-90 bottom-10 right-8 flex items-center justify-center p-12">
