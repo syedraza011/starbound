@@ -79,6 +79,7 @@ const Home = () => {
         <p>Add some images</p>
       </div>
       </div>
+      <div className="main"></div>
     </>
   );
 };

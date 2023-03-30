@@ -16,6 +16,7 @@
     "@emotion/styled": "^11.10.6",
     "@mui/lab": "^5.0.0-alpha.124",
     "@mui/material": "^5.11.14",
+    "@popperjs/core": "^2.11.7",
     "@supabase/supabase-js": "^2.12.0",
     "@syncfusion/ej2-react-calendars": "^20.4.54",
     "@tailwindcss/aspect-ratio": "^0.4.0",
