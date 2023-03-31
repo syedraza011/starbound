@@ -5,7 +5,18 @@ import FlightCard from "./FlightCard";
 import styles from "@/styles/Home.module.css";
 import robStyles from "@/styles/robsStyles/Flights.module.css";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 const Flights = () => {
+
+
+
+  const router = useRouter();
+
+  const handleEdit = (id) => {
+    router.push(`/editFlight/${id}`);
+  };
+
+
   <h1>Flights</h1>;
 
   console.log(supabase);
@@ -58,7 +69,7 @@ const Flights = () => {
       </p>
       <div>
         <Link className={styles.btnStyle} href="/AddFlight">
-          Sort flights
+          Add New Flight
         </Link>
 
         {fetchError && <p>{fetchError}</p>}
@@ -69,6 +80,7 @@ const Flights = () => {
                 key={flight.id}
                 flight={flight}
                 onDelete={handleDelete}
+                onEdit={() => handleEdit(flight.id)}
               />
             ))}
           </div>

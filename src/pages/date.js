@@ -1,21 +1,32 @@
 import react, { useState } from "react";
 import DatePicker from "react-datepicker";
+import styles from "../styles/Home.module.css";
 import "react-datepicker/dist/react-datepicker.css";
 const Date = () => {
   const [date, setDate] = useState(null);
-
+  console.log("Date", date);
   return (
     <>
       <div>date</div>
-      <DatePicker
-        placeholderText="Select Start Date"
-        selected={date}
-        onChange={(date) => setDate(date)}
-        dateFormat="yyyy-MM-dd"
-        isClearable
-        showYearDropdown
-        scrollableYearDropdown
-      />
+      <form>
+        <DatePicker
+          placeholderText="Select Start Date"
+          selected={date}
+          onChange={(date) => {
+            {
+              let final=date.toLocaleDateString("en-us");
+              
+
+              setDate(final);
+            }
+          }}
+          dateFormat="yyyy-MM-dd"
+          isClearable
+          showYearDropdown
+          scrollableYearDropdown
+        />
+        <button className={styles.btnStyle}>Submit </button>
+      </form>
 
       <p>
         Welcome to Starbound, the premier space tourism company for those
