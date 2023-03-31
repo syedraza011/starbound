@@ -43,6 +43,26 @@ const AddFlight = () => {
 
   return (
     <>
+    {/* <div className={robStyle.addFlightBox} >
+
+      <h1 className={robStyle.addFlightHead} >ADD YOUR FLIGHTS HERE </h1>
+      <form className={robStyle.addFlightSbmt} onSubmit={handleSubmit} >
+        <div>
+          <label className={robStyle.addFlightSbmt} htmlFor="departure" >
+          DEPART ORIGIN
+          </label>
+          <input
+          type="text"
+          id="departure"
+          value={depart}
+          onChange={(e) => setDeparture(e.target.value)}
+          className={robStyle.addFlightSbmt}
+          placeholder="DEPART ORIGIN"
+          />
+        </div>
+      </form>
+    </div> */}
+
       <div className={robStyle.addFlightBox} >
         <h1 className={robStyle.addFlightHead} >ADD YOUR FLIGHTS HERE </h1>
         <form className="Form bg-zinc-200" onSubmit={handleSubmit}>

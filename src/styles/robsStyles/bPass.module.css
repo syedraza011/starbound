@@ -2,5 +2,49 @@
     margin: 15px;
     padding: 15px;
     color: #ffdf00;
+    /* border: solid whitesmoke 5px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.bPassHead {
+    margin: 10px;
+    padding: 10px;
+    color: #ffdf00;
     border: solid whitesmoke 5px;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+}
+
+.bPassDtlOutBox {
+    margin: 10px;
+    padding: 10px;
+    border: solid whitesmoke 5px;
+    
+}
+
+.bPassDtl {
+    margin: 10px;
+    padding: 10px;
+    border: solid whitesmoke 5px;
+    font-size: xx-large;
+    color: 	#2F4F4F;
+    transition-property: background color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bPassbttn {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.bPassDtl:hover {
+    background-color: #00308F;
+    color: #ffdf00;
 }
