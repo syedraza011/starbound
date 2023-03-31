@@ -1,11 +1,17 @@
 import Head from "next/head";
 
 import NavigationBar from "/components/NavigationBar";
+import ChatWidget from "../../components/ChatWidget";
+import Footer from "/components/Footer";
+import "../styles/globals.css";
+import styles from "../styles/Home.module.css";
+import Image from "next/image";
 
 import "../styles/globals.css";
 import { SessionProvider } from "next-auth/react";
 function MyApp({ Component, pageProps, session }) {
   return (
+    <>
     <SessionProvider>
  <Head>
          <title>StarBound</title>
@@ -18,7 +24,10 @@ function MyApp({ Component, pageProps, session }) {
 
 
       <Component {...pageProps} />
+      <ChatWidget />
+      <Footer />
     </SessionProvider>
+    </>
   );
 }
 export default MyApp;

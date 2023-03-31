@@ -1,4 +1,4 @@
-As a group we worked togather to put this wirefrae using ExcaliDraw: an overview of our project
+As a group we worked togather to put this wireframe using ExcaliDraw: an overview of our project
 
 https://excalidraw.com/#json=MheOsMx2CfYJdYKYbArXQ,yGSFsWsYi_GSwhm0Vs1thg
 

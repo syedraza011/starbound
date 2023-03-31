@@ -30,7 +30,6 @@ const Training2 = () => {
           </div>
         </div>
       </div>
-
       <div className="main"></div>
     </>
   );

@@ -20,6 +20,7 @@ const FlightCard = ({ flight, onDelete, onEdit }) => {
   };
 
   return (
+    
     <div className={robStyles.flightBox}>
       <div className={robStyles.titleBox}>
         <h3 className={robStyles.title}>{flight.name}</h3>
@@ -41,6 +42,8 @@ const FlightCard = ({ flight, onDelete, onEdit }) => {
           </Link>
         </div>
       </div>
+    <div className="main"></div>
+      
     </div>
   );
 };
