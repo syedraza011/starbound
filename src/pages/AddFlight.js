@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import styles from "@/styles/Home.module.css";
+import robStyle from "@/styles/robsStyles/Flights.module.css"
 import DatePicker from "react-datepicker";
 import TimePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -72,11 +73,32 @@ const AddFlight = () => {
 
   return (
     <>
-      <div>
-        <h1>Add Flight page</h1>
+    {/* <div className={robStyle.addFlightBox} >
+
+      <h1 className={robStyle.addFlightHead} >ADD YOUR FLIGHTS HERE </h1>
+      <form className={robStyle.addFlightSbmt} onSubmit={handleSubmit} >
+        <div>
+          <label className={robStyle.addFlightSbmt} htmlFor="departure" >
+          DEPART ORIGIN
+          </label>
+          <input
+          type="text"
+          id="departure"
+          value={depart}
+          onChange={(e) => setDeparture(e.target.value)}
+          className={robStyle.addFlightSbmt}
+          placeholder="DEPART ORIGIN"
+          />
+        </div>
+      </form>
+    </div> */}
+
+      <div className={robStyle.addFlightBox} >
+        <h1 className={robStyle.addFlightHead} >ADD YOUR FLIGHTS HERE </h1>
         <form className="Form bg-zinc-200" onSubmit={handleSubmit}>
-          <div className="flex justify-center">
-            <div className="relative mb-3 xl:w-96" data-te-input-wrapper-init>
+          <div className={robStyle.addFlightSbmt}>
+            {/* <div className="relative mb-3 xl:w-96" data-te-input-wrapper-init> */}
+            <div data-te-input-wrapper-init>
               <input
                 type="text"
                 id="departure"
@@ -85,7 +107,8 @@ const AddFlight = () => {
                 className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 placeholder="Departure Origon"
               />
-              <div className="border-red-800">
+              {/* <div className="border-red-800"> */}
+              <div  >
                 <hr />
               </div>
 
@@ -113,8 +136,16 @@ const AddFlight = () => {
                 timeCaption="Time"
                 dateFormat="hh:mm:ss aa"
               />
-
-              <div className="border-red-800">
+              {/* <input
+                type="text"
+                id="departuretime"
+                value={departime}
+                onChange={(e) => setDepartime(e.target.value)}
+                className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                placeholder="Departure time"
+              /> */}
+              {/* <div className="border-red-800"> */}
+              <div  >
                 <hr />
               </div>
               <label
@@ -134,7 +165,17 @@ const AddFlight = () => {
                 showYearDropdown
                 scrollableYearDropdown
               />
-              <div className="border-red-800">
+              {/* <input
+                type="text"
+                id="departuretime"
+                value={depardate}
+                onChange={(e) => setDepardate(e.target.value)}
+                className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                placeholder="Departure Date"
+              /> */}
+              {/* <Date /> */}
+              {/* <div className="border-red-800"> */}
+              <div  >
                 <hr />
               </div>
               <label
@@ -155,8 +196,16 @@ const AddFlight = () => {
                 timeCaption="Time"
                 dateFormat="hh:mm:ss aa"
               />
-
-              <div className="border-red-800">
+              {/* <input
+                type="text"
+                id="arrivetime"
+                value={arrivetime}
+               
+                className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                placeholder="Arrival time"
+              /> */}
+              {/* <div className="border-red-800"> */}
+              <div  >
                 <hr />
               </div>
               <label
@@ -184,7 +233,8 @@ const AddFlight = () => {
                 className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                 placeholder="Arrival Date"
               /> */}
-              <div className="border-red-800">
+              {/* <div className="border-red-800"> */}
+              <div  >
                 <hr />
               </div>
               <label
@@ -217,6 +267,7 @@ const AddFlight = () => {
           </div>
         </form>
       </div>
+      <div className="main"></div>
     </>
   );
 };

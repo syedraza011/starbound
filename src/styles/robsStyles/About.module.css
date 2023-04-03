@@ -9,24 +9,57 @@
     transition-timing-function: linear;
 }
 
-.abtBox:hover {
-    /* background-color: black; */
-    color: silver;
-    /* background-color: blue; */
-  }
-
 .abtBttnBox {
     margin: 10px;
     padding: 10px;
     border: solid whitesmoke 5px;
     color: 	#2F4F4F;
     display: inline-block;
-    transition-property: background ;
+    transition-property: background color;
     transition-duration: 2s;
     transition-timing-function: linear;
+    display: inline-block;
 }
 
-.abtBttnBox:hover {
-    background-color: blue;
-    color: silver;
+.abtBox:hover {
+    background-color: #00308F;
+    color: whitesmoke
 }
+
+                                        /*  ---  ABOUT US  ---  */
+
+.abtUsBox {
+    margin: 20px;
+    padding: 20px;
+    display: table;
+    justify-content: center;
+    align-items: center;
+}
+
+.abtUsHeadBox {
+    margin: 10px;
+    padding: 10px;
+    border: solid whitesmoke 5px;
+    color: 	whitesmoke;
+    text-align: center;
+    font-size: x-large;
+}
+
+.abtUsInBox {
+    border: solid whitesmoke 5px;
+    color: 	#2F4F4F;
+    text-align: center;
+    width: 40%;
+    padding: 25px;
+    margin: 55px;
+    float: left;
+    transition-property: background color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    font-size: large;
+}
+
+.abtUsInBox:hover {
+    background-color: #00308F;
+    color: whitesmoke
+  }

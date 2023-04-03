@@ -78,6 +78,7 @@ const Home = () => {
         <h1>Graphics box</h1>
         <p>Add some images</p>
       </div>
+      <div className="main"></div>
       </div>
       <div className="main"></div>
     </>

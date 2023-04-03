@@ -1,3 +1,13 @@
+.tempBox {
+    margin: 10px;
+    padding: 10px;
+    border: solid whitesmoke 2px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: xx-large;
+    text-align: center;
+}
+
 .trainBox {
     margin: 15px;
     padding: 15px;
@@ -13,15 +23,11 @@
     margin: 15px;
     padding: 15px;
     border: solid whitesmoke 5px;
-    color: 	#2F4F4F;
+    color: 	whitesmoke;
     display: flex;
     position: relative;
     justify-content: center;
     font-size: x-large;
-    transition-property: background color;
-    transition-duration: 2s;
-    transition-timing-function: linear;
-
 }
 
 .trainingBox {
@@ -35,9 +41,39 @@
     transition-timing-function: linear;
 }
 
-.trainBox.trainBox:hover,
-.trainHeadBox:hover,
+.trainBox4 {
+    margin: 10px;
+    padding: 10px;
+    border: solid whitesmoke 2px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.trainTextBox {
+    margin: 10px;
+    padding: 10px;
+    border: solid whitesmoke 2px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.lowBar{
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
 .trainingBox:hover {
-    color: silver;
+    color: whitesmoke;
+    background-color: #00308F;
 
 }
+
+                                        /* --- Train1 --- */
+
+   

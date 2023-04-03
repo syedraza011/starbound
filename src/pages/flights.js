@@ -47,6 +47,7 @@ const Flights = () => {
   }, []);
 
   return (
+    <>
     <div className={robStyles.flightsBox}>
       <p className={robStyles.textBox}>
         Welcome to Starbound Flights, the premier space tourism company for
@@ -86,9 +87,12 @@ const Flights = () => {
           </div>
         )}
       </div>
-
-      <div className="main"></div>
+      <Link className={styles.btnStyle} href="/AddFlight">
+          Add a new flight
+        </Link>
     </div>
+    <div className="main"></div>
+    </>
   );
 };
 
