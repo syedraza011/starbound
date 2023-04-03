@@ -9,24 +9,19 @@ const Training4 = () => {
         <h1 className={robStyles.trainHeadBox}>PRE-FIGHT TRAINING</h1>
 
         <div className={robStyles.trainingBox}>
-          <h1>TRAINING PAGE 4</h1>
-          <div>training game to test customer compliance to reaction</div>
-          <div>
+
+          <div className={robStyles.trainBox4} >
+            <h1>Congratulations on passing your pre-space travel training! This is a significant accomplishment, and it demonstrates your dedication, hard work, and commitment to this incredible endeavor. Your training has equipped you with the necessary skills and knowledge to prepare you for the challenges that lie ahead. You are now one step closer to achieving your goal of space travel, and I wish you the best of luck on your journey. May you continue to learn, grow, and excel as you pursue this remarkable opportunity.</h1>
+          </div>
+        
+          <div className={robStyles.lowBar} >
             <button className={styles.btnStyle}>
-              <Link href="/training3">{"Prev"}</Link>
+              <Link href="/training3">{"PREV"}</Link>
             </button>
-
-            {/* {setTimeout(function () { */}
-
+            <h2 className={styles.btnStyle} >PROGRESS = 100%</h2>
             <button className={styles.btnStyle}>
-              <Link href="/training5">{"Next"}</Link>
+              <Link href="/payment">{"PAYMENT"}</Link>
             </button>
-
-            {/* }, 5000)} */}
-
-            {/* <button  className={styles.btnStyle} >
-            <Link href="/payment">{"Payment"}</Link>
-          </button> */}
           </div>
         </div>
       </div>

@@ -10,14 +10,18 @@ const Checkout = () => {
       <div className={robStyles.chckOutBox}>
         <h1 className={robStyles.headBox}>CHECKOUT HERE</h1>
         <form className="formStyling ">
-          <div className={styles.sizingBox}>
+          <div 
+          className={robStyles.allTextBox}
+          // className={styles.sizingBox}
+          >
             <ul>
               <li className={robStyles.textBox}>
                 <label className="label" htmlFor="firstName">
-                  firstName:
+                  FIRST NAME:
                 </label>
                 <input
-                  className="field-style field-split student-edit-input-small"
+                  // className="field-style field-split student-edit-input-small"
+                  className={robStyles.textInptBox}
                   placeholder="John"
                   type="text"
                   name="name"
@@ -26,10 +30,11 @@ const Checkout = () => {
               </li>
               <li className={robStyles.textBox}>
                 <label className="label" htmlFor="firstName">
-                  lastName:
+                  LAST NAME:
                 </label>
                 <input
-                  className="field-style field-split student-edit-input-small"
+                  // className="field-style field-split student-edit-input-small"
+                  className={robStyles.textInptBox}
                   placeholder="Smith"
                   type="text"
                   name="name"
@@ -38,10 +43,11 @@ const Checkout = () => {
               </li>
               <li className={robStyles.textBox}>
                 <label className="label" htmlFor="Address">
-                  Address:
+                  1ST ADDRESS:
                 </label>
                 <input
-                  className="field-style field-split student-edit-input-small"
+                  // className="field-style field-split student-edit-input-small"
+                  className={robStyles.textInptBox}
                   placeholder="123 tribe street"
                   type="text"
                   name="address"
@@ -50,10 +56,11 @@ const Checkout = () => {
               </li>
               <li className={robStyles.textBox}>
                 <label className="label" htmlFor="Address">
-                  Address 2:
+                  2ND ADDRESS:
                 </label>
                 <input
-                  className="field-style field-split student-edit-input-small"
+                  // className="field-style field-split student-edit-input-small"
+                  className={robStyles.textInptBox}
                   placeholder="Apt/Suite/Unit"
                   type="text"
                   name="address2"
@@ -62,10 +69,11 @@ const Checkout = () => {
               </li>
               <li className={robStyles.textBox}>
                 <label className="label" htmlFor="imageUrl">
-                  postal_zip_code:
+                  ZIP-CODE:
                 </label>
                 <input
-                  width={4}
+                  // width={4}
+                  className={robStyles.textInptBox}
                   type="number"
                   name="postal_zip_code"
                   label="Zip/Postal"
@@ -75,10 +83,11 @@ const Checkout = () => {
               </li>
               <li className={robStyles.textBox}>
                 <label className="label" htmlFor="Email">
-                  Email:
+                  EMAIL:
                 </label>
                 <input
-                  className="field-style field-split student-edit-input-small"
+                  // className="field-style field-split student-edit-input-small"
+                  className={robStyles.textInptBox}
                   type="text"
                   name="email"
                   label="Email"

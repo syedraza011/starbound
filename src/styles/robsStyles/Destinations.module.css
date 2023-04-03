@@ -1,27 +1,61 @@
+.desScroll {
+  scroll-snap-type: mandatory;
+  /* scroll-snap-points-y: repeat(3rem); */
+  scroll-snap-type: y mandatory;
+}
+
 .desPlnts {
   display: flex;
   /* flex-wrap: wrap; */
   justify-content: space-between;
   align-items: center;
   margin: 5px;
+  scroll-snap-align: start;
+}
+
+.desHead {
+  margin: 15px;
+  padding: 15px;
+  border: solid whitesmoke 5px;
+  color: whitesmoke;
+  font-size: XX-large;
+  display: inline-block;
 }
   
 .desPlnts > * {
-  margin: 2%;
-  padding: 2%;
+  margin: 10px;
+  padding: 10px;
   border: solid whitesmoke 5px;
   color: 	#2F4F4F;
   transition-property: background color;
   transition-duration: 2s;
   transition-timing-function: linear;
+ 
 }
   
 .desPlntsText {
   font-size: large;
   max-width: 600px;
+  scroll-snap-align: start;
+}
+
+.desBttn {
+  margin: 5px;
+  padding: 5px;
+  border: solid whitesmoke 2px;
+  color: 	#2F4F4F;
+  display: inline-block;
+  transition-property: background color;
+  transition-duration: 2s;
+  transition-timing-function: linear;
 }
 
 .desPlntsText:hover {
-  /* background-color: darkgray; */
-  color: silver;
+  background-color: #00308F;
+  color: whitesmoked;
+}
+
+.desBttn:hover {
+  background-color: #00308F;
+  color: whitesmoked;
 }

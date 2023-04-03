@@ -5,6 +5,9 @@ import supabase from "../../supabase";
 import styles from "@/styles/Home.module.css";
 import robStyles from "@/styles/robsStyles/Flights.module.css";
 import { useEffect, useState } from "react";
+import Checkout from "./checkout";
+import Image from "next/image";
+import gal from "../styles/assets/indxImg/galaxy.webp";
 
 const Home = () => {
   console.log(supabase);
@@ -76,11 +79,12 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className={styles.someElseBox}>
-          <h1>Graphics box</h1>
-          <p>Add some images</p>
-        </div>
       </div>
+      <div className={styles.someElseBox}>
+       
+        <Image src={gal} height="500" width="650" alt="" />
+      </div>
+     
       <div className="main"></div>
     </>
   );

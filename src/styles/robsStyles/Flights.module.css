@@ -1,36 +1,159 @@
+
+
 .flightsBox {
     margin: 20px;
     padding: 20px;
-    border: solid whitesmoke 0.5px;
-    color: 	#2F4F4F;
-    transition-property: background color;
+    /* border: solid whitesmoke 0.5px; */
+    /* color: 	#2F4F4F; */
+    /* transition-property: background color;
     transition-duration: 1s;
-    transition-timing-function: linear;
+    transition-timing-function: linear; */
     font-size: x-large;
 }
 
 .textBox {
-    margin: 5px;
-    padding: 5px;
+    border: solid whitesmoke 5px;
+    color: whitesmoke;
+    margin: 10px;
+    padding: 10px;
+    transition-property: background color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
 }
 
 .btnBox {
     margin: 5px;
     padding: 5px;
-    border: solid silver 5px;
-    color: silver;
+    border: solid whitesmoke 5px;
+    color: #2F4F4F;
     display: inline;
     transition-property: background color;
     transition-duration: 0s;
     transition-timing-function: linear;
 }
 
-.flightsBox:hover {
+/* .flightsBox:hover {
+    background-color: darkgray;
+    color: whitesmoke;
+  } */
+
+.textBox:hover,
+.btnBox:hover {
+    background-color: #00308F;
+    /* color: whitesmoke; */
+}
+
+                                        /* --- FLIGHT CARD --- */
+.flightCardBox {
+    margin: 20px;
+    padding: 20px;
+    border: solid whitesmoke 5px;
+    color: 	#2F4F4F;
+    transition-property: background color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+
+.flightCardBox:hover {
     /* background-color: darkgray; */
-    color: rgb(195, 145, 145);
+    color: whitesmoke;
   }
 
-.btnBox:hover {
-    background-color: blue;
-    color: silver;
+.flightCardBttn {
+    display: flex;
+    justify-content: space-around;
+}
+
+                                        /* --- ADD FLIGHT --- */
+.addFlightBox {
+    margin:  15px;
+    padding: 15px;
+    /* border: solid whitesmoke 5px; */
+    color: whitesmoke;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.addFlightHead {
+    margin:  15px;
+    padding: 15px;
+    border: solid whitesmoke 5px;
+    color: whitesmoke;
+    font-size: x-large;
+}
+
+.addFlightSbmt {
+    margin:  15px;
+    padding: 15px;
+    border: solid whitesmoke 5px;
+    color: 	#2F4F4F;
+    transition-property: background color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+
+.addFlightSbmt:hover {
+    background-color: #00308F;
+    color: whitesmoke;
+  }
+
+                                        /* --- EDIT FLIGHT --- */
+
+.editFlightBox {
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: column;
+}
+
+.editFlightHead {
+    margin:  15px;
+    padding: 15px;
+    border: solid whitesmoke 5px;
+    color: whitesmoke;
+    
+    font-size: x-large;
+    /* display: inline-block; */
+}
+
+.editFlightDtl {
+    margin:  10px;
+    padding: 10px;
+    border: solid whitesmoke 5px;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.editFlightInpt {
+    margin:  10px;
+    padding: 10px;
+    border: solid whitesmoke 5px;
+    color: 	#2F4F4F;
+    display: flex;
+    transition-property: background color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    font-size: large;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.editFlightBttn {
+    margin:  10px;
+    padding: 10px;
+    border: solid whitesmoke 5px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.editFlightInpt:hover {
+    background-color: #00308F;
+    color: whitesmoke;
 }

@@ -1,12 +1,13 @@
 import Link from "next/link";
-import styles from "@/styles/robsStyles/About.module.css";
+import styles from "@/styles/Home.module.css";
+import robStyles from "@/styles/robsStyles/About.module.css";
 import { BsFillRocketTakeoffFill } from "react-icons/bs";
 
 const About = () => {
   return (
     <>
       <h1>About page</h1>
-      <div className={styles.abtBox}>
+      <div className={robStyles.abtBox}>
         <p>
           Welcome to Starbound, the premier space tourism company for those
           seeking a truly out-of-this-world experience.
@@ -37,14 +38,14 @@ const About = () => {
           So why wait? Contact us today to start planning your journey to the
           stars with Starbound!
         </p>
-        <br></br>
-        <div className={styles.abtBttnBox}>
+        {/* <br></br>
+        <div className={robStyles.btnStyle}>
           <Link href="/aboutus">
-            <p>
+            <p className={styles.btnStyle} >
               Meet the Founders Click Here? <BsFillRocketTakeoffFill />
             </p>
           </Link>
-        </div>
+        </div> */}
       </div>
 
       <div className="main"></div>
