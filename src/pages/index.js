@@ -80,6 +80,7 @@ const Home = () => {
       </div>
       <div className="main"></div>
       </div>
+      <div className="main"></div>
     </>
   );
 };

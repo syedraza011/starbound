@@ -1,4 +1,7 @@
+import React from "react";
+import Link from "next/link";
 import styles from "@/styles/Home.module.css";
+
 import supabase from "../../supabase";
 import robStyles from "@/styles/robsStyles/Flights.module.css";
 import { AiFillEdit } from "react-icons/ai"
@@ -6,21 +9,17 @@ import { RiDeleteBin2Fill } from "react-icons/ri"
 import { BiAddToQueue } from "react-icons/bi"
 import Link from "next/link";
 
-const FlightCard = ({ flight, onDelete }) => {
-  // flight = this.props;
-  const handleDelete = async () => {
-    const { data, error } = await supabase
-      .from("flight")
-      .delete()
-      .eq("id", flight.id);
 
-    if (error) {
-      console.log(error);
-    }
-    if (data) {
-      console.log(data);
-      onDelete(flight.id);
-    }
+  const handleDeleteClick = () => {
+    onDelete(flight.id);
+  };
+
+  const handleEditClick = () => {
+    onEdit(flight);
+    router.push({
+      pathname: "/EditFlight",
+      query: { id: flight.id },
+    });
   };
 
   return (
@@ -65,4 +64,5 @@ const FlightCard = ({ flight, onDelete }) => {
     </>
   );
 };
+
 export default FlightCard;

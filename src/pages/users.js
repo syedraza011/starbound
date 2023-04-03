@@ -3,7 +3,27 @@ import Link from "next/link";
 import styles from "@/styles/Home.module.css";
 import robStyles from "@/styles/robsStyles/Users.module.css"
 
+
 const Users = () => {
+  const [userError, setUserError] = useState(null);
+  const [users, setUsers] = useState([])
+
+  useEffect(() => {
+    const getUsers = async () => {
+      const { data, error } = await supabase.from("users").select();
+      if (error) {
+        setUserError("could not fetch user data")
+        setUsers(null)
+      }
+      if (data) {
+        setUsers(data);
+        setUserError(null)
+      }
+    }
+    console.log(users)
+    getUsers()
+  }, [])
+ 
   return (
     <>
       <div className={robStyles.usersBox}>

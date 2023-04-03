@@ -1,55 +1,46 @@
 import react, { useState } from "react";
-import TimePicker from "react-datepicker";
+import DatePicker from "react-datepicker";
+import styles from "../styles/Home.module.css";
 import "react-datepicker/dist/react-datepicker.css";
 const Time = () => {
-  const event = new Date("August 19, 1975 23:15:30");
+  const [arrivetime, setArrivetime] = useState("");
+  let event = new Date("August 19, 1975 23:15:30");
   //display and sub state
   const [startTime, setStartTime] = useState(event);
   const [displayTime, setDisplayTime] = useState(event);
 
-  console.log("Event", event.toDateString());
-  console.log("Your time Starts now", startTime);
+  // console.log("Event", event.toDateString());
+  // // console.log("Your time Starts now", startTime);
 
   const handleSubmit = async (e) => {
-    startTime = startTime.toTimeString();
-    console.log("T", t);
     e.preventDefault();
-    setStartTime(t);
 
-    console.log("Company Name:", startTime);
+
+    // console.log("Company Name:", startTime);
   };
 
   return (
-    <>
+    <div className={styles.indexBox}>
       <div>Time</div>
       <form id="external-form" onClick={handleSubmit}>
-        <TimePicker
-          placeholderText="Select Time Slots"
-          selected={startTime}
-          onChange={(time) => setStartTime(time)}
+        <DatePicker
+          placeholderText="Select Arrival Date"
+          selected={arrivetime}
+          // onChange={(date) => setArrivedate(date)}
+          onChange={(date) => {
+            date.toDateString();
+            console.log("test date", date);
+            setArrivetime(date);
+          }}
+          dateFormat="yyyy-MM-dd hh:mm aa"
           showTimeSelect
           isClearable
-          showTimeSelectOnly
-          timeIntervals={15}
-          timeCaption="Time"
-          dateFormat="hh:mm:ss aa"
-          // selected={startTime}
-          // onChange={(date) => setStartTime(date.toTimeString())}
-          required
-          form="external-form"
+          showYearDropdown
+          scrollableYearDropdown
         />
-
-        {/* <input
-          type="text"
-          selected={startTime}
-          onChange={() => {
-            setDisplayTime(selected);
-            console.log("display", displayTime);
-          }}
-        /> */}
-        <button>Submit</button>
+        <button type="submit" className={styles.btnStyle}>Submit</button>
       </form>
-    </>
+    </div>
   );
 };
 export default Time;

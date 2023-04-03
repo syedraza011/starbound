@@ -7,44 +7,42 @@ import supabase from "../../supabase";
 // import FlightCard from "../pages/flightCard";
 import { data } from "autoprefixer";
 
-const EditFlight = (id) => {
-  const [depart, setDeparture] = useState("");
-  const [departime, setDepartime] = useState("");
-  const [depardate, setDepardate] = useState("");
-  const [arrivetime, setArrivetime] = useState("");
-  const [arrivedate, setArrivedate] = useState("");
-  const [formError, setFormError] = useState(null);
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!depart || !arrivetime || !arrivedate || !departime || !depardate) {
-      setFormError("Please fill out the required fields");
-      return;
-    }
-    console.log(
-      "Hello new obj",
-      depart,
-      departime,
-      depardate,
-      arrivetime,
-      arrivedate
-    );
+const EditFlight = ({ flight, onEdit }) => {
+  // get the router instance
+  const router = useRouter();
 
+  // create state variables for each form field
+  const [depart, setDepart] = useState(flight.depart);
+  const [departDateTime, setDepartDateTime] = useState(
+    new Date(flight.departDateTime)
+  );
+  const [arriveTime, setArriveTime] = useState(flight.arriveTime);
+  const [arriveDate, setArriveDate] = useState(flight.arriveDate);
+  const [price, setPrice] = useState(flight.price);
+
+  // handle form submission
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    // update the flight record in the database
     const { data, error } = await supabase
       .from("flight")
-      .select("depart,departime,depardate,arrivetime,arrivedate");
-    // .eq('id',flight.id)
-    // .single()
+      .update({
+        depart: depart,
+        departDateTime: departDateTime,
+        arriveTime: arriveTime,
+        arriveDate: arriveDate,
+        price: price,
+      })
+      .eq("id", flight.id);
+
     if (error) {
       console.log(error);
-      setFormError("Please fill out the required fields");
     }
     if (data) {
-      setDeparture(data.departure);
-      setDepartime(data.departime);
-      setDepardate(data.depardate);
-      setArrivetime(data.arrivetime);
-      setArrivedate(data.arrivedate);
-      setFormError(null);
+      console.log(data);
+      onEdit(data[0]);
+      router.push("/");
     }
   };
 
@@ -230,4 +228,5 @@ const EditFlight = (id) => {
     </>
   );
 };
+
 export default EditFlight;
