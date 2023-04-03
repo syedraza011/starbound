@@ -13,7 +13,7 @@
   block-size: fit-content;
   text-align: center;
   border: solid whitesmoke 5px;
-  color: #ffdf00;
+  color: whitesmoke;
   transition-property: background color;
   transition-duration: 2s;
   transition-timing-function: linear;
@@ -24,7 +24,7 @@
   padding: 15px;
   border: solid wgites 0.3px;
   display: inline-block;
-  color: #ffdf00;
+  color: whitesmoke;
   /* position: relative; */
 }
 
@@ -54,17 +54,17 @@
 
 .someElseBox:hover {
   background-color: #00308F;
-  color: #ffdf00;
+  color: whitesmoke;
 }
 
 .outFlightBox:hover {
   background-color: #00308F;
-  color: #ffdf00;
+  color: whitesmoke;
 }
 
 .welcBox:hover {
   background-color: #00308F;
-  color:#ffdf00;
+  color:whitesmoke;
 }
 
 /* --- Robs Styling --- */
@@ -177,7 +177,7 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #ffdf00;
+  color: whitesmoke;
   background-color: #00308F;
   cursor: pointer;
   /* color: silver; */

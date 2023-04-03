@@ -9,7 +9,7 @@
     margin: 5px;
     padding: 5px;
     border: solid whitesmoke 5px;
-    color: 	#ffdf00;
+    color: 	whitesmoke;
     display: flex;
     /* position: relative; */
     justify-content: center;
@@ -59,6 +59,6 @@
 /* .chckOutBox:hover, */
 .textInptBox:hover,
 .textBox:hover {
-    color: #ffdf00;
+    color: whitesmoke;
     background-color: #00308F;
 }

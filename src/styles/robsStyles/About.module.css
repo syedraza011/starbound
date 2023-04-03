@@ -23,7 +23,7 @@
 
 .abtBox:hover {
     background-color: #00308F;
-    color: #ffdf00;
+    color: whitesmoke
 }
 
                                         /*  ---  ABOUT US  ---  */
@@ -40,7 +40,7 @@
     margin: 10px;
     padding: 10px;
     border: solid whitesmoke 5px;
-    color: 	#ffdf00;
+    color: 	whitesmoke;
     text-align: center;
     font-size: x-large;
 }
@@ -61,5 +61,5 @@
 
 .abtUsInBox:hover {
     background-color: #00308F;
-    color: #ffdf00;
+    color: whitesmoke
   }

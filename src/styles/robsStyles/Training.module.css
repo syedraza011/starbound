@@ -23,7 +23,7 @@
     margin: 15px;
     padding: 15px;
     border: solid whitesmoke 5px;
-    color: 	#ffdf00;
+    color: 	whitesmoke;
     display: flex;
     position: relative;
     justify-content: center;
@@ -69,7 +69,7 @@
 }
 
 .trainingBox:hover {
-    color: #ffdf00;
+    color: whitesmoke;
     background-color: #00308F;
 
 }

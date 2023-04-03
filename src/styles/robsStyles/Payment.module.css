@@ -14,7 +14,7 @@
     margin: 10px;
     padding: 10px;
     border: solid whitesmoke 5px;
-    color: 	#ffdf00;
+    color: 	whitesmoke;
     display: inline-block;
     transition-property: background color;
     transition-duration: 2s;
@@ -38,7 +38,7 @@
 
 
 .crdDtlBox:hover {
-    color: #ffdf00;
+    color: whitesmoke;
     background-color: #00308F;
 }
 
