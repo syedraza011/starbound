@@ -1,5 +1,7 @@
 import styles from "@/styles/Home.module.css";
 import robStyle from "@/styles/robsStyles/bPass.module.css";
+import Image from "next/image";
+import barCode from "../styles/assets/bPass/barCode.png";
 
 
 export default function boardingpass() {
@@ -7,55 +9,66 @@ export default function boardingpass() {
     <>
       <div className={robStyle.bPassBox}>
         <h1 className={robStyle.bPassHead} > BOARDING PASS </h1>
-        <div className={robStyle.bPassDtlOutBox }>
-        <div className={robStyle.bPassDtl} >
-            <label>PASSENGER NAME</label>
-            <div>
-              firstNameData
+        <div className={robStyle.bPassDtlOutBox} >
+          <div className={robStyle.bPassDtlInBox} >
+          <div className={robStyle.bPassDtl} >
+              {/* <label>PASSENGER NAME</label> */}
+              <div>
+                FIRST & LAST NAME:
+              </div>
+              <div>
+                Johnathon | Doezmem
+              </div>
             </div>
-            <div>
-              lastNameData
+            <div className={robStyle.bPassDtl} >
+              {/* <label>DEPART ORIGIN</label> */}
+              <div>
+                FROM & TO: 
+              </div>
+              <div>
+                FROM=Earth | TO=Mars
+              </div>
             </div>
+            <div className={robStyle.bPassDtl} >
+              {/* <label>GATE & TIME</label> */}
+              <div>
+                GATE & TIME:
+              </div>
+              <div>
+                GATE=C26 | TIME=15:40
+              </div>
+            </div>
+            <div className={robStyle.bPassDtl} >
+              {/* <label>SHIP & SEAT</label> */}
+              <div>
+                SHIP & SEAT:
+              </div>
+              <div>
+                SHIP=C03 | SEAT=D-04
+              </div>
           </div>
           <div className={robStyle.bPassDtl} >
-            <label>DEPART ORIGIN</label>
+            {/* <label>LAUNCH CODE:</label> */}
             <div>
-              fromData
+              LAUNCH CODE: 
             </div>
             <div>
-              toData
-            </div>
-          </div>
-          <div className={robStyle.bPassDtl} >
-            <label>GATE & TIME</label>
-            <div>
-              gateData
-            </div>
-            <div>
-              departTimeData
+              A3419-K2390
             </div>
           </div>
-          <div className={robStyle.bPassDtl} >
-            <label>SHIP & SEAT</label>
-            <div>
-              shipData
-            </div>
-            <div>
-              seatData
-            </div>
-          </div>
-          <div className={robStyle.bPassDtl} >
-            <label>LAUNCH CODE:</label>
-            <div>
-              codeData
-            </div>
-          </div>
-          <div className={robStyle.bPassbttn} >
+          
+          {/* <div className={robStyle.bPassbttn} >
             <button className={styles.btnStyle} >
               SUBMIT HERE
             </button>
+          </div> */}
+        </div>
+          <div className={robStyle.pbPassCode} >
+            <Image src={barCode} width="150" />
           </div>
         </div>
+        
+        
         
 
         {/* <div className={styles.ticket}>
@@ -86,6 +99,7 @@ export default function boardingpass() {
           src="http://www.classtools.net/QR/pics/qr.png"
         </div> */}
       </div>
+      
       <div className="main"></div>
     </>
   );

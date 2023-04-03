@@ -46,16 +46,16 @@
   display: flex inline;
   float: right;
   border: solid whitesmoke 5px;
-  color: 	#2F4F4F;
+  /* color: 	#2F4F4F;
   transition-property: background color;
   transition-duration: 2s;
-  transition-timing-function: linear;
+  transition-timing-function: linear; */
 }
 
-.someElseBox:hover {
+/* .someElseBox:hover {
   background-color: #00308F;
   color: whitesmoke;
-}
+} */
 
 .outFlightBox:hover {
   background-color: #00308F;

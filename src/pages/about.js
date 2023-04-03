@@ -38,14 +38,14 @@ const About = () => {
           So why wait? Contact us today to start planning your journey to the
           stars with Starbound!
         </p>
-        <br></br>
+        {/* <br></br>
         <div className={robStyles.btnStyle}>
           <Link href="/aboutus">
             <p className={styles.btnStyle} >
               Meet the Founders Click Here? <BsFillRocketTakeoffFill />
             </p>
           </Link>
-        </div>
+        </div> */}
       </div>
 
       <div className="main"></div>
