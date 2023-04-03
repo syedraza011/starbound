@@ -1,11 +1,11 @@
 import react from "react";
 import Link from "next/link";
 import supabase from "../../supabase";
-import FlightCard from "./FlightCard";
+
 import styles from "@/styles/Home.module.css";
 import robStyles from "@/styles/robsStyles/Flights.module.css";
 import { useEffect, useState } from "react";
-import Checkout from "./checkout";
+
 const Home = () => {
   console.log(supabase);
   const [fetchError, setFetchError] = useState(null);
@@ -35,6 +35,7 @@ const Home = () => {
           <h1>WELCOME TO STARBOUND</h1>
 
           <p>
+        
             Our state-of-the-art spacecraft are designed for maximum comfort and
             safety, so you can relax and enjoy the ride while our experienced
             crew takes care of everything else. Whether you’re a space
@@ -47,37 +48,38 @@ const Home = () => {
             safe, enjoyable, and truly unforgettable experience.
           </p>
         </div>
+   
       </div>
       <div>
-      <div className={styles.outFlightBox}>
-        <h1>Flights departing soon...</h1>
+        <div className={styles.outFlightBox}>
+          <h1>Flights departing soon...</h1>
 
-        <div>
-          <div className={robStyles.flightsBox}>
-            {fetchError && <p>{fetchError}</p>}
-            {flights && (
-              <>
-                {flights.map((flight) => (
-                  <>
-                    <h3>Departure Origon: {flight.depart}</h3>
-                    <p>Flight Time: {flight.departime}</p>
-                    <p>Flight Date: {flight.depardate}</p>
+          <div>
+            <div className={robStyles.flightsBox}>
+              {fetchError && <p>{fetchError}</p>}
+              {flights && (
+                <>
+                  {flights.map((flight) => (
+                    <>
+                      <h3>Departure Origon: {flight.depart}</h3>
+                      <p>Flight Time: {flight.departime}</p>
+                      <p>Flight Date: {flight.depardate}</p>
 
-                    <hr></hr>
-                  </>
-                ))}
-              </>
-            )}
-            <button className={styles.btnStyle}>
-              <Link href="/flights">More Flights</Link>
-            </button>
+                      <hr></hr>
+                    </>
+                  ))}
+                </>
+              )}
+              <button className={styles.btnStyle}>
+                <Link href="/flights">More Flights</Link>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div className={styles.someElseBox}>
-        <h1>Graphics box</h1>
-        <p>Add some images</p>
-      </div>
+        <div className={styles.someElseBox}>
+          <h1>Graphics box</h1>
+          <p>Add some images</p>
+        </div>
       </div>
       <div className="main"></div>
     </>

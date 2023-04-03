@@ -21,13 +21,13 @@
     color: silver;
     display: inline;
     transition-property: background color;
-    transition-duration: 2s;
+    transition-duration: 0s;
     transition-timing-function: linear;
 }
 
 .flightsBox:hover {
     /* background-color: darkgray; */
-    color: silver;
+    color: rgb(195, 145, 145);
   }
 
 .btnBox:hover {
