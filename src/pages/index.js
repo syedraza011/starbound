@@ -82,7 +82,6 @@ const Home = () => {
         <p>Add some images</p> */}
         <Image src={gal} height="500" width="650" alt="" />
       </div>
-      <div className="main"></div>
       </div>
       <div className="main"></div>
     </>
