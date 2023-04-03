@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
+import UserNav from "@/pages/UserNav";
 
 function NavigationBar() {
   return (
@@ -7,12 +8,12 @@ function NavigationBar() {
       <div className="max-w-8l mx-auto px-2">
         <div className="flex justify-between">
           <div className="flex space-x-20">
-            <div>
+            <p>
               {/* Website Logo */}
-              <Link href="/" className="companyLogo">
+              {/* <Link href="/" className="companyLogo">
                 <img src="starbound.png" alt="Logo" className="starlogo" />
-              </Link>
-            </div>
+              </Link> */}
+            </p>
             {/* Primary Navbar items */}
             <div className="hidden md:flex items-center space-x-1">
               <Link
@@ -22,37 +23,56 @@ function NavigationBar() {
                 Home
               </Link>
               <Link
+                href="/signIn"
+                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
+              >
+                ToggleSignIn
+              </Link>
+              <Link
+                href="/ThreeGame"
+                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
+              >
+                Games
+              </Link>
+              <Link
+                href="/ballShooter"
+                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
+              >
+                BallGames
+              </Link>
+              <Link
+                href="/users"
+                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
+              >
+                Users
+              </Link>
+
+              <Link
+                href="/1Game"
+                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
+              >
+                1Games
+              </Link>
+              <Link
+                href="Game"
+                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
+              >
+                Game
+              </Link>
+              <Link
+                href="/user"
+                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
+              >
+                user
+              </Link>
+
+              <Link
                 href="/about"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 About
               </Link>
-              <a
-                href="/flights"
-                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
-              >
-                Flights
-              </a>
-              {/* <Link href="/src/pages/flights.js">Podcast</Link> */}
-              <Link
-                href="/destinations"
-                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
-              >
-                Destinations
-              </Link>
 
-              <Link
-                href="/training"
-                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
-              >
-                Training
-              </Link>
-              {/* <Link
-                href="/flight"
-                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
-              >
-                n_Flight
-              </Link> */}
               <Link
                 href="/store"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
@@ -65,18 +85,7 @@ function NavigationBar() {
               >
                 Contact
               </Link>
-              <Link
-                href="/checkout"
-                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
-              >
-                Checkout
-              </Link>
-              <Link
-                href="/users"
-                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
-              >
-                Users
-              </Link>
+
               <Link
                 href="/date"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"

@@ -1,31 +1,42 @@
 import react from "react";
-import Link from "Next/link";
+import Link from "next/link";
 import styles from "@/styles/Home.module.css";
-const Users = () => {
+import supabase from "../../supabase";
+import { useState, useEffect } from "react";
+const User = () => {
+  const [fetchError, setFetchError] = useState(null);
+  const [session, setSessions] = useState(null);
+  useEffect(() => {
+    const fetchSessions = async () => {
+      const { data, error } = await supabase.auth.getSession();
+      console.log("session",data);
+      if (error) {
+        setFetchError("Could not fetch flights data");
+        setSessions(null);
+        console.log("Error: ", error);
+      }
+      if (data) {
+        // console.log(data);
+        setSessions(data);
+        setFetchError(null);
+      }
+    };
+    fetchSessions();
+  }, []);
+
+  // async fetchSessions=()=>{
+  // const { data, error } = await supabase.auth.getSession()
+  // }
+
   return (
     <div>
       <h1>Users page</h1>
-    <div>
-    <form>
-      <div className="grid gap-6 sm:grid-cols-2">
-        <div className="relative z-0">
-          <input type="text" name="name" className="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" " />
-          <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Your name</label>
-        </div>
-        <div className="relative z-0">
-          <input type="text" name="email" className="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" " />
-          <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Your email</label>
-        </div>
-        <div className="relative z-0 col-span-2">
-          <textarea name="message" rows="5" className="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" "></textarea>
-          <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Your message</label>
-        </div>
+      <div>
+    
+        {/* <p>Is Logged In: {session.isLoggedIn ? "Yes" : "No"}</p> */}
+        {/* <p>Token: {session.token}</p> */}
       </div>
-      <button type="submit" className="mt-5 rounded-md bg-black px-10 py-2 text-white">Send Message</button>
-    </form>
-  </div>
-</div>
-
+    </div>
   );
 };
-export default Users;
+export default User;

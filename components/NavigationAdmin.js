@@ -89,6 +89,12 @@ function NavigationBar() {
               >
                 time
               </Link>
+              <Link
+                href="/admin"
+                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
+              >
+                AdminPage
+              </Link>
             </div>
           </div>
           {/* Secondary Navbar items */}
@@ -104,6 +110,12 @@ function NavigationBar() {
               className="py-2 px-2 font-medium text-white bg-blue-600 rounded hover:bg-blue-800 transition duration-300"
             >
               Account
+            </Link>
+            <Link
+              href="/signUp"
+              className="py-2 px-2 font-medium text-white bg-blue-600 rounded hover:bg-blue-800 transition duration-300"
+            >
+              Sign Up
             </Link>
           </div>
           {/* Mobile menu button */}
