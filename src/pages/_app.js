@@ -8,11 +8,12 @@ import styles from "../styles/Home.module.css";
 import Image from "next/image";
 
 import "../styles/globals.css";
-import { SessionProvider } from "next-auth/react";
+// import { SessionProvider } from "next-auth/react";
+
 function MyApp({ Component, pageProps, session }) {
   return (
     <>
-    <SessionProvider>
+    {/* <SessionProvider> */}
  <Head>
          <title>StarBound</title>
 
@@ -26,7 +27,7 @@ function MyApp({ Component, pageProps, session }) {
       <Component {...pageProps} />
       <ChatWidget />
       <Footer />
-    </SessionProvider>
+    {/* </SessionProvider> */}
     </>
   );
 }

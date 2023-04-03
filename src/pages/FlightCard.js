@@ -7,8 +7,6 @@ import robStyles from "@/styles/robsStyles/Flights.module.css";
 import { AiFillEdit } from "react-icons/ai"
 import { RiDeleteBin2Fill } from "react-icons/ri"
 import { BiAddToQueue } from "react-icons/bi"
-import Link from "next/link";
-
 
   const handleDeleteClick = () => {
     onDelete(flight.id);
@@ -22,6 +20,8 @@ import Link from "next/link";
     });
   };
 
+
+const FlightCard = () => {
   return (
     <>
       <div>
@@ -65,4 +65,4 @@ import Link from "next/link";
   );
 };
 
-export default FlightCard;
+// export default FlightCard;
