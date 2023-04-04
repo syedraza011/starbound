@@ -33,6 +33,7 @@
   padding: 15px;
   display: flex inline;
   float: left;
+  text-align: center;
   border: solid whitesmoke 5px;
   color: #2F4F4F;
   transition-property: background color;
@@ -212,6 +213,7 @@
   height: 330px;
   border-radius: 15px;
 }
+
 .btnStyle{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -468,6 +470,7 @@ cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* border: solid whitesmoke 5px; */
 }
 
 .cartitemscontainer {

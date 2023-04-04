@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import moment from "moment";
+import robStyles from "@/styles/robsStyles/Other.module.css"
 
 const TimeOption = ({ onSelectTime }) => {
   const [selectedTime, setSelectedTime] = useState(null);
@@ -48,7 +49,7 @@ const TimeOption = ({ onSelectTime }) => {
   };
 
   return (
-    <div>
+    <div >
       <Select
         value={selectedTime}
         onChange={handleTimeChange}
@@ -58,6 +59,7 @@ const TimeOption = ({ onSelectTime }) => {
         }
         placeholder="Select a time"
         isClearable
+        className={robStyles.styleBox}
       />
     </div>
   );

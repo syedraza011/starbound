@@ -1,7 +1,8 @@
-import react from "react";
+import react, { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
 import robStyles from "@/styles/robsStyles/Users.module.css"
+import supabase from "../../supabase";
 
 
 const Users = () => {

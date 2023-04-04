@@ -5,6 +5,7 @@ import TimeOption from "./TimeOption";
 import DateOption from "./DateOption";
 import styles from "@/styles/Home.module.css";
 import robStyle from "@/styles/robsStyles/Flights.module.css"
+import { MdAssignmentReturn } from 'react-icons/md'
 import DatePicker from "react-datepicker";
 import TimePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -74,13 +75,20 @@ function AddFlight() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-lg mx-auto mt-8">
-      <Link href="/flights">
-        <span className="text-2xl leading-none">&larr;</span>
+    <>
+    <div className={robStyle.addFlightBox } >
+      <form onSubmit={handleSubmit} className="max-w-lg mx-auto mt-8">
+      <Link  className={styles.btnStyle } href="/flights">
+        <span 
+        // className="text-2xl leading-none"
+        >
+          {/* &larr; */}
+          < MdAssignmentReturn/>
+        </span>
       </Link>
-      <div className="grid grid-cols-1 gap-6">
+      <div className={robStyle.addFlightSbmt} >
         <label htmlFor="depart" className="block">
-          Departure origon:
+          DEPART ORIGIN:
         </label>
         <input
           placeholder="Place of Dragon Departure"
@@ -89,11 +97,12 @@ function AddFlight() {
           name="depart"
           value={depart}
           onChange={(e) => setDepart(e.target.value)}
-          className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500"
+          // className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500 color:black"
+          className={robStyle.addFlightSbmt}
         />
 
         <label htmlFor="destination" className="block">
-          Destination
+          DESTINATION:
         </label>
         <input
           placeholder="Dragon Destination fpr example: Mars, Space, etc"
@@ -102,44 +111,49 @@ function AddFlight() {
           name="destination"
           value={destination}
           onChange={(e) => setDestination(e.target.value)}
-          className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500"
+          // className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500"
+          className={robStyle.addFlightSbmt}
         />
 
         <label
-          className="block text-gray-700 text-sm font-bold mb-2"
+          // className="block text-gray-700 text-sm font-bold mb-2"
+          
           htmlFor="departime"
         >
-          Departure Time
+          DEPART TIME:
         </label>
         <TimeOption onSelectTime={handleDeparSelectTime} />
 
         <label htmlFor="depardate" className="block">
-          Departure Date
+          DEPART DATE:
         </label>
         <DateOption
-          className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500"
+          // className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500"
+          className={robStyle.addFlightSbmt}
           onChange={handleDepardateChange}
         />
 
         <label
-          className="block text-gray-700 text-sm font-bold mb-2"
+          // className="block text-gray-700 text-sm font-bold mb-2"
+          
           htmlFor="departime"
         >
-          Return Time
+          RETURN TIME:
         </label>
         <TimeOption onSelectTime={handleReturnSelectTime} />
 
         <label htmlFor="depardate" className="block">
-          return Date
+          RETURN DATE:
         </label>
 
         <DateOption onChange={handleReturnDateChange} />
 
         <label>
-          Price:
+          PRICE:
           <input
             placeholder="Dragon Prince"
-            className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500"
+            // className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500"
+            className={robStyle.addFlightSbmt}
             type="number"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
@@ -147,11 +161,15 @@ function AddFlight() {
         </label>
         <div>
           <button type="submit" className={styles.btnStyle}>
-            Add new Flight
+            ADD NEW FLIGHT
           </button>
         </div>
       </div>
     </form>
+    </div>
+    
+    </>
+    
   );
 }
 
