@@ -1,274 +1,176 @@
 import { useState } from "react";
-import { useEffect } from "react";
+import supabase from "../../supabase";
+import Link from "next/link";
+import TimeOption from "./TimeOption";
+import DateOption from "./DateOption";
 import styles from "@/styles/Home.module.css";
 import robStyle from "@/styles/robsStyles/Flights.module.css"
+import { MdAssignmentReturn } from 'react-icons/md'
 import DatePicker from "react-datepicker";
 import TimePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import supabase from "../../supabase";
 
-const AddFlight = () => {
-  function timeFixer(time) {
-    setDepartime(time);
-    console.log("timeFiexer", time);
-  }
-
-  const [date, setDate] = useState(null);
-  const [startTime, setStartTime] = useState("");
-  const [depart, setDeparture] = useState("");
-  const [price, setPrice] = useState("");
+function AddFlight() {
+  const [depart, setDepart] = useState("");
+  const [destination, setDestination] = useState("");
   const [departime, setDepartime] = useState("");
-  const [depardate, setDepardate] = useState(null);
-  const [arrivetime, setArrivetime] = useState("");
-  const [arrivedate, setArrivedate] = useState("");
-  const [formError, setFormError] = useState(null);
+  const [depardate, setDepardate] = useState("");
+  const [returntime, setReturntime] = useState("");
+  const [returndate, setReturndate] = useState("");
+  const [price, setPrice] = useState("");
+
+  const handleDepardateChange = (date) => {
+    console.log("afterhandle", date);
+    setDepardate(date);
+  };
+
+  const handleDeparSelectTime = (time) => {
+    console.log();
+    setDepartime(time);
+  };
+
+  const handleReturnSelectTime = (time) => {
+    setReturntime(time);
+  };
+  const handleReturnDateChange = (date) => {
+    setReturndate(date);
+  };
   const handleSubmit = async (e) => {
-  
-
-    // useEffect =
-    //   (() => {
-    //     const updateDeparTime = depardate.toLocalDate("en-US");
-    //     console.log("updateDate", updateDeparTime);
-    //     setDepartime(updateDeparTime);
-
-    //     const updatedeparDate = depardate.toLocalDate("en-US");
-    //     console.log("updateDate", updatedeparDate);
-    //     setDepardate(updatedeparDate);
-    //   },
-    //   []);
-
     e.preventDefault();
-    if (
-      !depart ||
-      !arrivetime ||
-      !arrivedate ||
-      !departime ||
-      !depardate ||
-      !price
-    ) {
-      setFormError("Please fill out the required fields");
-      return;
-    }
-    console.log("Company Name:", depart);
-    console.log("depart Time:", departime);
-    console.log("depart depardate:", depardate);
-    console.log("depart arrivetime:", arrivetime);
-    console.log("depart  arrivedate:", arrivedate);
-    console.log("Dragon price:", price);
+    console.log("Submit ander");
 
-    const { data, error } = await supabase
-      .from("flight")
-      .insert([
-        { depart, departime, depardate, arrivetime, arrivedate, price },
-      ]);
+    console.log("depart:", depart);
+    console.log("destination:", destination);
+    console.log("departime:", departime);
+    console.log("depardate:", depardate);
+    console.log("returntime:", returntime);
+    console.log("returndate:", returndate);
+    console.log("price:", price);
+
+    const { data, error } = await supabase.from("flight").insert([
+      {
+        depart,
+        destination,
+        departime,
+        depardate,
+        returntime,
+        returndate,
+        price,
+      },
+    ]);
+
     if (error) {
-      console.log(error);
-      setFormError("Please fill out the required fields");
-    }
-    if (data) {
-      console.log(data);
-      setFormError(null);
+      console.error(error);
+    } else {
+      console.log("Flight added successfully:", data);
+      // reset form fields
+      setDepart("");
+      setDestination("");
+      setDepartime("");
+      setDepardate("");
+      setReturntime("");
+      setReturndate("");
+      setPrice("");
     }
   };
 
   return (
     <>
-    {/* <div className={robStyle.addFlightBox} >
-
-      <h1 className={robStyle.addFlightHead} >ADD YOUR FLIGHTS HERE </h1>
-      <form className={robStyle.addFlightSbmt} onSubmit={handleSubmit} >
-        <div>
-          <label className={robStyle.addFlightSbmt} htmlFor="departure" >
-          DEPART ORIGIN
-          </label>
-          <input
+    <div className={robStyle.addFlightBox } >
+      <form onSubmit={handleSubmit} className="max-w-lg mx-auto mt-8">
+      <Link  className={styles.btnStyle } href="/flights">
+        <span 
+        // className="text-2xl leading-none"
+        >
+          {/* &larr; */}
+          < MdAssignmentReturn/>
+        </span>
+      </Link>
+      <div className={robStyle.addFlightSbmt} >
+        <label htmlFor="depart" className="block">
+          DEPART ORIGIN:
+        </label>
+        <input
+          placeholder="Place of Dragon Departure"
           type="text"
-          id="departure"
+          id="depart"
+          name="depart"
           value={depart}
-          onChange={(e) => setDeparture(e.target.value)}
+          onChange={(e) => setDepart(e.target.value)}
+          // className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500 color:black"
           className={robStyle.addFlightSbmt}
-          placeholder="DEPART ORIGIN"
+        />
+
+        <label htmlFor="destination" className="block">
+          DESTINATION:
+        </label>
+        <input
+          placeholder="Dragon Destination fpr example: Mars, Space, etc"
+          type="text"
+          id="destination"
+          name="destination"
+          value={destination}
+          onChange={(e) => setDestination(e.target.value)}
+          // className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500"
+          className={robStyle.addFlightSbmt}
+        />
+
+        <label
+          // className="block text-gray-700 text-sm font-bold mb-2"
+          
+          htmlFor="departime"
+        >
+          DEPART TIME:
+        </label>
+        <TimeOption onSelectTime={handleDeparSelectTime} />
+
+        <label htmlFor="depardate" className="block">
+          DEPART DATE:
+        </label>
+        <DateOption
+          // className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500"
+          className={robStyle.addFlightSbmt}
+          onChange={handleDepardateChange}
+        />
+
+        <label
+          // className="block text-gray-700 text-sm font-bold mb-2"
+          
+          htmlFor="departime"
+        >
+          RETURN TIME:
+        </label>
+        <TimeOption onSelectTime={handleReturnSelectTime} />
+
+        <label htmlFor="depardate" className="block">
+          RETURN DATE:
+        </label>
+
+        <DateOption onChange={handleReturnDateChange} />
+
+        <label>
+          PRICE:
+          <input
+            placeholder="Dragon Prince"
+            // className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500"
+            className={robStyle.addFlightSbmt}
+            type="number"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
           />
+        </label>
+        <div>
+          <button type="submit" className={styles.btnStyle}>
+            ADD NEW FLIGHT
+          </button>
         </div>
-      </form>
-    </div> */}
-
-      <div className={robStyle.addFlightBox} >
-        <h1 className={robStyle.addFlightHead} >ADD YOUR FLIGHTS HERE </h1>
-        <form className="Form bg-zinc-200" onSubmit={handleSubmit}>
-          <div className={robStyle.addFlightSbmt}>
-            {/* <div className="relative mb-3 xl:w-96" data-te-input-wrapper-init> */}
-            <div data-te-input-wrapper-init>
-              <input
-                type="text"
-                id="departure"
-                value={depart}
-                onChange={(e) => setDeparture(e.target.value)}
-                className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                placeholder="Departure Origon"
-              />
-              {/* <div className="border-red-800"> */}
-              <div  >
-                <hr />
-              </div>
-
-              <label
-                htmlFor="departure"
-                className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] border-red-800 origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200"
-              >
-                Departure Origon
-              </label>
-              {/* -------------------------------------- */}
-
-              <TimePicker
-                placeholderText="Select Time Slots"
-                selected={departime}
-                onChange={(time) => setDepartime(time)}
-                //  {
-                //   let trimTime=time.toLocaleString('en-US')
-
-                //   setDepartime(trimTime)}
-                // }
-                showTimeSelect
-                isClearable
-                showTimeSelectOnly
-                timeIntervals={15}
-                timeCaption="Time"
-                dateFormat="hh:mm:ss aa"
-              />
-              {/* <input
-                type="text"
-                id="departuretime"
-                value={departime}
-                onChange={(e) => setDepartime(e.target.value)}
-                className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                placeholder="Departure time"
-              /> */}
-              {/* <div className="border-red-800"> */}
-              <div  >
-                <hr />
-              </div>
-              <label
-                htmlFor="departureTime"
-                className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] border-red-800 origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200"
-              >
-                Departure Time
-              </label>
-              {/* ------------------------------------------------------ */}
-
-              <DatePicker
-                placeholderText="Select Depart Date"
-                selected={depardate}
-                onChange={(depardate) => setDepardate(depardate)}
-                dateFormat="yyyy-MM-dd"
-                isClearable
-                showYearDropdown
-                scrollableYearDropdown
-              />
-              {/* <input
-                type="text"
-                id="departuretime"
-                value={depardate}
-                onChange={(e) => setDepardate(e.target.value)}
-                className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                placeholder="Departure Date"
-              /> */}
-              {/* <Date /> */}
-              {/* <div className="border-red-800"> */}
-              <div  >
-                <hr />
-              </div>
-              <label
-                htmlFor="departureDate"
-                className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] border-red-800 origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200"
-              >
-                Departure Date
-              </label>
-
-              <TimePicker
-                placeholderText="Select Arival Time"
-                selected={arrivetime}
-                onChange={(arrivetime) => setArrivetime(arrivetime)}
-                showTimeSelect
-                isClearable
-                showTimeSelectOnly
-                timeIntervals={15}
-                timeCaption="Time"
-                dateFormat="hh:mm:ss aa"
-              />
-              {/* <input
-                type="text"
-                id="arrivetime"
-                value={arrivetime}
-               
-                className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                placeholder="Arrival time"
-              /> */}
-              {/* <div className="border-red-800"> */}
-              <div  >
-                <hr />
-              </div>
-              <label
-                htmlFor="arrivalTime"
-                className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] border-red-800 origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200"
-              >
-                Arrival Time
-              </label>
-
-              {/* --------------changing---------- */}
-              <DatePicker
-                placeholderText="Select Arrival Date"
-                selected={arrivedate}
-                onChange={(date) => setArrivedate(date)}
-                dateFormat="yyyy-MM-dd"
-                isClearable
-                showYearDropdown
-                scrollableYearDropdown
-              />
-              {/* <input
-                type="text"
-                id="arrivetime"
-                value={arrivedate}
-                onChange={(e) => setArrivedate(date)}
-                className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                placeholder="Arrival Date"
-              /> */}
-              {/* <div className="border-red-800"> */}
-              <div  >
-                <hr />
-              </div>
-              <label
-                htmlFor="arrivalDate"
-                className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] border-red-800 origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200"
-              >
-                Arrival Date
-              </label>
-              {/* ------------changing above------------------ */}
-
-              <input
-                type="number"
-                id="price"
-                value={price}
-                onChange={(e) => setPrice(e.target.value)}
-                className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                placeholder="Dragon price"
-              />
-              <div className="border-red-800">
-                <hr />
-              </div>
-              <label
-                htmlFor="price"
-                className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] border-red-800 origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200"
-              >
-                Dragon Price
-              </label>
-              <button className={styles.btnStyle}>Submit data</button>
-            </div>
-          </div>
-        </form>
       </div>
-      <div className="main"></div>
+    </form>
+    </div>
+    
     </>
+    
   );
-};
+}
+
 export default AddFlight;

@@ -1,15 +1,13 @@
 import react from "react";
 import Link from "next/link";
 import supabase from "../../supabase";
-import FlightCard from "./FlightCard";
+
 import styles from "@/styles/Home.module.css";
 import robStyles from "@/styles/robsStyles/Flights.module.css";
 import { useEffect, useState } from "react";
 import Checkout from "./checkout";
 import Image from "next/image";
-import Img1 from "/public/Imgs/Img1.jpg";
-import Img2 from "/public/Imgs/Img2.jpg";
-import { width } from "@mui/system";
+import gal from "../styles/assets/indxImg/galaxy.webp";
 
 const Home = () => {
   console.log(supabase);
@@ -37,9 +35,10 @@ const Home = () => {
     <>
       <div className={styles.indexBox}>
         <div className={styles.welcBox}>
-          <h1 class="text-2xl font-extrabold ">WELCOME TO STARBOUND</h1>
-          <br></br>
-          <p class="font-semibold">
+          <h1>WELCOME TO STARBOUND</h1>
+
+          <p>
+        
             Our state-of-the-art spacecraft are designed for maximum comfort and
             safety, so you can relax and enjoy the ride while our experienced
             crew takes care of everything else. Whether you’re a space
@@ -52,6 +51,7 @@ const Home = () => {
             safe, enjoyable, and truly unforgettable experience.
           </p>
         </div>
+   
       </div>
 
       <Image src={Img1} alt="/" width={3121}></Image>
@@ -98,12 +98,12 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* <div className={styles.someElseBox}>
-          <h1>Graphics box</h1>
-          <p>Add some images</p>
-        </div> */}
-        <div className="main"></div>
       </div>
+      <div className={styles.someElseBox}>
+       
+        <Image src={gal} height="500" width="650" alt="" />
+      </div>
+     
       <div className="main"></div>
     </>
   );

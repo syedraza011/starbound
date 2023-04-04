@@ -9,11 +9,13 @@
     transition-duration: 1s;
     transition-timing-function: linear; */
     font-size: x-large;
+    /* color: whitesmoke; */
 }
 
 .textBox {
     border: solid whitesmoke 5px;
-    color: whitesmoke;
+    /* color: whitesmoke; */
+    color: #2F4F4F;
     margin: 10px;
     padding: 10px;
     transition-property: background color;
@@ -40,24 +42,41 @@
 .textBox:hover,
 .btnBox:hover {
     background-color: #00308F;
-    /* color: whitesmoke; */
+    color: whitesmoke;
 }
 
                                         /* --- FLIGHT CARD --- */
 .flightCardBox {
-    margin: 20px;
-    padding: 20px;
+    margin: 15px;
+    padding: 15px;
     border: solid whitesmoke 5px;
     color: 	#2F4F4F;
     transition-property: background color;
     transition-duration: 2s;
     transition-timing-function: linear;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 .flightCardBox:hover {
-    /* background-color: darkgray; */
+    background-color: #00308F;
     color: whitesmoke;
   }
+
+.flightCardText {
+    margin: 10px;
+    padding: 10px;
+    border: solid whitesmoke 3px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    /* color: 	#2F4F4F;
+    transition-property: background color;
+    transition-duration: 2s;
+    transition-timing-function: linear; */
+
+}
 
 .flightCardBttn {
     display: flex;
@@ -68,25 +87,38 @@
 .addFlightBox {
     margin:  15px;
     padding: 15px;
-    /* border: solid whitesmoke 5px; */
+    border: solid whitesmoke 5px;
     color: whitesmoke;
-    display: flex ;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    /* display: flex ; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* flex-direction: column; */
 }
 
 .addFlightHead {
-    margin:  15px;
-    padding: 15px;
-    border: solid whitesmoke 5px;
-    color: whitesmoke;
-    font-size: x-large;
+    margin:  10px;
+    padding: 10px;
+    /* border: solid whitesmoke 3px; */
+    color: 	#2F4F4F;
+    transition-property: background color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
 }
 
 .addFlightSbmt {
-    margin:  15px;
-    padding: 15px;
+    margin:  10px;
+    padding: 10px;
+    border: solid whitesmoke 5px;
+    color: 	#2F4F4F;
+    transition-property: background color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    width: 98%;
+}
+
+.addFlightInpt {
+    margin:  5px;
+    padding: 5px;
     border: solid whitesmoke 5px;
     color: 	#2F4F4F;
     transition-property: background color;
@@ -94,6 +126,7 @@
     transition-timing-function: linear;
 }
 
+.addFlightHead:hover,
 .addFlightSbmt:hover {
     background-color: #00308F;
     color: whitesmoke;
