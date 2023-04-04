@@ -49,6 +49,7 @@ const Cart = () => {
     <div className={styles.cartitem} key={item.id} item={item}>
       <div className={styles.cartitemdetails}>
         <p className={styles.cartitemdeparture}>
+          Departure Origin: {item.depart}
           Departure Origon: {item.depart}
         </p>
         <p className={styles.cartitemdate}>Departure Date: {item.depardate}</p>

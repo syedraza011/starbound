@@ -53,9 +53,16 @@ const Home = () => {
         </div>
    
       </div>
-      <div>
+
+      <Image src={Img1} alt="/" width={3121}></Image>
+      {/* <Image src={Img2} alt="/" width={3121}></Image> */}
+      <br></br>
+      <br></br>
+      <div className="text-center">
         <div className={styles.outFlightBox}>
-          <h1>Flights departing soon...</h1>
+          <h1 className="text-2xl font-extrabold text-gray-500 text-center  hover:text-blue-600">
+            Flights Departing Soon
+          </h1>
 
           <div>
             <div className={robStyles.flightsBox}>
@@ -64,9 +71,21 @@ const Home = () => {
                 <>
                   {flights.map((flight) => (
                     <>
-                      <h3>Departure Origon: {flight.depart}</h3>
-                      <p>Flight Time: {flight.departime}</p>
-                      <p>Flight Date: {flight.depardate}</p>
+                      <br></br>
+                      <h3 className="text-gray-500 text-md pb-2 font-extrabold hover:text-blue-600">
+                        Departure From: {flight.depart}
+                      </h3>
+                      <br></br>
+
+                      <p className="text-gray-500 text-md pb-2 font-bold hover:text-blue-600">
+                        Time: {flight.departime}
+                      </p>
+
+                      <p className="text-gray-500 text-md pb-2 font-bold hover:text-blue-600">
+                        Date: {flight.depardate}
+                      </p>
+
+                      <br></br>
 
                       <hr></hr>
                     </>

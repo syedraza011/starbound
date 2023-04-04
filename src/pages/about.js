@@ -6,7 +6,7 @@ import { BsFillRocketTakeoffFill } from "react-icons/bs";
 const About = () => {
   return (
     <>
-      <h1>About page</h1>
+      {/* <h1>About page</h1> */}
       <div className={robStyles.abtBox}>
         <p>
           Welcome to Starbound, the premier space tourism company for those
@@ -41,7 +41,7 @@ const About = () => {
         {/* <br></br>
         <div className={robStyles.btnStyle}>
           <Link href="/aboutus">
-            <p className={styles.btnStyle} >
+            <p className={styles.btnStyle}>
               Meet the Founders Click Here? <BsFillRocketTakeoffFill />
             </p>
           </Link>
