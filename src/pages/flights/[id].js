@@ -2,6 +2,8 @@ import { useState } from "react";
 import supabase from "../../../supabase";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import robStyles from "@/styles/robsStyles/Flights.module.css";
+
 
 const FlightDetails = ({ flight }) => {
   const router = useRouter();
@@ -64,17 +66,18 @@ const FlightDetails = ({ flight }) => {
 
   return (
     <>
+    <div className={robStyles.flightsBox} >
       <Link href="/flights">
         <span className="text-2xl leading-none">&larr;</span>
       </Link>
-      <div className="w-full max-w-3xl mx-auto py-16 px-8">
+      <div className={robStyles.textBox}>
         <h1 className="text-3xl mb-6">
           {flight.depart} to {flight.destination}
         </h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col">
             <label htmlFor="depart" className="mb-2 font-medium">
-              Departure:
+              DEPART:
             </label>
             <input
               type="text"
@@ -82,12 +85,13 @@ const FlightDetails = ({ flight }) => {
               name="depart"
               value={formData.depart}
               onChange={handleChange}
-              className="border rounded py-2 px-3"
+              // className="border rounded py-2 px-3"
+              className={robStyles.btnBox}
             />
           </div>
           <div className="flex flex-col">
             <label htmlFor="destination" className="mb-2 font-medium">
-              Destination:
+              DESTINATION:
             </label>
             <input
               type="text"
@@ -95,12 +99,13 @@ const FlightDetails = ({ flight }) => {
               name="destination"
               value={formData.destination}
               onChange={handleChange}
-              className="border rounded py-2 px-3"
+              // className="border rounded py-2 px-3"
+              className={robStyles.btnBox}
             />
           </div>
           <div className="flex flex-col">
             <label htmlFor="departime" className="mb-2 font-medium">
-              Departure time:
+              DEPART TIME:
             </label>
             <input
               type="text"
@@ -108,12 +113,13 @@ const FlightDetails = ({ flight }) => {
               name="departime"
               value={formData.departime}
               onChange={handleChange}
-              className="border rounded py-2 px-3"
+              // className="border rounded py-2 px-3"
+              className={robStyles.btnBox}
             />
           </div>
           <div className="flex flex-col">
             <label htmlFor="depardate" className="mb-2 font-medium">
-              Departure Date:
+              DEPART DATE:
             </label>
             <input
               type="text"
@@ -121,9 +127,11 @@ const FlightDetails = ({ flight }) => {
               name="depardate"
               value={formData.depardate}
               onChange={handleChange}
+              className={robStyles.btnBox}
             />
           </div>
-          <div className="mb-4">
+          <div className={robStyles.textBox} >
+            <div className="mb-4">
             <label htmlFor="returndate">Return time:</label>
             <input
               type="text"
@@ -131,6 +139,7 @@ const FlightDetails = ({ flight }) => {
               name="returntime"
               value={formData.returntime}
               onChange={handleChange}
+              className={robStyles.btnBox}
             />
           </div>
           <div className="mb-4">
@@ -141,6 +150,7 @@ const FlightDetails = ({ flight }) => {
               name="returndate"
               value={formData.returndate}
               onChange={handleChange}
+              className={robStyles.btnBox}
             />
           </div>
           <div className="mb-4">
@@ -151,15 +161,21 @@ const FlightDetails = ({ flight }) => {
               name="price"
               value={formData.price}
               onChange={handleChange}
+              className={robStyles.btnBox}
             />
           </div>
+          </div>
+          
           <Link href="/flights">
-            <button>Back to Flights Page</button>
+            <button className={robStyles.btnBox} >Back to Flights Page</button>
           </Link>
 
-          <button type="submit">Update Flight </button>
+          <button className={robStyles.btnBox} type="submit">Update Flight </button>
         </form>
       </div>
+    </div>
+    <div className="main"></div>
+      
     </>
   );
 };

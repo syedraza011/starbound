@@ -1,9 +1,10 @@
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
+import { BsCart4 } from "react-icons/bs";
 
 function NavigationBar() {
   return (
-    <nav className="sticky bg-[#9ca3af] shadow-lg">
+    <nav className="sticky bg-[white] shadow-lg">
       <div className="max-w-8l mx-auto px-2">
         <div className="flex justify-between">
           <div className="flex space-x-20">
@@ -53,12 +54,13 @@ function NavigationBar() {
               >
                 n_Flight
               </Link> */}
-              <Link
+
+              {/* <Link
                 href="/store"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 Store
-              </Link>
+              </Link> */}
               <Link
                 href="/contact"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
@@ -71,34 +73,42 @@ function NavigationBar() {
               >
                 Checkout
               </Link>
-              <Link
+
+              {/* <Link
                 href="/users"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 Users
-              </Link>
-              <Link
+              </Link> */}
+              {/* <Link
                 href="/date"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 Date
-              </Link>
-              <Link
+              </Link> */}
+              {/* <Link
                 href="/time"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 time
-              </Link>
-              <Link
+              </Link> */}
+              {/* <Link
                 href="/admin"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 AdminPage
-              </Link>
+              </Link> */}
             </div>
           </div>
           {/* Secondary Navbar items */}
           <div className="hidden md:flex items-center space-x-3 ">
+            <Link
+              href="https://buy.stripe.com/test_3cs01K2bEaQO0Hm5kl"
+              className="py-5 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
+            >
+              <BsCart4 />
+            </Link>
+
             <Link
               href="/login"
               className="py-2 px-2 font-medium text-white bg-blue-600 rounded hover:bg-blue-800 transition duration-300"

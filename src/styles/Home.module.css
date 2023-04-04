@@ -29,12 +29,28 @@
 }
 
 .outFlightBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+  padding: 15px;
+  /* display: flex inline; */
+  /* float: left; */
+  border: solid whitesmoke 5px;
+  color: #2f4f4f;
+  transition-property: background color;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+
+.outFlightBox {
   margin: 15px;
   padding: 15px;
   display: flex inline;
   float: left;
+  text-align: center;
   border: solid whitesmoke 5px;
-  color: #2F4F4F;
+  color: #2f4f4f;
   transition-property: background color;
   transition-duration: 1s;
   transition-timing-function: linear;
@@ -46,29 +62,29 @@
   display: flex inline;
   float: right;
   border: solid whitesmoke 5px;
-  /* color: 	#2F4F4F;
+  color: #2f4f4f;
   transition-property: background color;
   transition-duration: 2s;
-  transition-timing-function: linear; */
+  transition-timing-function: linear;
 }
 
-/* .someElseBox:hover {
-  background-color: #00308F;
+.someElseBox:hover {
+  background-color: #00308f;
+  color: whitesmoke;
+}
+
+/* .outFlightBox:hover {
+  background-color: #00308f;
   color: whitesmoke;
 } */
 
-.outFlightBox:hover {
-  background-color: #00308F;
+/* .outFlightBox:hover, */
+.welcBox:hover {
+  background-color: #00308f;
   color: whitesmoke;
 }
 
-.welcBox:hover {
-  background-color: #00308F;
-  color:whitesmoke;
-}
-
 /* --- Robs Styling --- */
-
 
 .container {
   padding: 0 2rem;
@@ -77,7 +93,7 @@
 /* .users{
   background-color: rgb(162, 158, 158);
 } */
-.destination{
+.destination {
   background-color: aquamarine;
 }
 .main {
@@ -89,7 +105,7 @@
   justify-content: center;
   align-items: center;
   background-color: rgb(244, 238, 238);
-} 
+}
 .departing-soon * {
   background-color: aqua;
 }
@@ -137,7 +153,7 @@
   line-height: 1.5;
   font-size: 1.5rem;
 }
-.departingSoon{
+.departingSoon {
   background-color: chocolate;
 }
 .code {
@@ -161,7 +177,7 @@
   margin: 10px;
   padding: 10px;
   text-align: left;
-  color: #2F4F4F;
+  color: #2f4f4f;
   text-decoration: none;
   border: solid whitesmoke 5px;
   border-radius: 10px;
@@ -178,7 +194,7 @@
 .card:focus,
 .card:active {
   color: whitesmoke;
-  background-color: #00308F;
+  background-color: #00308f;
   cursor: pointer;
   /* color: silver; */
   /* border-color: #0070f3; */
@@ -207,16 +223,17 @@
   }
 }
 
-.sizingBox{
+.sizingBox {
   width: 350px;
   height: 330px;
   border-radius: 15px;
 }
-.btnStyle{
+
+.btnStyle {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: bold;
-  color: 	#2F4F4F;
+  color: #2f4f4f;
   /* background-color: rgb(198, 188, 188); */
   border-radius: 15px;
   border: solid whitesmoke 1px;
@@ -234,21 +251,20 @@
   transition-timing-function: linear;
 }
 
-.btnStyle:hover{
+.btnStyle:hover {
   background-color: whitesmoke;
-  color: #00308F;
- }
- .boxInput{
+  color: #00308f;
+}
+.boxInput {
   height: 200px;
- }
- /* .carditem:hover{
+}
+/* .carditem:hover{
   color: goldenrod
  } */
- .companyLogo:hover{
-cursor: pointer;
- }
+.companyLogo:hover {
+  cursor: pointer;
+}
 /* boarding pass  */
-
 
 /* ------------login form----------*/
 
@@ -342,7 +358,7 @@ cursor: pointer;
 .signInButton:hover {
   background-color: #b3c4de;
 }
-.passwordResetButton{
+.passwordResetButton {
   background-color: #ffffff;
   color: #000000;
   border: 1px solid #000000;
@@ -353,16 +369,12 @@ cursor: pointer;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.passwordResetButton:hover{
+.passwordResetButton:hover {
   background-color: #935f5f;
   color: #ffffff;
-
 }
 
-
 /* ------------login form----------*/
-
-
 
 /* ------------Sign up form----------*/
 
@@ -376,7 +388,6 @@ cursor: pointer;
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
   color: #03031a;
   font-size: 1.2rem;
- 
 }
 
 .signUpform {
@@ -391,7 +402,6 @@ cursor: pointer;
   width: 90%;
   max-width: 500px;
   margin: 0 auto;
-  
 }
 
 .formgroup {
@@ -422,11 +432,32 @@ cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
+.btnStyle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2f4f4f;
+  /* background-color: rgb(198, 188, 188); */
+  border-radius: 15px;
+  border: solid whitesmoke 1px;
+  margin: 15px;
+  padding: 15px;
+  cursor: pointer;
+  /* display: inline-block; */
+  /* margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+  transition-property: background color;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
 .btn-primary {
   background-color: #0070f3;
   color: #fff;
 }
-
 
 .googleButton {
   background-color: #dd4b39;
@@ -453,21 +484,14 @@ cursor: pointer;
   margin-right: 0.5rem;
 }
 
-
-
-
-
-
-
-
 /* ------------Sign up form----------*/
-
 
 /* ---Cart Styling */
 .cartcontainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* border: solid whitesmoke 5px; */
 }
 
 .cartitemscontainer {

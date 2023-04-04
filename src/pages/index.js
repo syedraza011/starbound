@@ -5,8 +5,9 @@ import supabase from "../../supabase";
 import styles from "@/styles/Home.module.css";
 import robStyles from "@/styles/robsStyles/Flights.module.css";
 import { useEffect, useState } from "react";
-import Checkout from "./checkout";
+
 import Image from "next/image";
+import Img1 from "../../public/Imgs/Img1.jpg";
 import gal from "../styles/assets/indxImg/galaxy.webp";
 
 const Home = () => {
@@ -51,9 +52,14 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div>
+
+      <Image src={Img1} alt="/" width={3121}></Image>
+
+      <div className="text-center">
         <div className={styles.outFlightBox}>
-          <h1>Flights departing soon...</h1>
+          <h1 className="text-2xl font-extrabold text-gray-500 text-center  hover:text-blue-600">
+            Flights Departing Soon
+          </h1>
 
           <div>
             <div className={robStyles.flightsBox}>
@@ -68,6 +74,23 @@ const Home = () => {
                         <p>Flight Date: {flight.depardate}</p>
                       </div>
                       <hr />
+                      <br></br>
+                      <h3 className="text-gray-500 text-md pb-2 font-extrabold hover:text-blue-600">
+                        Departure From: {flight.depart}
+                      </h3>
+                      <br></br>
+
+                      <p className="text-gray-500 text-md pb-2 font-bold  hover:text-blue-600">
+                        Time: {flight.departime}
+                      </p>
+
+                      <p className="text-gray-500 text-md pb-2 font-bold  hover:text-blue-600">
+                        Date: {flight.depardate}
+                      </p>
+
+                      <br></br>
+
+                      <hr></hr>
                     </>
                   ))}
                 </>
