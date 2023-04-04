@@ -1,4 +1,4 @@
-import styles from "@/styles/Home.module.css";
+
 import robStyle from "@/styles/robsStyles/bPass.module.css";
 import Image from "next/image";
 import barCode from "../styles/assets/bPass/barCode.png";

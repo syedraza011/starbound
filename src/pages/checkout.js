@@ -9,6 +9,7 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 
 const Checkout = () => {
   const [name, setName] = useState("");
+  const [lName, setlName] = useState("");
   const [email, setEmail] = useState("");
   const [address1, setAddress1] = useState("");
   const [address2, setAddress2] = useState("");
@@ -49,10 +50,10 @@ const Checkout = () => {
                   className={robStyles.textInptBox}
                   placeholder="Smith"
                   type="text"
-                  name="name"
+                  name="lastname"
                   required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  value={lName}
+                  onChange={(e) => setlName(e.target.value)}
                 ></input>
               </li>
               <li className={robStyles.textBox}>

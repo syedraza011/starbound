@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import supabase from "../../supabase";
-import styles from "@/styles/Dash.module.css";
 
 export default function Dash() {
   const [user, setUser] = useState(null);

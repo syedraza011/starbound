@@ -8,7 +8,7 @@ const AboutUs = () => {
         <h1 className={styles.abtUsHeadBox}>MEET THE FOUNDERS</h1>
 
         <div className={styles.abtUsInBox}>
-          <h2 className={styles.abtUsHeadBox} >Angeles R.</h2>
+          <h2 className={styles.abtUsHeadBox}>Angeles R.</h2>
           <p>
             placeHolder119Words Lorem ipsum dolor sit amet, consectetur
             adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -30,7 +30,7 @@ const AboutUs = () => {
         </div>
 
         <div className={styles.abtUsInBox}>
-          <h2 className={styles.abtUsHeadBox} >Dewit R.</h2>
+          <h2 className={styles.abtUsHeadBox}>Dewit R.</h2>
           <p>
             placeHolder119Words Lorem ipsum dolor sit amet, consectetur
             adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -54,7 +54,7 @@ const AboutUs = () => {
         </div>
 
         <div className={styles.abtUsInBox}>
-          <h2 className={styles.abtUsHeadBox} >Saad M.</h2>
+          <h2 className={styles.abtUsHeadBox}>Saad M.</h2>
           <p>
             placeHolder119Words Lorem ipsum dolor sit amet, consectetur
             adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -76,7 +76,7 @@ const AboutUs = () => {
         </div>
 
         <div className={styles.abtUsInBox}>
-          <h2 className={styles.abtUsHeadBox} >Sayed R.</h2>
+          <h2 className={styles.abtUsHeadBox}>Sayed R.</h2>
           <p>
             placeHolder119Words Lorem ipsum dolor sit amet, consectetur
             adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -93,7 +93,7 @@ const AboutUs = () => {
             tristique senectus et netus et. Massa enim nec dui nunc.
           </p>
           <h3>
-            <Link href="">RAZAS LINKEDIN</Link>
+            <Link href="">Syed Raza </Link>
           </h3>
         </div>
       </div>
