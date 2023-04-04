@@ -1,30 +1,30 @@
 import react, { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
-import robStyles from "@/styles/robsStyles/Users.module.css"
+import robStyles from "@/styles/robsStyles/Users.module.css";
+import { useState, useEffect } from "react";
 import supabase from "../../supabase";
-
 
 const Users = () => {
   const [userError, setUserError] = useState(null);
-  const [users, setUsers] = useState([])
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     const getUsers = async () => {
       const { data, error } = await supabase.from("users").select();
       if (error) {
-        setUserError("could not fetch user data")
-        setUsers(null)
+        setUserError("could not fetch user data");
+        setUsers(null);
       }
       if (data) {
         setUsers(data);
-        setUserError(null)
+        setUserError(null);
       }
-    }
-    console.log(users)
-    getUsers()
-  }, [])
- 
+    };
+    console.log(users);
+    getUsers();
+  }, []);
+
   return (
     <>
       <div className={robStyles.usersBox}>
