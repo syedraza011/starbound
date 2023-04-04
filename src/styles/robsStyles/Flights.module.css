@@ -47,19 +47,36 @@
 
                                         /* --- FLIGHT CARD --- */
 .flightCardBox {
-    margin: 20px;
-    padding: 20px;
+    margin: 15px;
+    padding: 15px;
     border: solid whitesmoke 5px;
     color: 	#2F4F4F;
     transition-property: background color;
     transition-duration: 2s;
     transition-timing-function: linear;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 .flightCardBox:hover {
-    /* background-color: darkgray; */
+    background-color: #00308F;
     color: whitesmoke;
   }
+
+.flightCardText {
+    margin: 10px;
+    padding: 10px;
+    border: solid whitesmoke 3px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    /* color: 	#2F4F4F;
+    transition-property: background color;
+    transition-duration: 2s;
+    transition-timing-function: linear; */
+
+}
 
 .flightCardBttn {
     display: flex;
@@ -79,11 +96,13 @@
 }
 
 .addFlightHead {
-    margin:  15px;
-    padding: 15px;
-    border: solid whitesmoke 5px;
-    color: whitesmoke;
-    font-size: x-large;
+    margin:  10px;
+    padding: 10px;
+    /* border: solid whitesmoke 3px; */
+    color: 	#2F4F4F;
+    transition-property: background color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
 }
 
 .addFlightSbmt {
@@ -107,6 +126,7 @@
     transition-timing-function: linear;
 }
 
+.addFlightHead:hover,
 .addFlightSbmt:hover {
     background-color: #00308F;
     color: whitesmoke;

@@ -83,13 +83,13 @@ const Cart = () => {
   return (
     <div className={styles.cartcontainer}>
       <Link href="/flights"></Link>
-      <div className={styles.cartitemscontainer}>{cartItemsElements}</div>
+      <div className={styles.cartcontainer }>{cartItemsElements}</div>
       <button className={styles.btnStyle} onClick={handleClearCart}>
-        Clear cart
+        CLEAR CART:
       </button>
-      <h4>Total Cost:</h4>
+      <h4>TOTAL COST:</h4>
       <button className={styles.btnStyle} onClick={handleClearCart}>
-        Proceed to Checkout
+        CHECKOUT:
       </button>
       <div className="main"></div>
     </div>

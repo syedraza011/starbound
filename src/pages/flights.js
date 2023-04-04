@@ -4,7 +4,7 @@ import supabase from "../../supabase";
 import styles from "@/styles/Home.module.css";
 import robStyles from "@/styles/robsStyles/Flights.module.css";
 import Cart from "../pages/cart";
-import { BsFillCartCheckFill } from 'react-icons'
+import { BsFillCartCheckFill } from 'react-icons/bs'
 import { useRouter } from "next/router";
 
 const Flights = () => {
@@ -77,11 +77,11 @@ const Flights = () => {
 
   return (
     <>
-      <Cart />
-      <div className="styles.btnStyle">
-        <Link href="/cart">🛒 </Link>
-      </div>
       <div className={robStyles.flightsBox}>
+        <Cart />
+      <div className={styles.btnStyle}>
+        <Link href="/cart"> < BsFillCartCheckFill /> </Link>
+      </div>
         <p className={robStyles.textBox}>
           Welcome to Starbound Flights, the premier space tourism company for
           those seeking a truly out-of-this-world experience. Our mission is to
@@ -97,24 +97,26 @@ const Flights = () => {
           {flights && (
             <div className="flights">
               {flights.map((flight, index) => (
-                <div key={index} className={robStyles.textBox}>
-                  <h2>
-                    {flight.depart} to {flight.destination}
+                <div key={index} className={robStyles.flightCardBox}>
+                  <h2 className={robStyles.flightCardText} >
+                    {flight.depart}  <span/> {flight.destination}
                   </h2>
-                  <p>Depart Origon: {flight.depart}</p>
-                  <p>depart Time:{flight.departime}</p>
-                  <p>depart Date: {flight.depardate}</p>
-                  <p>Return Time:{flight.returntime}</p>
-                  <p> Return Date: {flight.returndate}</p>
-                  <p>Dragon Price: ${flight.price}</p>
-                  <button onClick={() => handleEdit(flight.id)}>Edit</button>
-                  <button onClick={() => handleDelete(flight.id)}>
+                  <p className={robStyles.flightCardText} >Depart Origon: <span/>{flight.depart}</p>
+                  <p className={robStyles.flightCardText} >Depart Time:  <span/>{flight.departime}</p>
+                  <p className={robStyles.flightCardText} >Depart Date:  <span/>{flight.depardate}</p>
+                  <p className={robStyles.flightCardText} >Return Time:  <span/>{flight.returntime}</p>
+                  <p className={robStyles.flightCardText} >Return Date:  <span/>{flight.returndate}</p>
+                  <p className={robStyles.flightCardText} >Dragon Price: $  <span/>{flight.price}</p>
+                  <div className={robStyles.flightCardBttn} >
+                    <button className={styles.btnStyle} onClick={() => handleEdit(flight.id)}>Edit</button>
+                  <button className={styles.btnStyle} onClick={() => handleDelete(flight.id)}>
                     Delete
                   </button>
-
-                  <button onClick={() => handleAddToCart(flight)}>
+                  <button  className={styles.btnStyle} onClick={() => handleAddToCart(flight)}>
                     Add to Cart
                   </button>
+                  </div>
+                  
                 </div>
               ))}
             </div>
