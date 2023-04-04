@@ -6,6 +6,11 @@ import styles from "@/styles/Home.module.css";
 import robStyles from "@/styles/robsStyles/Flights.module.css";
 import { useEffect, useState } from "react";
 import Checkout from "./checkout";
+import Image from "next/image";
+import Img1 from "/public/Imgs/Img1.jpg";
+import Img2 from "/public/Imgs/Img2.jpg";
+import { width } from "@mui/system";
+
 const Home = () => {
   console.log(supabase);
   const [fetchError, setFetchError] = useState(null);
@@ -32,9 +37,9 @@ const Home = () => {
     <>
       <div className={styles.indexBox}>
         <div className={styles.welcBox}>
-          <h1>WELCOME TO STARBOUND</h1>
-
-          <p>
+          <h1 class="text-2xl font-extrabold ">WELCOME TO STARBOUND</h1>
+          <br></br>
+          <p class="font-semibold">
             Our state-of-the-art spacecraft are designed for maximum comfort and
             safety, so you can relax and enjoy the ride while our experienced
             crew takes care of everything else. Whether you’re a space
@@ -48,37 +53,56 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div>
-      <div className={styles.outFlightBox}>
-        <h1>Flights departing soon...</h1>
 
-        <div>
-          <div className={robStyles.flightsBox}>
-            {fetchError && <p>{fetchError}</p>}
-            {flights && (
-              <>
-                {flights.map((flight) => (
-                  <>
-                    <h3>Departure Origon: {flight.depart}</h3>
-                    <p>Flight Time: {flight.departime}</p>
-                    <p>Flight Date: {flight.depardate}</p>
+      <Image src={Img1} alt="/" width={3121}></Image>
+      {/* <Image src={Img2} alt="/" width={3121}></Image> */}
+      <br></br>
+      <br></br>
+      <div className="text-center">
+        <div className={styles.outFlightBox}>
+          <h1 className="text-2xl font-extrabold text-gray-500 text-center  hover:text-blue-600">
+            Flights Departing Soon
+          </h1>
 
-                    <hr></hr>
-                  </>
-                ))}
-              </>
-            )}
-            <button className={styles.btnStyle}>
-              <Link href="/flights">More Flights</Link>
-            </button>
+          <div>
+            <div className={robStyles.flightsBox}>
+              {fetchError && <p>{fetchError}</p>}
+              {flights && (
+                <>
+                  {flights.map((flight) => (
+                    <>
+                      <br></br>
+                      <h3 className="text-gray-500 text-md pb-2 font-extrabold hover:text-blue-600">
+                        Departure From: {flight.depart}
+                      </h3>
+                      <br></br>
+
+                      <p className="text-gray-500 text-md pb-2 font-bold hover:text-blue-600">
+                        Time: {flight.departime}
+                      </p>
+
+                      <p className="text-gray-500 text-md pb-2 font-bold hover:text-blue-600">
+                        Date: {flight.depardate}
+                      </p>
+
+                      <br></br>
+
+                      <hr></hr>
+                    </>
+                  ))}
+                </>
+              )}
+              <button className={styles.btnStyle}>
+                <Link href="/flights">More Flights</Link>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div className={styles.someElseBox}>
-        <h1>Graphics box</h1>
-        <p>Add some images</p>
-      </div>
-      <div className="main"></div>
+        {/* <div className={styles.someElseBox}>
+          <h1>Graphics box</h1>
+          <p>Add some images</p>
+        </div> */}
+        <div className="main"></div>
       </div>
       <div className="main"></div>
     </>
