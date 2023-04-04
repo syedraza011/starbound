@@ -1,3 +1,5 @@
+
+
 import styles from "../styles/Home.module.css";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -45,6 +47,11 @@ const Cart = () => {
     localStorage.removeItem("cartItems");
   };
 
+  let totalCost = 0;
+  for (let i = 0; i < cartItems.length; i++) {
+    totalCost += cartItems[i].price * cartItems[i].quantity;
+  }
+
   const cartItemsElements = cartItems.map((item) => (
     <div className={styles.cartitem} key={item.id} item={item}>
       <div className={styles.cartitemdetails}>
@@ -84,14 +91,17 @@ const Cart = () => {
   return (
     <div className={styles.cartcontainer}>
       <Link href="/flights"></Link>
-      <div className={styles.cartcontainer }>{cartItemsElements}</div>
+      <div className={styles.cartcontainer}>{cartItemsElements}</div>
       <button className={styles.btnStyle} onClick={handleClearCart}>
         CLEAR CART:
       </button>
-      <h4>TOTAL COST:</h4>
-      <button className={styles.btnStyle} onClick={handleClearCart}>
-        CHECKOUT:
-      </button>
+      <h4>Total Cost:</h4>
+      <Link href="/checkout">
+        <button className={styles.clearcartbutton} onClick={handleClearCart}>
+          Proceed to Checkout
+        </button>
+      </Link>
+
       <div className="main"></div>
     </div>
   );

@@ -5,7 +5,7 @@ import supabase from "../../supabase";
 import styles from "@/styles/Home.module.css";
 import robStyles from "@/styles/robsStyles/Flights.module.css";
 import { useEffect, useState } from "react";
-import Checkout from "./checkout";
+
 import Image from "next/image";
 import Img1 from "../../public/Imgs/Img1.jpg";
 import gal from "../styles/assets/indxImg/galaxy.webp";
@@ -54,10 +54,8 @@ const Home = () => {
       </div>
 
       <Image src={Img1} alt="/" width={3121}></Image>
-      {/* <Image src={Img2} alt="/" width={3121}></Image> */}
-      {/* <br></br>
-      <br></br> */}
-      {/* <div className="text-center">
+
+      <div className="text-center">
         <div className={styles.outFlightBox}>
           <h1 className="text-2xl font-extrabold text-gray-500 text-center  hover:text-blue-600">
             Flights Departing Soon
@@ -68,8 +66,14 @@ const Home = () => {
               {fetchError && <p>{fetchError}</p>}
               {flights && (
                 <>
-                  {flights.map((flight) => (
+                  {flights.map((flight, index) => (
                     <>
+                      <div key={index} flight={flight}>
+                        <h3>Departure Origon: {flight.depart}</h3>
+                        <p>Flight Time: {flight.departime}</p>
+                        <p>Flight Date: {flight.depardate}</p>
+                      </div>
+                      <hr />
                       <br></br>
                       <h3 className="text-gray-500 text-md pb-2 font-extrabold hover:text-blue-600">
                         Departure From: {flight.depart}
@@ -97,10 +101,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div> */}
-      {/* <div className={styles.someElseBox}>
+      </div>
+      <div className={styles.someElseBox}>
         <Image src={gal} height="500" width="650" alt="" />
-      </div> */}
+      </div>
 
       <div className="main"></div>
     </>

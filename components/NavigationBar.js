@@ -192,7 +192,7 @@ function NavigationBar() {
         <div className="flex justify-between">
           <div className="flex space-x-20">
             <div>
-              {/* Website Logo */}
+             
               <Link href="/" className="companyLogo">
                 <img src="starbound.png" alt="Logo" className="starlogo" />
               </Link>
@@ -217,7 +217,7 @@ function NavigationBar() {
               >
                 Flights
               </a>
-              {/* <Link href="/src/pages/flights.js">Podcast</Link> */}
+            
               <Link
                 href="/destinations"
                 className="py-4 px-2 text-gray-800 font-extrabold hover:text-blue-600 transition duration-300"
@@ -231,12 +231,7 @@ function NavigationBar() {
               >
                 Training
               </Link>
-              {/* <Link
-                href="/flight"
-                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
-              >
-                n_Flight
-              </Link> */}
+              
               <Link
                 href="/store"
                 className="py-4 px-2 text-gray-800 font-extrabold hover:text-blue-600 transition duration-300"
@@ -261,24 +256,7 @@ function NavigationBar() {
               >
                 Users
               </Link>
-              {/* <Link
-                href="/date"
-                className="py-4 px-2 text-gray-800 font-extrabold hover:text-blue-600 transition duration-300"
-              >
-                Date
-              </Link> */}
-              {/* <Link
-                href="/time"
-                className="py-4 px-2 text-gray-800 font-extrabold hover:text-blue-600 transition duration-300"
-              >
-                Time
-              </Link> */}
-              {/* <Link
-                href="/admin"
-                className="py-4 px-2 text-gray-800 font-extrabold hover:text-blue-600 transition duration-300"
-              >
-                AdminPage
-              </Link> */}
+              
             </div>
           </div>
           {/* Secondary Navbar items */}
@@ -299,13 +277,13 @@ function NavigationBar() {
               href="/account"
               className="py-2 px-2 font-medium text-white bg-gray-600 rounded hover:bg-gray-800 transition duration-300"
             >
-              Account
+              Sign Out
             </Link>
             <Link
               href="/signUp"
               className="py-2 px-2 font-medium text-white bg-gray-600 rounded hover:bg-gray-800 transition duration-300"
             >
-              Sign Up
+              Dashboard
             </Link>
           </div>
           {/* Mobile menu button */}
