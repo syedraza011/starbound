@@ -192,7 +192,6 @@ function NavigationBar() {
         <div className="flex justify-between">
           <div className="flex space-x-20">
             <div>
-             
               <Link href="/" className="companyLogo">
                 <img src="starbound.png" alt="Logo" className="starlogo" />
               </Link>
@@ -217,7 +216,7 @@ function NavigationBar() {
               >
                 Flights
               </a>
-            
+
               <Link
                 href="/destinations"
                 className="py-4 px-2 text-gray-800 font-extrabold hover:text-blue-600 transition duration-300"
@@ -231,7 +230,7 @@ function NavigationBar() {
               >
                 Training
               </Link>
-              
+
               <Link
                 href="/store"
                 className="py-4 px-2 text-gray-800 font-extrabold hover:text-blue-600 transition duration-300"
@@ -256,7 +255,6 @@ function NavigationBar() {
               >
                 Users
               </Link>
-              
             </div>
           </div>
           {/* Secondary Navbar items */}
@@ -268,7 +266,7 @@ function NavigationBar() {
               <BsCart4 />
             </Link>
             <Link
-              href="/login"
+              href="/signIn"
               className="py-2 px-2 font-medium text-white bg-gray-600 rounded hover:bg-gray-800 transition duration-300"
             >
               Log In
@@ -326,7 +324,7 @@ function NavigationBar() {
           </li>
           <li>
             <div
-              href="/flights"
+              href="/uFlights"
               className="py-4 px-2 text-gray-800 font-extrabold hover:text-blue-600 transition duration-300"
             >
               Flights

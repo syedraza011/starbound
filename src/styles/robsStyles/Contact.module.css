@@ -7,12 +7,12 @@
 }
 
 .conHeadBox {
-    margin: 10px;
-    padding: 10px;
-    border: solid whitesmoke 5px;
-    color: 	whitesmoke;
-    display: flex;
-    font-size: x-large;
+  margin: 10px;
+  padding: 10px;
+  border: solid whitesmoke 5px;
+  color: whitesmoke;
+  display: flex;
+  font-size: x-large;
 }
 
 .conDtlBox {

@@ -92,9 +92,9 @@ const Flights = () => {
           experience the thrill of exploring the cosmos for yourself.
         </p>
         <div>
-          {/* <Link className={styles.btnStyle} href="/AddFlight">
+          <Link className={styles.btnStyle} href="/AddFlight">
             Add New Flight
-          </Link> */}
+          </Link>
 
           {fetchError && <p>{fetchError}</p>}
           {flights && (
@@ -129,7 +129,7 @@ const Flights = () => {
                     {flight.price}
                   </p>
                   <div className={robStyles.flightCardBttn}>
-                    {/* <button
+                    <button
                       className={styles.btnStyle}
                       onClick={() => handleEdit(flight.id)}
                     >
@@ -140,7 +140,7 @@ const Flights = () => {
                       onClick={() => handleDelete(flight.id)}
                     >
                       Delete
-                    </button> */}
+                    </button>
                     <button
                       className={styles.btnStyle}
                       onClick={() => handleAddToCart(flight)}

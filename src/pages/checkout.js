@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import styles from "@/styles/Home.module.css";
 import robStyles from "@/styles/robsStyles/Checkout.module.css";
 import { BsFillRocketTakeoffFill } from "react-icons/bs";
-import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 
 const Checkout = () => {
   const [name, setName] = useState("");

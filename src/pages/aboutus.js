@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "@/styles/robsStyles/About.module.css";
 
-const AboutUs = () => {
+export default function AboutUs() {
   return (
     <>
       <div className={styles.abtUsBox}>
@@ -100,5 +100,5 @@ const AboutUs = () => {
       <div className="main"></div>
     </>
   );
-};
+}
 // export default AboutUs;

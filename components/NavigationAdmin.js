@@ -110,7 +110,7 @@ function NavigationBar() {
             </Link>
 
             <Link
-              href="/login"
+              href="/signIn"
               className="py-2 px-2 font-medium text-white bg-blue-600 rounded hover:bg-blue-800 transition duration-300"
             >
               Log In
@@ -121,12 +121,12 @@ function NavigationBar() {
             >
               Account
             </Link>
-            <Link
+            {/* <Link
               href="/signUp"
               className="py-2 px-2 font-medium text-white bg-blue-600 rounded hover:bg-blue-800 transition duration-300"
             >
               Sign Up
-            </Link>
+            </Link> */}
           </div>
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
