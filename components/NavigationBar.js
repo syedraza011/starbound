@@ -261,24 +261,24 @@ function NavigationBar() {
               >
                 Users
               </Link>
-              <Link
+              {/* <Link
                 href="/date"
                 className="py-4 px-2 text-gray-800 font-extrabold hover:text-blue-600 transition duration-300"
               >
                 Date
-              </Link>
-              <Link
+              </Link> */}
+              {/* <Link
                 href="/time"
                 className="py-4 px-2 text-gray-800 font-extrabold hover:text-blue-600 transition duration-300"
               >
                 Time
-              </Link>
-              <Link
+              </Link> */}
+              {/* <Link
                 href="/admin"
                 className="py-4 px-2 text-gray-800 font-extrabold hover:text-blue-600 transition duration-300"
               >
                 AdminPage
-              </Link>
+              </Link> */}
             </div>
           </div>
           {/* Secondary Navbar items */}

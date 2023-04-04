@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useState } from "react";
 import { CartProvider } from "../../context/cartContext";
 import NavigationAdmin from "/components/NavigationAdmin";
-import ChatWidget from "../../components/ChatWidget";
+// import ChatWidget from "../../components/ChatWidget";
 import Footer from "/components/Footer";
 import "../styles/globals.css";
 
@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
       <CartProvider cartItems={cartItems} setCartItems={setCartItems}>
         <Component {...pageProps} />
       </CartProvider>
-      <ChatWidget />
+      {/* <ChatWidget /> */}
       <Footer />
     </>
   );

@@ -7,6 +7,7 @@ import robStyles from "@/styles/robsStyles/Flights.module.css";
 import { useEffect, useState } from "react";
 import Checkout from "./checkout";
 import Image from "next/image";
+import Img1 from "../../public/Imgs/Img1.jpg";
 import gal from "../styles/assets/indxImg/galaxy.webp";
 
 const Home = () => {
@@ -38,7 +39,6 @@ const Home = () => {
           <h1>WELCOME TO STARBOUND</h1>
 
           <p>
-        
             Our state-of-the-art spacecraft are designed for maximum comfort and
             safety, so you can relax and enjoy the ride while our experienced
             crew takes care of everything else. Whether you’re a space
@@ -51,14 +51,13 @@ const Home = () => {
             safe, enjoyable, and truly unforgettable experience.
           </p>
         </div>
-   
       </div>
 
       <Image src={Img1} alt="/" width={3121}></Image>
       {/* <Image src={Img2} alt="/" width={3121}></Image> */}
-      <br></br>
-      <br></br>
-      <div className="text-center">
+      {/* <br></br>
+      <br></br> */}
+      {/* <div className="text-center">
         <div className={styles.outFlightBox}>
           <h1 className="text-2xl font-extrabold text-gray-500 text-center  hover:text-blue-600">
             Flights Departing Soon
@@ -77,11 +76,11 @@ const Home = () => {
                       </h3>
                       <br></br>
 
-                      <p className="text-gray-500 text-md pb-2 font-bold hover:text-blue-600">
+                      <p className="text-gray-500 text-md pb-2 font-bold  hover:text-blue-600">
                         Time: {flight.departime}
                       </p>
 
-                      <p className="text-gray-500 text-md pb-2 font-bold hover:text-blue-600">
+                      <p className="text-gray-500 text-md pb-2 font-bold  hover:text-blue-600">
                         Date: {flight.depardate}
                       </p>
 
@@ -98,12 +97,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className={styles.someElseBox}>
-       
+      </div> */}
+      {/* <div className={styles.someElseBox}>
         <Image src={gal} height="500" width="650" alt="" />
-      </div>
-     
+      </div> */}
+
       <div className="main"></div>
     </>
   );
