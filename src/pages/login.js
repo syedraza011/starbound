@@ -127,6 +127,7 @@ export default function Login() {
             Sign Up
           </a>
         </div>
+        <div className="main"></div>
       </div>
       <button onClick={handleSignOut}>Sign Out</button>
     </div>

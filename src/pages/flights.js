@@ -4,8 +4,11 @@ import supabase from "../../supabase";
 import styles from "@/styles/Home.module.css";
 import robStyles from "@/styles/robsStyles/Flights.module.css";
 import Cart from "../pages/cart";
+import { BsFillCartCheckFill } from 'react-icons'
+import { useRouter } from "next/router";
 
 const Flights = () => {
+  const router = useRouter();
   const [fetchError, setFetchError] = useState(null);
   const [flights, setflights] = useState(null);
   const [cartItems, setCartItems] = useState([]);
@@ -75,7 +78,7 @@ const Flights = () => {
   return (
     <>
       <Cart />
-      <div className="styles.CartIcon">
+      <div className="styles.btnStyle">
         <Link href="/cart">🛒 </Link>
       </div>
       <div className={robStyles.flightsBox}>
@@ -85,7 +88,7 @@ const Flights = () => {
           make space travel accessible and safe for everyone, so that you can
           experience the thrill of exploring the cosmos for yourself.
         </p>
-        <div>
+        <div >
           <Link className={styles.btnStyle} href="/AddFlight">
             Add New Flight
           </Link>
@@ -94,7 +97,7 @@ const Flights = () => {
           {flights && (
             <div className="flights">
               {flights.map((flight, index) => (
-                <div key={index}>
+                <div key={index} className={robStyles.textBox}>
                   <h2>
                     {flight.depart} to {flight.destination}
                   </h2>

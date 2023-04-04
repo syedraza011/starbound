@@ -84,13 +84,14 @@ const Cart = () => {
     <div className={styles.cartcontainer}>
       <Link href="/flights"></Link>
       <div className={styles.cartitemscontainer}>{cartItemsElements}</div>
-      <button className={styles.clearcartbutton} onClick={handleClearCart}>
+      <button className={styles.btnStyle} onClick={handleClearCart}>
         Clear cart
       </button>
       <h4>Total Cost:</h4>
-      <button className={styles.clearcartbutton} onClick={handleClearCart}>
+      <button className={styles.btnStyle} onClick={handleClearCart}>
         Proceed to Checkout
       </button>
+      <div className="main"></div>
     </div>
   );
 };

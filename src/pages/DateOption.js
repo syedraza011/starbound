@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import moment from "moment";
+import robStyles from "@/styles/robsStyles/Other.module.css"
 
 const DateOption = ({ onChange }) => {
   const currentYear = moment().year();
@@ -39,7 +40,7 @@ const DateOption = ({ onChange }) => {
   };
 
   return (
-    <div>
+    <div className={robStyles.dateBox} >
       <select
         name="year"
         defaultValue={selectedDate ? selectedDate.year() : ""}

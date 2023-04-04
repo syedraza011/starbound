@@ -53,12 +53,13 @@ function NavigationBar() {
               >
                 n_Flight
               </Link> */}
-              <Link
+
+              {/* <Link
                 href="/store"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 Store
-              </Link>
+              </Link> */}
               <Link
                 href="/contact"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
@@ -71,12 +72,12 @@ function NavigationBar() {
               >
                 Checkout
               </Link>
-              <Link
+              {/* <Link
                 href="/users"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 Users
-              </Link>
+              </Link> */}
               <Link
                 href="/date"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
