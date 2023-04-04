@@ -38,7 +38,6 @@ const Home = () => {
           <h1>WELCOME TO STARBOUND</h1>
 
           <p>
-        
             Our state-of-the-art spacecraft are designed for maximum comfort and
             safety, so you can relax and enjoy the ride while our experienced
             crew takes care of everything else. Whether you’re a space
@@ -51,7 +50,6 @@ const Home = () => {
             safe, enjoyable, and truly unforgettable experience.
           </p>
         </div>
-   
       </div>
       <div>
         <div className={styles.outFlightBox}>
@@ -62,13 +60,14 @@ const Home = () => {
               {fetchError && <p>{fetchError}</p>}
               {flights && (
                 <>
-                  {flights.map((flight) => (
+                  {flights.map((flight, index) => (
                     <>
-                      <h3>Departure Origon: {flight.depart}</h3>
-                      <p>Flight Time: {flight.departime}</p>
-                      <p>Flight Date: {flight.depardate}</p>
-
-                      <hr></hr>
+                      <div key={index} flight={flight}>
+                        <h3>Departure Origon: {flight.depart}</h3>
+                        <p>Flight Time: {flight.departime}</p>
+                        <p>Flight Date: {flight.depardate}</p>
+                      </div>
+                      <hr />
                     </>
                   ))}
                 </>
@@ -81,10 +80,9 @@ const Home = () => {
         </div>
       </div>
       <div className={styles.someElseBox}>
-       
         <Image src={gal} height="500" width="650" alt="" />
       </div>
-     
+
       <div className="main"></div>
     </>
   );

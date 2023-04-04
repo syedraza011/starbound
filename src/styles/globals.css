@@ -1,6 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Import Tailwind CSS */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Your custom styles here */
+
 
 /* html,
 body {
@@ -32,7 +36,8 @@ a {
 /* source-code https://codepen.io/wheresdara/pen/wvXBpwa */
 
 body{
-  background-color: black;
+  background-color: rgb(244, 241, 241);
+  
 }
 
 .main {

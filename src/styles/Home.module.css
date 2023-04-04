@@ -556,5 +556,13 @@ cursor: pointer;
   color: white;
   border: #0070f3 solid 1px;
 }
-
+.googleButton{
+  background-color: #935f5f;
+  border-radius: 15px;
+  color: white;;
+}
+.googleButton:hover{
+  border: #2F4F4F solid 1px;
+  
+}
 /* ---Cart Styling */

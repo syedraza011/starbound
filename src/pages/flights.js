@@ -4,8 +4,10 @@ import supabase from "../../supabase";
 import styles from "@/styles/Home.module.css";
 import robStyles from "@/styles/robsStyles/Flights.module.css";
 import Cart from "../pages/cart";
+import { useRouter } from "next/router";
 
 const Flights = () => {
+  const router = useRouter();
   const [fetchError, setFetchError] = useState(null);
   const [flights, setflights] = useState(null);
   const [cartItems, setCartItems] = useState([]);

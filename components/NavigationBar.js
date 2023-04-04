@@ -10,9 +10,9 @@ function NavigationBar() {
           <div className="flex space-x-20">
             <p>
               {/* Website Logo */}
-              {/* <Link href="/" className="companyLogo">
+              <Link href="/" className="companyLogo">
                 <img src="starbound.png" alt="Logo" className="starlogo" />
-              </Link> */}
+              </Link>
             </p>
             {/* Primary Navbar items */}
             <div className="hidden md:flex items-center space-x-1">
@@ -22,24 +22,9 @@ function NavigationBar() {
               >
                 Home
               </Link>
-              <Link
-                href="/signIn"
-                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
-              >
-                ToggleSignIn
-              </Link>
-              <Link
-                href="/ThreeGame"
-                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
-              >
-                Games
-              </Link>
-              <Link
-                href="/ballShooter"
-                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
-              >
-                BallGames
-              </Link>
+              
+              
+             
               <Link
                 href="/users"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
@@ -47,18 +32,8 @@ function NavigationBar() {
                 Users
               </Link>
 
-              <Link
-                href="/1Game"
-                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
-              >
-                1Games
-              </Link>
-              <Link
-                href="Game"
-                className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
-              >
-                Game
-              </Link>
+            
+             
               <Link
                 href="/user"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
@@ -73,12 +48,12 @@ function NavigationBar() {
                 About
               </Link>
 
-              <Link
+              {/* <Link
                 href="/store"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 Store
-              </Link>
+              </Link> */}
               <Link
                 href="/contact"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
@@ -109,22 +84,22 @@ function NavigationBar() {
           {/* Secondary Navbar items */}
           <div className="hidden md:flex items-center space-x-3 ">
             <Link
-              href="/login"
+              href="/signIn"
               className="py-2 px-2 font-medium text-white bg-blue-600 rounded hover:bg-blue-800 transition duration-300"
             >
               Log In
             </Link>
             <Link
-              href="/account"
+              href="/signout"
               className="py-2 px-2 font-medium text-white bg-blue-600 rounded hover:bg-blue-800 transition duration-300"
             >
-              Account
+              Sign Out
             </Link>
             <Link
-              href="/signUp"
+              href="/dashboard"
               className="py-2 px-2 font-medium text-white bg-blue-600 rounded hover:bg-blue-800 transition duration-300"
             >
-              Sign Up
+              Dashboard
             </Link>
           </div>
           {/* Mobile menu button */}
