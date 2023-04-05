@@ -8,7 +8,8 @@ import { useEffect, useState } from "react";
 
 import Image from "next/image";
 import Img1 from "../../public/Imgs/Img1.jpg";
-import gal from "../styles/assets/indxImg/galaxy.webp";
+import Img2 from "../../public/Imgs/Img2.jpg";
+import Img3 from "../../public/Imgs/Img3.jpg";
 
 const Home = () => {
   console.log(supabase);
@@ -54,8 +55,12 @@ const Home = () => {
       </div>
 
       <Image src={Img1} alt="/" width={3121}></Image>
+      <br></br>
+      <Image src={Img2} alt="/" width={3121}></Image>
+      <br></br>
+      <Image src={Img3} alt="/" width={3121}></Image>
 
-      <div className="text-center">
+      {/* <div className="text-center">
         <div className={styles.outFlightBox}>
           <h1 className="text-2xl font-extrabold text-gray-500 text-center  hover:text-blue-600">
             Flights Departing Soon
@@ -101,10 +106,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className={styles.someElseBox}>
+      </div> */}
+      {/* <div className={styles.someElseBox}>
         <Image src={gal} height="500" width="650" alt="" />
-      </div>
+      </div> */}
 
       <div className="main"></div>
     </>
