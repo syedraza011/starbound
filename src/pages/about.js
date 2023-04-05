@@ -2,8 +2,6 @@ import Link from "next/link";
 import styles from "@/styles/Home.module.css";
 import robStyles from "@/styles/robsStyles/About.module.css";
 import { BsFillRocketTakeoffFill } from "react-icons/bs";
-import Image from "next/image";
-import Img4 from "../../public/Imgs/Img4.jpg";
 
 const About = () => {
   return (
@@ -49,9 +47,6 @@ const About = () => {
             </p>
           </Link>
         </div> */}
-      </div>
-      <div>
-        <Image src={Img4} alt="/" width={3121}></Image>
       </div>
 
       <div className="main"></div>
