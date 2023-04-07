@@ -1,7 +1,7 @@
-.cnctBox {
+/* .contactForm {
   margin: 20px;
   padding: 20px;
-  border: solid whitesmoke 5px;
+  border: solid whitesmoke 1px;
   display: flex;
   flex-direction: column;
 }
@@ -40,7 +40,7 @@
   transition-timing-function: linear;
   width: 480px;
   /* font-size: x-large; */
-}
+/* }
 .conComBox {
   margin: 5px;
   padding: 5px;
@@ -50,15 +50,56 @@
   transition-property: background color;
   transition-duration: 2s;
   transition-timing-function: linear;
-  width: 500px;
+  width: 500px; */
 
   /* font-size: x-large; */
-}
+/* }
 
 .conInBox:hover,
 .conComBox:hover,
 /* .cnctBox:hover, */
-.conDtlBox:hover {
-  background-color: #00308f;
-  color: whitesmoke;
+/* .conDtlBox:hover { */
+  /* background-color: #00308f;
+  color: whitesmoke; */
+/* }  */
+.cnctBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+.conHeadBox {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #2a2a2a;
+}
+
+.conDtlBox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.conDtlBox label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #2a2a2a;
+}
+
+.conInBox,
+.conComBox {
+  padding: 1rem
+}
+.formCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 20px;
 }

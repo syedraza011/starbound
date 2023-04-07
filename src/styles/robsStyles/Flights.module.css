@@ -64,19 +64,48 @@
     color: whitesmoke;
   }
 
-.flightCardText {
-    margin: 10px;
-    padding: 10px;
-    border: solid whitesmoke 3px;
+  .flightCardText {
     display: flex;
-    justify-content: space-evenly;
     flex-direction: row;
-    /* color: 	#2F4F4F;
-    transition-property: background color;
-    transition-duration: 2s;
-    transition-timing-function: linear; */
-
-}
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-image: url('https://images.pexels.com/photos/76969/cold-front-warm-front-hurricane-felix-76969.jpeg?auto=compress&cs=tinysrgb&w=1600');
+    background-position: center;
+    background-size: cover;
+    color: #090909;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  
+  .flightCardText:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .flightCardText img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    margin-right: 24px;
+    border-radius: 50%;
+  }
+  
+  .flightCardText h3 {
+    margin: 0 0 4px 0;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .flightCardText p {
+    margin: 0;
+  }
+  
 
 .flightCardBttn {
     display: flex;

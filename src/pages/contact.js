@@ -35,7 +35,7 @@ const Contact = () => {
         <h1 className={robvStyles.conHeadBox}>
           Contact via, help@starbound.com, or by filling out the form
         </h1>
-        <form onSubmit={handleSubmit}>
+        <form className={robvStyles.formCard} onSubmit={handleSubmit}>
           <div className={robvStyles.conDtlBox}>
             <label>YOUR NAME: </label>
             <input
@@ -72,10 +72,8 @@ const Contact = () => {
           </div>
           <button className={styles.btnStyle} type="submit">
             Send Message
-
             <BsFillRocketTakeoffFill />
           </button>
-       
         </form>
       </div>
       <div className="main"></div>
