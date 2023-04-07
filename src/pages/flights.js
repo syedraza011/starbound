@@ -107,9 +107,10 @@ const Flights = () => {
           <div className={robStyles.flightCardText}>
             {flights.map((flight, index) => (
               <div key={index}>
-                <h2>
-                  {flight.depart} <span />
-                </h2>
+                <h1>
+                  {flight.depart} to {flight.destination}
+                  <span />
+                </h1>
                 <p>
                   Depart Origon: <span />
                   {flight.depart}

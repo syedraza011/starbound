@@ -70,10 +70,11 @@ const FlightDetails = ({ flight }) => {
       <Link href="/flights">
         <span className="text-2xl leading-none">&larr;</span>
       </Link>
-      <div className={robStyles.textBox}>
-        <h1 className="text-3xl mb-6">
+      <h1 className="text-3xl mb-6">
           {flight.depart} to {flight.destination}
         </h1>
+      <div className={robStyles.textBox}>
+     
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col">
             <label htmlFor="depart" className="mb-2 font-medium">

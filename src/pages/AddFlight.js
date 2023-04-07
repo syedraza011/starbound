@@ -35,7 +35,18 @@ function AddFlight() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Submit ander");
-
+    if (
+      !depart ||
+      !destination ||
+      !departime ||
+      !depardate ||
+      !returntime ||
+      !returndate ||
+      !price
+    ) {
+      alert("Please fill all fields");
+      return;
+    }
     console.log("depart:", depart);
     console.log("destination:", destination);
     console.log("departime:", departime);
@@ -73,17 +84,16 @@ function AddFlight() {
 
   return (
     <>
-      <div className={robStyle.addFlightBox}>
+      {/* <div className={robStyle.addFlightBox}> */}
+      <div>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto mt-8">
-          <Link className={styles.btnStyle} href="/flights">
-            <span
-            // className="text-2xl leading-none"
-            >
-              {/* &larr; */}
-              <MdAssignmentReturn />
+          <Link href="/flights">
+            <span className="text-2xl bg-red leading-none">
+              &larr;
+              {/* <MdAssignmentReturn /> */}
             </span>
           </Link>
-          <div className={robStyle.addFlightSbmt}>
+          <div>
             <label htmlFor="depart" className="block">
               DEPART ORIGIN:
             </label>
@@ -94,8 +104,8 @@ function AddFlight() {
               name="depart"
               value={depart}
               onChange={(e) => setDepart(e.target.value)}
-              // className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500 color:black"
-              className={robStyle.addFlightSbmt}
+              className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500 color:black"
+              // className={robStyle.addFlightSbmt}
             />
 
             <label htmlFor="destination" className="block">
@@ -108,13 +118,12 @@ function AddFlight() {
               name="destination"
               value={destination}
               onChange={(e) => setDestination(e.target.value)}
-              // className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500"
-              className={robStyle.addFlightSbmt}
+              className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500"
+              // className={robStyle.addFlightSbmt}
             />
 
             <label
-              // className="block text-gray-700 text-sm font-bold mb-2"
-
+              className="block text-gray-700 text-sm font-bold mb-2"
               htmlFor="departime"
             >
               DEPART TIME:
@@ -125,19 +134,18 @@ function AddFlight() {
               DEPART DATE:
             </label>
             <DateOption
-              // className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500"
-              className={robStyle.addFlightSbmt}
+              className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500"
+              // className={robStyle.addFlightSbmt}
               onChange={handleDepardateChange}
             />
 
             <label
-              // className="block text-gray-700 text-sm font-bold mb-2"
-
+              className="block text-gray-700 text-sm font-bold mb-2"
               htmlFor="departime"
             >
               RETURN TIME:
             </label>
-            <TimeOption onSelectTime={handleReturnSelectTime} />
+            <TimeOption required onSelectTime={handleReturnSelectTime} />
 
             <label htmlFor="depardate" className="block">
               RETURN DATE:
@@ -149,15 +157,19 @@ function AddFlight() {
               PRICE:
               <input
                 placeholder="Dragon Prince"
-                // className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500"
-                className={robStyle.addFlightSbmt}
+                className="border border-gray-300 px-3 py-2 rounded-lg w-full focus:outline-none focus:border-blue-500"
+                // className={robStyle.addFlightSbmt}
                 type="number"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
               />
             </label>
             <div>
-              <button type="submit" className={styles.btnStyle}>
+              {/* <button type="submit" className={styles.btnStyle}> */}
+              <button
+                type="submit"
+                className="bg-red-400 focus:border-blue-500"
+              >
                 ADD NEW FLIGHT
               </button>
             </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import moment from "moment";
-import robStyles from "@/styles/robsStyles/Other.module.css"
+import robStyles from "@/styles/robsStyles/Other.module.css";
 
 const DateOption = ({ onChange }) => {
   const currentYear = moment().year();
@@ -40,49 +40,52 @@ const DateOption = ({ onChange }) => {
   };
 
   return (
-    <div className={robStyles.dateBox} >
-      <select
-        name="year"
-        defaultValue={selectedDate ? selectedDate.year() : ""}
-        onChange={handleDateChange}
-      >
-        <option value="" disabled>
-          Year
-        </option>
-        {yearOptions.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
+    <div className={robStyles.dateBox}>
+      <div style={{ display: "flex" }}>
+        <select
+          name="date"
+          defaultValue={selectedDate ? selectedDate.date() : ""}
+          onChange={handleDateChange}
+        >
+          <option value="" disabled>
+            Day
           </option>
-        ))}
-      </select>
-      <select
-        name="month"
-        defaultValue={selectedDate ? selectedDate.month() + 1 : ""}
-        onChange={handleDateChange}
-      >
-        <option value="" disabled>
-          Month
-        </option>
-        {monthOptions.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
+          {dayOptions.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+
+        <select
+          name="month"
+          defaultValue={selectedDate ? selectedDate.month() + 1 : ""}
+          onChange={handleDateChange}
+        >
+          <option value="" disabled>
+            Month
           </option>
-        ))}
-      </select>
-      <select
-        name="date"
-        defaultValue={selectedDate ? selectedDate.date() : ""}
-        onChange={handleDateChange}
-      >
-        <option value="" disabled>
-          Day
-        </option>
-        {dayOptions.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
+          {monthOptions.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+        <select
+          name="year"
+          defaultValue={selectedDate ? selectedDate.year() : currentYear}
+          onChange={handleDateChange}
+        >
+          <option value="" disabled>
+            Year
           </option>
-        ))}
-      </select>
+          {yearOptions.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
     </div>
   );
 };
