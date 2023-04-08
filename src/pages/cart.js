@@ -86,6 +86,23 @@ const Cart = () => {
     </div>
   ));
 
+  // return (
+  //   <div className={styles.cartcontainer}>
+  //     <Link href="/flights"></Link>
+  //     <div className={styles.cartcontainer}>{cartItemsElements}</div>
+  //     <button className={styles.btnStyle} onClick={handleClearCart}>
+  //       CLEAR CART:
+  //     </button>
+  //     <h4>Total Cost:</h4>
+  //     <Link href="/checkout">
+  //       <button className={styles.clearcartbutton} onClick={handleClearCart}>
+  //         Proceed to Checkout
+  //       </button>
+  //     </Link>
+
+  //     <div className="main"></div>
+  //   </div>
+  // );
   return (
     <div className={styles.cartcontainer}>
       <Link href="/flights"></Link>
@@ -93,13 +110,12 @@ const Cart = () => {
       <button className={styles.btnStyle} onClick={handleClearCart}>
         CLEAR CART:
       </button>
-      <h4>Total Cost:</h4>
+      <h4>Total Cost: ${totalCost.toFixed(2)}</h4>
       <Link href="/checkout">
         <button className={styles.clearcartbutton} onClick={handleClearCart}>
           Proceed to Checkout
         </button>
       </Link>
-
       <div className="main"></div>
     </div>
   );

@@ -28,12 +28,12 @@ function NavigationBar() {
               >
                 About
               </Link>
-              <a
+              <Link
                 href="/flights"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 Flights
-              </a>
+              </Link>
               {/* <Link href="/src/pages/flights.js">Podcast</Link> */}
               <Link
                 href="/destinations"
@@ -48,14 +48,13 @@ function NavigationBar() {
               >
                 Training
               </Link>
-             
 
-             <Link
+              <Link
                 href="/store"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"
               >
                 Store
-              </Link> 
+              </Link>
               <Link
                 href="/contact"
                 className="py-4 px-2 text-gray-800 font-bold hover:text-blue-600 transition duration-300"

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BsCart4 } from "react-icons/bs";
+import Link from "next/link";
 const CartIcon = () => {
   const [numItemsInCart, setNumItemsInCart] = useState(0);
 
@@ -16,16 +17,12 @@ const CartIcon = () => {
   }
 
   return (
-    <nav>
-      <ul>
-        <li>
-          <a href="/cart">
-            <BsCart4 />
-            <span className="cart-badge">{numItemsInCart}</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+   
+        <Link href="/cart">
+          <BsCart4 />
+          <span className="cart-badge">{numItemsInCart}</span>
+        </Link>
+   
   );
 };
 
