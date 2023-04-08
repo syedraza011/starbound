@@ -3,7 +3,7 @@ import Link from "next/link";
 import supabase from "../../supabase";
 import styles from "@/styles/Home.module.css";
 import robStyles from "@/styles/robsStyles/Flights.module.css";
-import Cart from "../pages/cart";
+import Cart from "../../cart/cart";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { useRouter } from "next/router";
 

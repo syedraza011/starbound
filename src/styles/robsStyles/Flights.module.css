@@ -24,14 +24,15 @@
 }
 
 .btnBox {
+   
     margin: 5px;
     padding: 5px;
-    border: solid whitesmoke 5px;
-    color: #2F4F4F;
+
+    color: #0b0b0b;
     display: inline;
-    transition-property: background color;
+    /* transition-property: background color;
     transition-duration: 2s;
-    transition-timing-function: linear;
+    transition-timing-function: linear; */
 }
 
 /* .flightsBox:hover {
@@ -39,11 +40,11 @@
     color: whitesmoke;
   } */
 
-.textBox:hover,
-.btnBox:hover {
+
+/* .btnBox:hover {
     background-color: #00308F;
     color: whitesmoke;
-}
+} */
 
                                         /* --- FLIGHT CARD --- */
 .flightCardBox {
